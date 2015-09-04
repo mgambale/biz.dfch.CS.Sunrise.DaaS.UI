@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "biz.dfch.CS.Sunrise.DaaS.UI", "biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.lsxtproj", "{8CEEED37-86C5-4404-B674-A885DEABC202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biz.dfch.CS.Sunrise.DaaS.UI.Server", "biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\biz.dfch.CS.Sunrise.DaaS.UI.Server.csproj", "{DFDCAD6C-A5AA-48F0-A48B-7C0DC3128657}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient", "biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient.jsproj", "{340D15D9-8973-4F3D-A378-0B1EA722AE7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CEEED37-86C5-4404-B674-A885DEABC202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEEED37-86C5-4404-B674-A885DEABC202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEEED37-86C5-4404-B674-A885DEABC202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEEED37-86C5-4404-B674-A885DEABC202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDCAD6C-A5AA-48F0-A48B-7C0DC3128657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDCAD6C-A5AA-48F0-A48B-7C0DC3128657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDCAD6C-A5AA-48F0-A48B-7C0DC3128657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDCAD6C-A5AA-48F0-A48B-7C0DC3128657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340D15D9-8973-4F3D-A378-0B1EA722AE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340D15D9-8973-4F3D-A378-0B1EA722AE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340D15D9-8973-4F3D-A378-0B1EA722AE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340D15D9-8973-4F3D-A378-0B1EA722AE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

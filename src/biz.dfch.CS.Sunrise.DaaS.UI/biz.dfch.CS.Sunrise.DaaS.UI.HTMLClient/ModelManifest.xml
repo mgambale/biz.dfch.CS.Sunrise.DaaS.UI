@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Client.lsml" Checksum="7546E4150A141C35BCAC8B91B228566A0C5B6956216188EF967336A18C4BEB5D" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Proxies.lsml" Checksum="FC305C65BC4099B05992163ECBED6BCD3CBBE7EA81550D163E93FAC05C01C19F" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\Home.lsml" Checksum="F1EACE46E1B71B9B32D217425F45F09654F350375828D78A47C241E6F90AFFA6" />
+  </Documents>
+</ModelDocumentManifest>
