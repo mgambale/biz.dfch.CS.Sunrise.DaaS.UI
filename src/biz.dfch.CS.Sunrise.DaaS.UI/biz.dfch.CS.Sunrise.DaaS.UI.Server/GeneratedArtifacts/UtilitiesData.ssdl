@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="UtilitiesDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="UtilitiesDataStore">
+    <EntitySet Name="CatalogueItems" EntityType="UtilitiesDataStore.CatalogueItem" store:Type="Tables" Schema="dbo" Table="CatalogueItem" />
+    <EntitySet Name="KeyNameValues" EntityType="UtilitiesDataStore.KeyNameValue" store:Type="Tables" Schema="dbo" Table="KeyNameValue" />
+    <EntitySet Name="Persons" EntityType="UtilitiesDataStore.Person" store:Type="Tables" Schema="dbo" Table="Person" />
+    <EntitySet Name="Tasks" EntityType="UtilitiesDataStore.Task" store:Type="Tables" Schema="dbo" Table="Task" />
+  </EntityContainer>
+  <EntityType Name="CatalogueItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Collection" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="KeyNameValue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Key" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GivenName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Parameters" Type="nvarchar(max)" />
+    <Property Name="Error" Type="nvarchar(max)" />
+    <Property Name="EndTime" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+</Schema>

@@ -1,7 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application Name="LightSwitchApplication.biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient"
-             xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
   <Application.Attributes>
     <Partial />
   </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Person" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:CatalogueItem" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityContainer>
+    <EntityContainer.Attributes>
+      <Proxy
+        Target="ServiceInterface:UtilitiesData" />
+    </EntityContainer.Attributes>
+  </EntityContainer>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Endpoint" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityContainer>
+    <EntityContainer.Attributes>
+      <Proxy
+        Target="ServiceInterface:DiagnosticsData" />
+    </EntityContainer.Attributes>
+  </EntityContainer>
 </Application>

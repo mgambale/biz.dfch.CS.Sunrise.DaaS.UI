@@ -81,6 +81,7 @@
     <Reference Include="System.Runtime.Serialization">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
@@ -192,6 +193,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DiagnosticsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagnosticsData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\UtilitiesData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UtilitiesData.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Service.lsml">
@@ -202,6 +213,23 @@
     <_ServerFile Include="LogIn.aspx" />
     <_ServerFile Include="LogOut.aspx" />
     <Content Include="Web.config" />
+    <LightSwitchModel Include="DataSources\UtilitiesData\KeyNameValues.lsml" />
+    <LightSwitchModel Include="DataSources\UtilitiesData\Tasks.lsml" />
+    <LightSwitchModel Include="DataSources\UtilitiesData\Persons.lsml" />
+    <LightSwitchModel Include="DataSources\UtilitiesData\CatalogueItems.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\UtilitiesData.lsml" />
+    <LightSwitchExternalDataSource Include="Properties\UtilitiesData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UtilitiesData.Designer.cs</LastGenOutput>
+      <EntityContainer>UtilitiesData</EntityContainer>
+    </LightSwitchExternalDataSource>
+    <LightSwitchModel Include="DataSources\DiagnosticsData\Endpoints.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\DiagnosticsData.lsml" />
+    <LightSwitchExternalDataSource Include="Properties\DiagnosticsData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DiagnosticsData.Designer.cs</LastGenOutput>
+      <EntityContainer>DiagnosticsData</EntityContainer>
+    </LightSwitchExternalDataSource>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -218,9 +246,7 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

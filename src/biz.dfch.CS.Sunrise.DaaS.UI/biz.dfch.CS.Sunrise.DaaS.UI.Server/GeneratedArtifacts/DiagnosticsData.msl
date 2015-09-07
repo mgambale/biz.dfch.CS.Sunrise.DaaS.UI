@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="DiagnosticsData" StorageEntityContainer="DiagnosticsDataStore">
+    <EntitySetMapping Name="Endpoints">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Endpoint)">
+        <MappingFragment StoreEntitySet="Endpoints">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Modifed" ColumnName="Modifed" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

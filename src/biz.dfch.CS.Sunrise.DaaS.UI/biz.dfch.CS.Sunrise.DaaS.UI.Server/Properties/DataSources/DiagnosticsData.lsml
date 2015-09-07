@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="DiagnosticsData"
+    DataProvider="AstoriaDataProvider">
+    <EntityContainer.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </EntityContainer.Attributes>
+    <SubmitOperation
+      Name="SaveChanges" />
+  </EntityContainer>
+  <DataService
+    Name="DiagnosticsDataDataService"
+    EntityContainer="DiagnosticsData">
+    <DataService.Attributes>
+      <CsdlEntityContainer
+        Format="Json"
+        Name="Diagnostics"
+        Namespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics" />
+      <Partial
+        IsPrimary="True" />
+    </DataService.Attributes>
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="8bc8ad2f-0dd9-42d7-9e78-bfac73e729c2" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="DiagnosticsData" />
+    </DataService.ConnectionProperties>
+  </DataService>
+</ServiceApplication>
