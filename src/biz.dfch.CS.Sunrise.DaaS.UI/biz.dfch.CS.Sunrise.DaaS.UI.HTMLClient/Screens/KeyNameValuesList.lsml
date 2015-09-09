@@ -5,10 +5,10 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="BrowseKeyNameValues">
+    Name="KeyNameValuesList">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="UtilitiesData" />
+        EntityContainer="BaseData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -26,7 +26,7 @@
               Name="KeyNameValues"
               Kind="Collection"
               DataType="CollectionView$KeyNameValue"
-              View="Microsoft.LightSwitch.MobileWeb:Table">
+              View="Microsoft.LightSwitch.MobileWeb:List">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="KeyNameValues" />
@@ -35,7 +35,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                      Member="KeyNameValuesList/Properties[KeyNameValues]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -123,7 +123,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                        Member="KeyNameValuesList/Properties[KeyNameValues]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -145,7 +145,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                          Member="KeyNameValuesList/Properties[KeyNameValues]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -172,12 +172,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showAddEditKeyNameValue]">
+                          Target="!module/Methods[showKeyNameValueAdd]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showAddEditKeyNameValue]/Parameters[KeyNameValue]" />
+                              TargetParameter="!module/Methods[showKeyNameValueAdd]/Parameters[KeyNameValue]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -204,16 +204,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showAddEditKeyNameValue]">
+                          Target="!module/Methods[showKeyNameValueEdit]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="KeyNameValue">
                             <ChainExpression>
                               <MemberExpression
-                                Member="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                                Member="KeyNameValuesList/Properties[KeyNameValues]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -243,16 +243,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showViewKeyNameValue]">
+                          Target="!module/Methods[showKeyNameValueView]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="KeyNameValue">
                             <ChainExpression>
                               <MemberExpression
-                                Member="BrowseKeyNameValues/Properties[KeyNameValues]" />
+                                Member="KeyNameValuesList/Properties[KeyNameValues]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -324,7 +324,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="UtilitiesData/Members[KeyNameValues]" />
+                  Member="BaseData/Members[KeyNameValues]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -332,7 +332,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseKeyNameValues/Properties[KeyNameValues]/Query" />
+              Target="KeyNameValuesList/Properties[KeyNameValues]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -340,10 +340,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showBrowseKeyNameValues">
+      Name="showKeyNameValuesList">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="BrowseKeyNameValues" />
+          TargetScreen="KeyNameValuesList" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

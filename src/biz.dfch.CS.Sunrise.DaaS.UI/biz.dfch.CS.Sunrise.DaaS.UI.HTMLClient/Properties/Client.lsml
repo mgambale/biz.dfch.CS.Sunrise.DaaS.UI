@@ -32,6 +32,9 @@
     <EntityContainerGroupProperty
       Name="DiagnosticsData"
       EntityContainer="DiagnosticsData" />
+    <EntityContainerGroupProperty
+      Name="BaseData"
+      EntityContainer="BaseData" />
   </EntityContainerGroup>
   <GlobalAttributeGroup>
     <GlobalAttributeGroup.Attributes>
@@ -42,12 +45,9 @@
   <Application.NavigationItems>
     <ApplicationNavigationMethodLink
       Name="link"
-      Method="!module/Methods[showBrowseEndpoints]" />
+      Method="!module/Methods[showEndpointsBrowse]" />
     <ApplicationNavigationMethodLink
       Name="link1"
-      Method="!module/Methods[showBrowseTasks]" />
-    <ApplicationNavigationMethodLink
-      Name="link2"
-      Method="!module/Methods[showBrowseKeyNameValues]" />
+      Method="!module/Methods[showKeyNameValuesList]" />
   </Application.NavigationItems>
 </Application>

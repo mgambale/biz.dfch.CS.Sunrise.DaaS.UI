@@ -57,17 +57,15 @@
         PropertyType=":String?" />
       <EntityProperty
         Name="EndTime"
-        PropertyType=":DateTimeOffset">
+        PropertyType=":DateTimeOffset?">
         <EntityProperty.Attributes>
-          <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Created"
-        PropertyType=":DateTimeOffset">
+        PropertyType=":DateTimeOffset?">
         <EntityProperty.Attributes>
-          <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -76,9 +74,8 @@
         PropertyType=":String?" />
       <EntityProperty
         Name="Modified"
-        PropertyType=":DateTimeOffset">
+        PropertyType=":DateTimeOffset?">
         <EntityProperty.Attributes>
-          <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -88,7 +85,7 @@
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
-    Name="UtilitiesData">
+    Name="BaseData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
@@ -180,7 +177,7 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="UtilitiesDataDataService">
+    Name="BaseDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
@@ -189,7 +186,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Task"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities"
+          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base"
           Name="Tasks"
           EntityType="Task" />
         <CsdlProperty

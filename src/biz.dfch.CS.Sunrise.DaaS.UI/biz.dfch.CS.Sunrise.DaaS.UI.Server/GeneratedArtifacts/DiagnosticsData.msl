@@ -7,10 +7,14 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Tid" ColumnName="Tid" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="RouteTemplate" ColumnName="RouteTemplate" />
+          <ScalarProperty Name="RoutePrefix" ColumnName="RoutePrefix" />
+          <ScalarProperty Name="ServerRole" ColumnName="ServerRole" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="Modifed" ColumnName="Modifed" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
         </MappingFragment>
       </EntityTypeMapping>

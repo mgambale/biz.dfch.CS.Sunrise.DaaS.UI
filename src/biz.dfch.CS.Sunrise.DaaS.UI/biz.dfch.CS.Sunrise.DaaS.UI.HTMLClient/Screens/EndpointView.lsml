@@ -5,10 +5,10 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ViewKeyNameValue">
+    Name="EndpointView">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="UtilitiesData" />
+        EntityContainer="DiagnosticsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -31,21 +31,6 @@
               Name="left"
               Kind="Group">
               <ContentItem
-                Name="Key"
-                Kind="Value"
-                DataType=":String">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Key" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
                 Name="Name"
                 Kind="Value"
                 DataType=":String">
@@ -53,7 +38,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
                         Member="Name" />
                     </ChainExpression>
@@ -61,17 +46,76 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="Value"
+                Name="Version"
                 Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:Paragraph">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
-                        Member="Value" />
+                        Member="Version" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="RoutePrefix"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointView/Properties[Endpoint]" />
+                      <MemberExpression
+                        Member="RoutePrefix" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="RouteTemplate"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointView/Properties[Endpoint]" />
+                      <MemberExpression
+                        Member="RouteTemplate" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="ServerRole"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointView/Properties[Endpoint]" />
+                      <MemberExpression
+                        Member="ServerRole" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Priority"
+                Kind="Value"
+                DataType=":Int32">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointView/Properties[Endpoint]" />
+                      <MemberExpression
+                        Member="Priority" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -99,66 +143,6 @@
                 </ControlPropertySource>
               </ContentItem.PropertySources>
             </ContentItem>
-            <ContentItem.CommandItems>
-              <ContentItem
-                Name="Edit"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditKeyNameValue]">
-                          <ArgumentExpression
-                            Parameter="KeyNameValue">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="ViewKeyNameValue/Properties[KeyNameValue]" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-edit"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="Delete"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="ViewKeyNameValue/Methods[deleteEntity]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-remove"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-            </ContentItem.CommandItems>
           </ContentItem>
           <ContentItem
             Name="General"
@@ -167,21 +151,6 @@
               Name="GeneralRow1"
               Kind="Group">
               <ContentItem
-                Name="Tid"
-                Kind="Value"
-                DataType=":String">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Tid" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
                 Name="Id"
                 Kind="Value"
                 DataType=":Int32">
@@ -189,7 +158,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
                         Member="Id" />
                     </ChainExpression>
@@ -197,16 +166,16 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="Created"
+                Name="Tid"
                 Kind="Value"
-                DataType=":DateTimeOffset">
+                DataType=":String?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
-                        Member="Created" />
+                        Member="Tid" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -219,7 +188,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
                         Member="CreatedBy" />
                     </ChainExpression>
@@ -227,16 +196,16 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="Modified"
+                Name="Created"
                 Kind="Value"
-                DataType=":DateTimeOffset">
+                DataType=":DateTimeOffset?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
-                        Member="Modified" />
+                        Member="Created" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -249,9 +218,24 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewKeyNameValue/Properties[KeyNameValue]" />
+                        Member="EndpointView/Properties[Endpoint]" />
                       <MemberExpression
                         Member="ModifiedBy" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Modified"
+                Kind="Value"
+                DataType=":DateTimeOffset?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointView/Properties[Endpoint]" />
+                      <MemberExpression
+                        Member="Modified" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -300,13 +284,11 @@
           Name="dialogName"
           ParameterType=":String" />
       </ScreenMethod>
-      <ScreenMethod
-        Name="deleteEntity" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="KeyNameValue"
-        PropertyType="KeyNameValue">
+        Name="Endpoint"
+        PropertyType="Endpoint">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -315,14 +297,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showViewKeyNameValue">
+      Name="showEndpointView">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ViewKeyNameValue" />
+          TargetScreen="EndpointView" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="KeyNameValue"
-        ParameterType="KeyNameValue" />
+        Name="Endpoint"
+        ParameterType="Endpoint" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

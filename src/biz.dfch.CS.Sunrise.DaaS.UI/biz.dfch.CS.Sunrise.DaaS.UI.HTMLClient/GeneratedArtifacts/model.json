@@ -2109,8 +2109,7 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
           "name": "EmailAddress",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
+          "underlyingType": { "__id": ":String" }
         },
         {
           "__isSemanticType": 1,
@@ -2128,15 +2127,13 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
           "name": "PhoneNumber",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
+          "underlyingType": { "__id": ":String" }
         },
         {
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:Percent",
           "name": "Percent",
           "underlyingType": { "__id": ":Decimal" },
-          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
           ":@DecimalConstraint":
           {
             "scale": 9
@@ -2146,8 +2143,7 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:WebAddress",
           "name": "WebAddress",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
+          "underlyingType": { "__id": ":String" }
         }
       ]
     },
@@ -2179,6 +2175,11 @@
               "id": "DataWorkspace/Members[DiagnosticsData]",
               "name": "DiagnosticsData",
               "entityContainer": { "__id": "DiagnosticsData" }
+            },
+            {
+              "id": "DataWorkspace/Members[BaseData]",
+              "name": "BaseData",
+              "entityContainer": { "__id": "BaseData" }
             }
           ]
         },
@@ -2187,62 +2188,62 @@
           "name": "LightSwitchServiceApplicationGroup"
         },
         {
-          "id": "CollectionView$Endpoint",
-          "name": "CollectionView$Endpoint",
+          "id": "Task*",
+          "name": "Task*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Task" }
+        },
+        {
+          "id": "CollectionView$Task",
+          "name": "CollectionView$Task",
           "kind": "CollectionView",
-          "elementType": { "__id": "Endpoint" },
+          "elementType": { "__id": "Task" },
           "methods":
           [
             {
-              "id": "CollectionView$Endpoint/Methods[addNew]",
+              "id": "CollectionView$Task/Methods[addNew]",
               "name": "addNew",
-              "returnType": { "__id": "Endpoint" }
+              "returnType": { "__id": "Task" }
             },
             {
-              "id": "CollectionView$Endpoint/Methods[addAndEditNew]",
+              "id": "CollectionView$Task/Methods[addAndEditNew]",
               "name": "addAndEditNew",
-              "returnType": { "__id": "Endpoint" }
+              "returnType": { "__id": "Task" }
             },
             {
-              "id": "CollectionView$Endpoint/Methods[showSearch]",
+              "id": "CollectionView$Task/Methods[showSearch]",
               "name": "showSearch",
-              "returnType": { "__id": "Endpoint" }
+              "returnType": { "__id": "Task" }
             },
             {
-              "id": "CollectionView$Endpoint/Methods[editSelected]",
+              "id": "CollectionView$Task/Methods[editSelected]",
               "name": "editSelected"
             },
             {
-              "id": "CollectionView$Endpoint/Methods[deleteSelected]",
+              "id": "CollectionView$Task/Methods[deleteSelected]",
               "name": "deleteSelected"
             },
             {
-              "id": "CollectionView$Endpoint/Methods[removeSelected]",
+              "id": "CollectionView$Task/Methods[removeSelected]",
               "name": "removeSelected"
             },
             {
-              "id": "CollectionView$Endpoint/Methods[refresh]",
+              "id": "CollectionView$Task/Methods[refresh]",
               "name": "refresh"
             },
             {
-              "id": "CollectionView$Endpoint/Methods[viewSelected]",
+              "id": "CollectionView$Task/Methods[viewSelected]",
               "name": "viewSelected"
             }
           ],
           "properties":
           [
             {
-              "id": "CollectionView$Endpoint/Properties[selectedItem]",
+              "id": "CollectionView$Task/Properties[selectedItem]",
               "name": "selectedItem",
-              "propertyType": { "__id": "Endpoint" }
+              "propertyType": { "__id": "Task" }
             }
           ]
-        },
-        {
-          "id": "Endpoint*",
-          "name": "Endpoint*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Endpoint" }
         },
         {
           "id": "CatalogueItem*",
@@ -2361,60 +2362,60 @@
           ]
         },
         {
-          "id": "Task*",
-          "name": "Task*",
+          "id": "Endpoint*",
+          "name": "Endpoint*",
           "kind": "Enumerable",
-          "elementType": { "__id": "Task" }
+          "elementType": { "__id": "Endpoint" }
         },
         {
-          "id": "CollectionView$Task",
-          "name": "CollectionView$Task",
+          "id": "CollectionView$Endpoint",
+          "name": "CollectionView$Endpoint",
           "kind": "CollectionView",
-          "elementType": { "__id": "Task" },
+          "elementType": { "__id": "Endpoint" },
           "methods":
           [
             {
-              "id": "CollectionView$Task/Methods[addNew]",
+              "id": "CollectionView$Endpoint/Methods[addNew]",
               "name": "addNew",
-              "returnType": { "__id": "Task" }
+              "returnType": { "__id": "Endpoint" }
             },
             {
-              "id": "CollectionView$Task/Methods[addAndEditNew]",
+              "id": "CollectionView$Endpoint/Methods[addAndEditNew]",
               "name": "addAndEditNew",
-              "returnType": { "__id": "Task" }
+              "returnType": { "__id": "Endpoint" }
             },
             {
-              "id": "CollectionView$Task/Methods[showSearch]",
+              "id": "CollectionView$Endpoint/Methods[showSearch]",
               "name": "showSearch",
-              "returnType": { "__id": "Task" }
+              "returnType": { "__id": "Endpoint" }
             },
             {
-              "id": "CollectionView$Task/Methods[editSelected]",
+              "id": "CollectionView$Endpoint/Methods[editSelected]",
               "name": "editSelected"
             },
             {
-              "id": "CollectionView$Task/Methods[deleteSelected]",
+              "id": "CollectionView$Endpoint/Methods[deleteSelected]",
               "name": "deleteSelected"
             },
             {
-              "id": "CollectionView$Task/Methods[removeSelected]",
+              "id": "CollectionView$Endpoint/Methods[removeSelected]",
               "name": "removeSelected"
             },
             {
-              "id": "CollectionView$Task/Methods[refresh]",
+              "id": "CollectionView$Endpoint/Methods[refresh]",
               "name": "refresh"
             },
             {
-              "id": "CollectionView$Task/Methods[viewSelected]",
+              "id": "CollectionView$Endpoint/Methods[viewSelected]",
               "name": "viewSelected"
             }
           ],
           "properties":
           [
             {
-              "id": "CollectionView$Task/Properties[selectedItem]",
+              "id": "CollectionView$Endpoint/Properties[selectedItem]",
               "name": "selectedItem",
-              "propertyType": { "__id": "Task" }
+              "propertyType": { "__id": "Endpoint" }
             }
           ]
         },
@@ -2484,10 +2485,10 @@
           ":@NotSearchable": { },
           ":@DefaultScreen":
           {
-            "value": { "__id": "ViewKeyNameValue" },
+            "value": { "__id": "KeyNameValueView" },
             ":@ScreenParameterMapping":
             {
-              "screenParameter": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
+              "screenParameter": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
             }
           },
           "methods":
@@ -2540,6 +2541,11 @@
               ":@Required": { }
             },
             {
+              "id": "KeyNameValue/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
               "id": "KeyNameValue/Properties[Created]",
               "name": "Created",
               "propertyType": { "__id": ":DateTimeOffset" },
@@ -2567,30 +2573,30 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Task/Properties[Tid]" } },
-          "id": "Task",
-          "name": "Task",
+          ":@SummaryProperty": { "property": { "__id": "Endpoint/Properties[Tid]" } },
+          "id": "Endpoint",
+          "name": "Endpoint",
           ":@NotSearchable": { },
           ":@DefaultScreen":
           {
-            "value": { "__id": "ViewTask" },
+            "value": { "__id": "EndpointView" },
             ":@ScreenParameterMapping":
             {
-              "screenParameter": { "__id": "ViewTask/Properties[Task]" }
+              "screenParameter": { "__id": "EndpointView/Properties[Endpoint]" }
             }
           },
           "methods":
           [
             {
-              "id": "Task/Methods[deleteEntity]",
+              "id": "Endpoint/Methods[deleteEntity]",
               "name": "deleteEntity"
             },
             {
-              "id": "Task/Methods[edit]",
+              "id": "Endpoint/Methods[edit]",
               "name": "edit"
             },
             {
-              "id": "Task/Methods[view]",
+              "id": "Endpoint/Methods[view]",
               "name": "view"
             }
           ],
@@ -2598,77 +2604,73 @@
           [
             {
               "__isKeyProperty": 1,
-              "id": "Task/Properties[Id]",
+              "id": "Endpoint/Properties[Id]",
               "name": "Id",
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
             {
-              "id": "Task/Properties[Tid]",
+              "id": "Endpoint/Properties[Tid]",
               "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
+              "propertyType": { "__id": ":String?" }
             },
             {
-              "id": "Task/Properties[Name]",
+              "id": "Endpoint/Properties[Name]",
               "name": "Name",
               "propertyType": { "__id": ":String" },
               ":@Required": { }
             },
             {
-              "id": "Task/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
+              "id": "Endpoint/Properties[Version]",
+              "name": "Version",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
             },
             {
-              "id": "Task/Properties[Status]",
-              "name": "Status",
-              "propertyType": { "__id": ":String?" }
+              "id": "Endpoint/Properties[RouteTemplate]",
+              "name": "RouteTemplate",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
             },
             {
-              "id": "Task/Properties[Type]",
-              "name": "Type",
-              "propertyType": { "__id": ":String?" }
+              "id": "Endpoint/Properties[RoutePrefix]",
+              "name": "RoutePrefix",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
             },
             {
-              "id": "Task/Properties[Parameters]",
-              "name": "Parameters",
-              "propertyType": { "__id": ":String?" }
+              "id": "Endpoint/Properties[ServerRole]",
+              "name": "ServerRole",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
             },
             {
-              "id": "Task/Properties[c_Error]",
-              "name": "c_Error",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[EndTime]",
-              "name": "EndTime",
-              "propertyType": { "__id": ":DateTimeOffset" },
+              "id": "Endpoint/Properties[Priority]",
+              "name": "Priority",
+              "propertyType": { "__id": ":Int32" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
             {
-              "id": "Task/Properties[Created]",
+              "id": "Endpoint/Properties[Created]",
               "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
+              "propertyType": { "__id": ":DateTimeOffset?" },
               ":@NotSearchable": { }
             },
             {
-              "id": "Task/Properties[CreatedBy]",
+              "id": "Endpoint/Properties[CreatedBy]",
               "name": "CreatedBy",
               "propertyType": { "__id": ":String?" }
             },
             {
-              "id": "Task/Properties[Modified]",
+              "id": "Endpoint/Properties[Modified]",
               "name": "Modified",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
+              "propertyType": { "__id": ":DateTimeOffset?" },
               ":@NotSearchable": { }
             },
             {
-              "id": "Task/Properties[ModifiedBy]",
+              "id": "Endpoint/Properties[ModifiedBy]",
               "name": "ModifiedBy",
               "propertyType": { "__id": ":String?" }
             }
@@ -2825,15 +2827,6 @@
               "entityType": { "__id": "CatalogueItem" }
             },
             {
-              "id": "UtilitiesData/Members[KeyNameValues]",
-              "name": "KeyNameValues",
-              "canDelete": true,
-              "canInsert": true,
-              "canUpdate": true,
-              "elementType": { "__id": "KeyNameValue" },
-              "entityType": { "__id": "KeyNameValue" }
-            },
-            {
               "id": "UtilitiesData/Members[Persons]",
               "name": "Persons",
               "canDelete": true,
@@ -2841,15 +2834,6 @@
               "canUpdate": true,
               "elementType": { "__id": "Person" },
               "entityType": { "__id": "Person" }
-            },
-            {
-              "id": "UtilitiesData/Members[Tasks]",
-              "name": "Tasks",
-              "canDelete": true,
-              "canInsert": true,
-              "canUpdate": true,
-              "elementType": { "__id": "Task" },
-              "entityType": { "__id": "Task" }
             }
           ],
           "queryOperations":
@@ -2893,44 +2877,6 @@
               ]
             },
             {
-              "id": "UtilitiesData/Members[KeyNameValues_Single]",
-              "name": "KeyNameValues_Single",
-              "elementType": { "__id": "KeyNameValue" },
-              "query": { "__id": "UtilitiesData/Members[KeyNameValues_Single]" },
-              "returnType": { "__id": "KeyNameValue" },
-              "source":
-              {
-                "member": { "__id": "UtilitiesData/Members[KeyNameValues]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "UtilitiesData/Members[KeyNameValues_Single]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            },
-            {
-              "id": "UtilitiesData/Members[KeyNameValues_SingleOrDefault]",
-              "name": "KeyNameValues_SingleOrDefault",
-              "elementType": { "__id": "KeyNameValue" },
-              "query": { "__id": "UtilitiesData/Members[KeyNameValues_SingleOrDefault]" },
-              "returnType": { "__id": "KeyNameValue" },
-              "source":
-              {
-                "member": { "__id": "UtilitiesData/Members[KeyNameValues]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "UtilitiesData/Members[KeyNameValues_SingleOrDefault]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            },
-            {
               "id": "UtilitiesData/Members[Persons_Single]",
               "name": "Persons_Single",
               "elementType": { "__id": "Person" },
@@ -2967,40 +2913,61 @@
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "id": "DiagnosticsData",
+          "name": "DiagnosticsData",
+          "dataProvider": "AstoriaDataProvider",
+          ":@Partial": { "isPrimary": true },
+          "entitySets":
+          [
             {
-              "id": "UtilitiesData/Members[Tasks_Single]",
-              "name": "Tasks_Single",
-              "elementType": { "__id": "Task" },
-              "query": { "__id": "UtilitiesData/Members[Tasks_Single]" },
-              "returnType": { "__id": "Task" },
+              "id": "DiagnosticsData/Members[Endpoints]",
+              "name": "Endpoints",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Endpoint" },
+              "entityType": { "__id": "Endpoint" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "DiagnosticsData/Members[Endpoints_Single]",
+              "name": "Endpoints_Single",
+              "elementType": { "__id": "Endpoint" },
+              "query": { "__id": "DiagnosticsData/Members[Endpoints_Single]" },
+              "returnType": { "__id": "Endpoint" },
               "source":
               {
-                "member": { "__id": "UtilitiesData/Members[Tasks]" }
+                "member": { "__id": "DiagnosticsData/Members[Endpoints]" }
               },
               "parameters":
               [
                 {
-                  "id": "UtilitiesData/Members[Tasks_Single]/Parameters[Id]",
+                  "id": "DiagnosticsData/Members[Endpoints_Single]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
             },
             {
-              "id": "UtilitiesData/Members[Tasks_SingleOrDefault]",
-              "name": "Tasks_SingleOrDefault",
-              "elementType": { "__id": "Task" },
-              "query": { "__id": "UtilitiesData/Members[Tasks_SingleOrDefault]" },
-              "returnType": { "__id": "Task" },
+              "id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]",
+              "name": "Endpoints_SingleOrDefault",
+              "elementType": { "__id": "Endpoint" },
+              "query": { "__id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]" },
+              "returnType": { "__id": "Endpoint" },
               "source":
               {
-                "member": { "__id": "UtilitiesData/Members[Tasks]" }
+                "member": { "__id": "DiagnosticsData/Members[Endpoints]" }
               },
               "parameters":
               [
                 {
-                  "id": "UtilitiesData/Members[Tasks_SingleOrDefault]/Parameters[Id]",
+                  "id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
@@ -3009,369 +2976,206 @@
           ]
         },
         {
-          "displayName": "Add Edit Endpoint",
-          "id": "AddEditEndpoint",
-          "name": "AddEditEndpoint",
-          "launchMode": "Single",
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" }
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Task/Properties[Tid]" } },
+          "id": "Task",
+          "name": "Task",
+          ":@NotSearchable": { },
           "methods":
           [
             {
-              "id": "AddEditEndpoint/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "AddEditEndpoint/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
+              "id": "Task/Methods[deleteEntity]",
+              "name": "deleteEntity"
             },
             {
-              "id": "AddEditEndpoint/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "AddEditEndpoint/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "displayName": "Add Edit Key Name Value",
-          "id": "AddEditKeyNameValue",
-          "name": "AddEditKeyNameValue",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[UtilitiesData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Details Row1",
-                        "name": "DetailsRow1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Key",
-                            "name": "Key",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Name",
-                            "name": "Name",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Value",
-                            "name": "Value",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
-                                }
-                              ]
-                            }
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                            "value": 200
-                          },
-                          {
-                            "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                            "value": 400
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "General",
-                    "name": "General",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "General Row1",
-                        "name": "GeneralRow1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "KeyNameValue_Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Id]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Created]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "AddEditKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Modified]" }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "AddEditKeyNameValue/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "AddEditKeyNameValue/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
+              "id": "Task/Methods[edit]",
+              "name": "edit"
             },
             {
-              "id": "AddEditKeyNameValue/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "AddEditKeyNameValue/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
+              "id": "Task/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
           [
             {
-              "id": "AddEditKeyNameValue/Properties[KeyNameValue]",
-              "name": "KeyNameValue",
+              "__isKeyProperty": 1,
+              "id": "Task/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Task/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Task/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Task/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Task/Properties[Status]",
+              "name": "Status",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Task/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Task/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Task/Properties[c_Error]",
+              "name": "c_Error",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Task/Properties[EndTime]",
+              "name": "EndTime",
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Task/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Task/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Task/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Task/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String?" }
+            }
+          ]
+        },
+        {
+          "id": "BaseData",
+          "name": "BaseData",
+          "dataProvider": "AstoriaDataProvider",
+          ":@Partial": { "isPrimary": true },
+          "entitySets":
+          [
+            {
+              "id": "BaseData/Members[KeyNameValues]",
+              "name": "KeyNameValues",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
               "elementType": { "__id": "KeyNameValue" },
-              "propertyType": { "__id": "KeyNameValue" },
-              ":@IsParameter": { }
+              "entityType": { "__id": "KeyNameValue" }
+            },
+            {
+              "id": "BaseData/Members[Tasks]",
+              "name": "Tasks",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Task" },
+              "entityType": { "__id": "Task" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "BaseData/Members[KeyNameValues_Single]",
+              "name": "KeyNameValues_Single",
+              "elementType": { "__id": "KeyNameValue" },
+              "query": { "__id": "BaseData/Members[KeyNameValues_Single]" },
+              "returnType": { "__id": "KeyNameValue" },
+              "source":
+              {
+                "member": { "__id": "BaseData/Members[KeyNameValues]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "BaseData/Members[KeyNameValues_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "BaseData/Members[KeyNameValues_SingleOrDefault]",
+              "name": "KeyNameValues_SingleOrDefault",
+              "elementType": { "__id": "KeyNameValue" },
+              "query": { "__id": "BaseData/Members[KeyNameValues_SingleOrDefault]" },
+              "returnType": { "__id": "KeyNameValue" },
+              "source":
+              {
+                "member": { "__id": "BaseData/Members[KeyNameValues]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "BaseData/Members[KeyNameValues_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "BaseData/Members[Tasks_Single]",
+              "name": "Tasks_Single",
+              "elementType": { "__id": "Task" },
+              "query": { "__id": "BaseData/Members[Tasks_Single]" },
+              "returnType": { "__id": "Task" },
+              "source":
+              {
+                "member": { "__id": "BaseData/Members[Tasks]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "BaseData/Members[Tasks_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "BaseData/Members[Tasks_SingleOrDefault]",
+              "name": "Tasks_SingleOrDefault",
+              "elementType": { "__id": "Task" },
+              "query": { "__id": "BaseData/Members[Tasks_SingleOrDefault]" },
+              "returnType": { "__id": "Task" },
+              "source":
+              {
+                "member": { "__id": "BaseData/Members[Tasks]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "BaseData/Members[Tasks_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
             }
           ]
         },
@@ -3403,193 +3207,7 @@
                     "displayName": "Details",
                     "name": "Details",
                     "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "AddEditTask/Properties[Task]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Id",
-                                "name": "Id",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Id]" }
-                                }
-                              },
-                              {
-                                "displayName": "Tid",
-                                "name": "Tid",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Tid]" }
-                                }
-                              },
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Name]" }
-                                }
-                              },
-                              {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Description]" }
-                                }
-                              },
-                              {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Status]" }
-                                }
-                              },
-                              {
-                                "displayName": "Type",
-                                "name": "Type",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Type]" }
-                                }
-                              },
-                              {
-                                "displayName": "Parameters",
-                                "name": "Parameters",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Parameters]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "right",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "c Error",
-                                "name": "c_Error",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[c_Error]" }
-                                }
-                              },
-                              {
-                                "displayName": "End Time",
-                                "name": "EndTime",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[EndTime]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created",
-                                "name": "Created",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Created]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created By",
-                                "name": "CreatedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[CreatedBy]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified",
-                                "name": "Modified",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Modified]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified By",
-                                "name": "ModifiedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[ModifiedBy]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
+                    "view": { "__id": ":RowsLayout" }
                   }
                 ]
               },
@@ -3638,23 +3256,17 @@
                 }
               ]
             }
-          ],
-          "properties":
-          [
-            {
-              "id": "AddEditTask/Properties[Task]",
-              "name": "Task",
-              "elementType": { "__id": "Task" },
-              "propertyType": { "__id": "Task" },
-              ":@IsParameter": { }
-            }
           ]
         },
         {
-          "displayName": "Browse Endpoints",
-          "id": "BrowseEndpoints",
-          "name": "BrowseEndpoints",
+          "displayName": "Endpoints Browse",
+          "id": "EndpointsBrowse",
+          "name": "EndpointsBrowse",
           "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[DiagnosticsData]" }
+          },
           "rootContentItem":
           {
             "displayName": "Root Content Item",
@@ -3675,139 +3287,16 @@
                     "name": "EndpointList",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
-                    "commandItems":
-                    [
-                      {
-                        "displayName": "Search",
-                        "name": "SearchEndpoints",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-search"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Add",
-                        "name": "Add",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-add"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Edit",
-                        "name": "Edit",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-edit"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "View",
-                        "name": "View",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" }
-                      }
-                    ]
-                  }
-                ],
-                "propertySources":
-                [
-                  {
-                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "BrowseEndpoints/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "BrowseEndpoints/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "BrowseEndpoints/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "BrowseEndpoints/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "displayName": "Browse Key Name Values",
-          "id": "BrowseKeyNameValues",
-          "name": "BrowseKeyNameValues",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[UtilitiesData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Key Name Value List",
-                    "name": "KeyNameValueList",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
                       {
-                        "displayName": "KeyNameValues",
-                        "name": "KeyNameValues",
+                        "displayName": "Endpoints",
+                        "name": "Endpoints",
                         "kind": "Collection",
                         "view": { "__id": ":Table" },
                         "dataSource":
                         {
-                          "member": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" }
+                          "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
                         },
                         "childContentItems":
                         [
@@ -3825,40 +3314,33 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Key",
-                                "name": "Key",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              },
-                              {
                                 "displayName": "Name",
                                 "name": "Name",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
+                                  "member": { "__id": "Endpoint/Properties[Name]" }
                                 }
                               },
                               {
-                                "displayName": "Value",
-                                "name": "Value",
+                                "displayName": "Version",
+                                "name": "Version",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
+                                  "member": { "__id": "Endpoint/Properties[Version]" }
+                                }
+                              },
+                              {
+                                "displayName": "Route Prefix",
+                                "name": "RoutePrefix",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Endpoint/Properties[RoutePrefix]" }
                                 }
                               }
                             ],
@@ -3880,10 +3362,10 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" }
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
                                 },
                                 {
-                                  "target": { "__id": "CollectionView$KeyNameValue/Methods[viewSelected]" }
+                                  "target": { "__id": "CollectionView$Endpoint/Methods[viewSelected]" }
                                 }
                               ]
                             }
@@ -3895,7 +3377,7 @@
                     [
                       {
                         "displayName": "Search",
-                        "name": "SearchKeyNameValues",
+                        "name": "SearchEndpoints",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -3907,10 +3389,10 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" }
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
                                 },
                                 {
-                                  "target": { "__id": "CollectionView$KeyNameValue/Methods[showSearch]" }
+                                  "target": { "__id": "CollectionView$Endpoint/Methods[showSearch]" }
                                 }
                               ]
                             }
@@ -3918,70 +3400,6 @@
                           {
                             "property": { "__id": ":RootCommand/Properties[Icon]" },
                             "value": "msls-search"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Add",
-                        "name": "Add",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditKeyNameValue]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" } },
-                              ":@CreateNewEntity":
-                              {
-                                "targetParameter": { "__id": "!module/Methods[showAddEditKeyNameValue]/Parameters[KeyNameValue]" }
-                              }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-add"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Edit",
-                        "name": "Edit",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditKeyNameValue]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" } },
-                              "arguments":
-                              [
-                                {
-                                  "parameter": { "__id": "!module/Methods[showAddEditKeyNameValue]/Parameters[KeyNameValue]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$KeyNameValue/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-edit"
                           }
                         ]
                       },
@@ -3996,24 +3414,168 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showViewKeyNameValue]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" } },
+                              "target": { "__id": "!module/Methods[showEndpointView]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "EndpointsBrowse/Properties[Endpoints]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showViewKeyNameValue]/Parameters[KeyNameValue]" },
+                                  "parameter": { "__id": "!module/Methods[showEndpointView]/Parameters[Endpoint]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]" }
+                                        "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
                                       },
                                       {
-                                        "member": { "__id": "CollectionView$KeyNameValue/Properties[selectedItem]" }
+                                        "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
                                       }
                                     ]
                                   }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "General Row1",
+                        "name": "GeneralRow1",
+                        "kind": "Group",
+                        "view": { "__id": ":RowsLayout" },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Id",
+                            "name": "Endpoints_selectedItem_Id",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                },
+                                {
+                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Id]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Tid",
+                            "name": "Endpoints_selectedItem_Tid",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                },
+                                {
+                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Tid]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Created By",
+                            "name": "Endpoints_selectedItem_CreatedBy",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                },
+                                {
+                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[CreatedBy]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Created",
+                            "name": "Endpoints_selectedItem_Created",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                },
+                                {
+                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Created]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Modified By",
+                            "name": "Endpoints_selectedItem_ModifiedBy",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                },
+                                {
+                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[ModifiedBy]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Modified",
+                            "name": "Endpoints_selectedItem_Modified",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                },
+                                {
+                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Modified]" }
                                 }
                               ]
                             }
@@ -4042,24 +3604,24 @@
           "methods":
           [
             {
-              "id": "BrowseKeyNameValues/Methods[showTab]",
+              "id": "EndpointsBrowse/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "BrowseKeyNameValues/Methods[showTab]/Parameters[tabName]",
+                  "id": "EndpointsBrowse/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "BrowseKeyNameValues/Methods[showDialog]",
+              "id": "EndpointsBrowse/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "BrowseKeyNameValues/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "EndpointsBrowse/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -4069,38 +3631,38 @@
           "properties":
           [
             {
-              "id": "BrowseKeyNameValues/Properties[KeyNameValues]",
-              "name": "KeyNameValues",
+              "id": "EndpointsBrowse/Properties[Endpoints]",
+              "name": "Endpoints",
               "disableSearch": true,
               "pageSize": 45,
-              "elementType": { "__id": "KeyNameValue" },
-              "propertyType": { "__id": "CollectionView$KeyNameValue" },
+              "elementType": { "__id": "Endpoint" },
+              "propertyType": { "__id": "CollectionView$Endpoint" },
               "query":
               {
-                "id": "BrowseKeyNameValues/Properties[KeyNameValues]/Query",
-                "name": "KeyNameValuesQuery",
-                "elementType": { "__id": "KeyNameValue" },
-                "returnType": { "__id": "KeyNameValue*" },
+                "id": "EndpointsBrowse/Properties[Endpoints]/Query",
+                "name": "EndpointsQuery",
+                "elementType": { "__id": "Endpoint" },
+                "returnType": { "__id": "Endpoint*" },
                 "source":
                 {
-                  "member": { "__id": "UtilitiesData/Members[KeyNameValues]" }
+                  "member": { "__id": "DiagnosticsData/Members[Endpoints]" }
                 }
               },
               "source":
               {
-                "target": { "__id": "BrowseKeyNameValues/Properties[KeyNameValues]/Query" }
+                "target": { "__id": "EndpointsBrowse/Properties[Endpoints]/Query" }
               }
             }
           ]
         },
         {
-          "displayName": "Browse Tasks",
-          "id": "BrowseTasks",
-          "name": "BrowseTasks",
+          "displayName": "Endpoint View",
+          "id": "EndpointView",
+          "name": "EndpointView",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
-            "property": { "__id": "DataWorkspace/Members[UtilitiesData]" }
+            "property": { "__id": "DataWorkspace/Members[DiagnosticsData]" }
           },
           "rootContentItem":
           {
@@ -4118,240 +3680,260 @@
                 "childContentItems":
                 [
                   {
-                    "displayName": "Task List",
-                    "name": "TaskList",
+                    "displayName": "Details",
+                    "name": "Details",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
                       {
-                        "displayName": "Tasks",
-                        "name": "Tasks",
-                        "kind": "Collection",
-                        "view": { "__id": ":TileList" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "BrowseTasks/Properties[Tasks]" }
-                        },
+                        "displayName": "left",
+                        "name": "left",
+                        "kind": "Group",
+                        "view": { "__id": ":RowsLayout" },
                         "childContentItems":
                         [
                           {
-                            "displayName": "rows",
-                            "name": "rows",
-                            "kind": "Details",
-                            "view": { "__id": ":RowsLayout" },
+                            "displayName": "Name",
+                            "name": "Name",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
                             "dataSource":
                             {
                               "links":
                               [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Name]" }
+                                }
                               ]
-                            },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Tid",
-                                "name": "Tid",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
+                            }
+                          },
+                          {
+                            "displayName": "Version",
+                            "name": "Version",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
                                 {
-                                  "member": { "__id": "Task/Properties[Tid]" }
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
                                 },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Large"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Id",
-                                "name": "Id",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
                                 {
-                                  "member": { "__id": "Task/Properties[Id]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
+                                  "member": { "__id": "Endpoint/Properties[Version]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Route Prefix",
+                            "name": "RoutePrefix",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
                                 {
-                                  "member": { "__id": "Task/Properties[Name]" }
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
                                 },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                "value": "FitToContent"
-                              }
-                            ]
+                                {
+                                  "member": { "__id": "Endpoint/Properties[RoutePrefix]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Route Template",
+                            "name": "RouteTemplate",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[RouteTemplate]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Server Role",
+                            "name": "ServerRole",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[ServerRole]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Priority",
+                            "name": "Priority",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Priority]" }
+                                }
+                              ]
+                            }
                           }
                         ],
                         "propertySources":
                         [
                           {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "BrowseTasks/Properties[Tasks]" }
-                                },
-                                {
-                                  "target": { "__id": "CollectionView$Task/Methods[viewSelected]" }
-                                }
-                              ]
-                            }
+                            "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                            "value": 200
+                          },
+                          {
+                            "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                            "value": 400
                           }
                         ]
                       }
-                    ],
-                    "commandItems":
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
                     [
                       {
-                        "displayName": "Search",
-                        "name": "SearchTasks",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
+                        "displayName": "General Row1",
+                        "name": "GeneralRow1",
+                        "kind": "Group",
+                        "view": { "__id": ":RowsLayout" },
+                        "childContentItems":
                         [
                           {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
+                            "displayName": "Id",
+                            "name": "Id",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
                             {
                               "links":
                               [
                                 {
-                                  "member": { "__id": "BrowseTasks/Properties[Tasks]" }
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
                                 },
                                 {
-                                  "target": { "__id": "CollectionView$Task/Methods[showSearch]" }
+                                  "member": { "__id": "Endpoint/Properties[Id]" }
                                 }
                               ]
                             }
                           },
                           {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-search"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Add",
-                        "name": "Add",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
+                            "displayName": "Tid",
+                            "name": "Tid",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
                             {
-                              "target": { "__id": "!module/Methods[showAddEditTask]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTasks/Properties[Tasks]" } },
-                              ":@CreateNewEntity":
-                              {
-                                "targetParameter": { "__id": "!module/Methods[showAddEditTask]/Parameters[Task]" }
-                              }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-add"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Edit",
-                        "name": "Edit",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditTask]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTasks/Properties[Tasks]" } },
-                              "arguments":
+                              "links":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showAddEditTask]/Parameters[Task]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "BrowseTasks/Properties[Tasks]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$Task/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Tid]" }
                                 }
                               ]
                             }
                           },
                           {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-edit"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "View",
-                        "name": "View",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
+                            "displayName": "Created By",
+                            "name": "CreatedBy",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
                             {
-                              "target": { "__id": "!module/Methods[showViewTask]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTasks/Properties[Tasks]" } },
-                              "arguments":
+                              "links":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showViewTask]/Parameters[Task]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "BrowseTasks/Properties[Tasks]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$Task/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[CreatedBy]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Created",
+                            "name": "Created",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Created]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Modified By",
+                            "name": "ModifiedBy",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[ModifiedBy]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Modified",
+                            "name": "Modified",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Modified]" }
                                 }
                               ]
                             }
@@ -4380,24 +3962,24 @@
           "methods":
           [
             {
-              "id": "BrowseTasks/Methods[showTab]",
+              "id": "EndpointView/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "BrowseTasks/Methods[showTab]/Parameters[tabName]",
+                  "id": "EndpointView/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "BrowseTasks/Methods[showDialog]",
+              "id": "EndpointView/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "BrowseTasks/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "EndpointView/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -4407,27 +3989,11 @@
           "properties":
           [
             {
-              "id": "BrowseTasks/Properties[Tasks]",
-              "name": "Tasks",
-              "disableSearch": true,
-              "pageSize": 45,
-              "elementType": { "__id": "Task" },
-              "propertyType": { "__id": "CollectionView$Task" },
-              "query":
-              {
-                "id": "BrowseTasks/Properties[Tasks]/Query",
-                "name": "TasksQuery",
-                "elementType": { "__id": "Task" },
-                "returnType": { "__id": "Task*" },
-                "source":
-                {
-                  "member": { "__id": "UtilitiesData/Members[Tasks]" }
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "BrowseTasks/Properties[Tasks]/Query" }
-              }
+              "id": "EndpointView/Properties[Endpoint]",
+              "name": "Endpoint",
+              "elementType": { "__id": "Endpoint" },
+              "propertyType": { "__id": "Endpoint" },
+              ":@IsParameter": { }
             }
           ]
         },
@@ -4503,10 +4069,14 @@
           ]
         },
         {
-          "displayName": "View Endpoint",
-          "id": "ViewEndpoint",
-          "name": "ViewEndpoint",
+          "displayName": "Key Name Value Add",
+          "id": "KeyNameValueAdd",
+          "name": "KeyNameValueAdd",
           "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+          },
           "rootContentItem":
           {
             "displayName": "Root Content Item",
@@ -4527,36 +4097,82 @@
                     "name": "Details",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
-                    "commandItems":
+                    "childContentItems":
                     [
                       {
-                        "displayName": "Delete",
-                        "name": "Delete",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "KeyNameValueAdd/Properties[KeyNameValue]" }
+                        },
+                        "childContentItems":
                         [
                           {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "ViewEndpoint/Methods[deleteEntity]" }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-remove"
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Key",
+                                "name": "Key",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
+                                }
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Value",
+                                "name": "Value",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
                           }
                         ]
                       }
                     ]
-                  }
-                ],
-                "propertySources":
-                [
-                  {
-                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
-                    "value": true
                   }
                 ]
               },
@@ -4566,48 +4182,65 @@
                 "kind": "Group",
                 "view": { "__id": ":DialogPages" }
               }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
             ]
           },
           "methods":
           [
             {
-              "id": "ViewEndpoint/Methods[showTab]",
+              "id": "KeyNameValueAdd/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ViewEndpoint/Methods[showTab]/Parameters[tabName]",
+                  "id": "KeyNameValueAdd/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ViewEndpoint/Methods[showDialog]",
+              "id": "KeyNameValueAdd/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ViewEndpoint/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "KeyNameValueAdd/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
-            },
+            }
+          ],
+          "properties":
+          [
             {
-              "id": "ViewEndpoint/Methods[deleteEntity]",
-              "name": "deleteEntity"
+              "id": "KeyNameValueAdd/Properties[KeyNameValue]",
+              "name": "KeyNameValue",
+              "elementType": { "__id": "KeyNameValue" },
+              "propertyType": { "__id": "KeyNameValue" },
+              ":@IsParameter": { }
             }
           ]
         },
         {
-          "displayName": "View Key Name Value",
-          "id": "ViewKeyNameValue",
-          "name": "ViewKeyNameValue",
+          "displayName": "Key Name Value Edit",
+          "id": "KeyNameValueEdit",
+          "name": "KeyNameValueEdit",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
-            "property": { "__id": "DataWorkspace/Members[UtilitiesData]" }
+            "property": { "__id": "DataWorkspace/Members[BaseData]" }
           },
           "rootContentItem":
           {
@@ -4642,13 +4275,13 @@
                             "displayName": "Key",
                             "name": "Key",
                             "kind": "Value",
-                            "view": { "__id": ":Text" },
+                            "view": { "__id": ":TextArea" },
                             "dataSource":
                             {
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
+                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
                                 },
                                 {
                                   "member": { "__id": "KeyNameValue/Properties[Key]" }
@@ -4660,13 +4293,13 @@
                             "displayName": "Name",
                             "name": "Name",
                             "kind": "Value",
-                            "view": { "__id": ":Text" },
+                            "view": { "__id": ":TextArea" },
                             "dataSource":
                             {
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
+                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
                                 },
                                 {
                                   "member": { "__id": "KeyNameValue/Properties[Name]" }
@@ -4678,16 +4311,34 @@
                             "displayName": "Value",
                             "name": "Value",
                             "kind": "Value",
-                            "view": { "__id": ":Paragraph" },
+                            "view": { "__id": ":TextArea" },
                             "dataSource":
                             {
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
+                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
                                 },
                                 {
                                   "member": { "__id": "KeyNameValue/Properties[Value]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Description",
+                            "name": "Description",
+                            "kind": "Value",
+                            "view": { "__id": ":TextArea" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                                },
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Description]" }
                                 }
                               ]
                             }
@@ -4705,9 +4356,361 @@
                           }
                         ]
                       }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "KeyNameValue_Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "KeyNameValue_Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "KeyNameValue_Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "KeyNameValue_CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "KeyNameValue_Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "KeyNameValue_ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "KeyNameValueEdit/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "KeyNameValueEdit/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "KeyNameValueEdit/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "KeyNameValueEdit/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "KeyNameValueEdit/Properties[KeyNameValue]",
+              "name": "KeyNameValue",
+              "elementType": { "__id": "KeyNameValue" },
+              "propertyType": { "__id": "KeyNameValue" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Key Name Values List",
+          "id": "KeyNameValuesList",
+          "name": "KeyNameValuesList",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Key Name Value List",
+                    "name": "KeyNameValueList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "KeyNameValues",
+                        "name": "KeyNameValues",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Key",
+                                "name": "Key",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Value",
+                                "name": "Value",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$KeyNameValue/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
                     ],
                     "commandItems":
                     [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchKeyNameValues",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$KeyNameValue/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Add",
+                        "name": "Add",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showKeyNameValueAdd]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showKeyNameValueAdd]/Parameters[KeyNameValue]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
                       {
                         "displayName": "Edit",
                         "name": "Edit",
@@ -4719,17 +4722,21 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showAddEditKeyNameValue]" },
+                              "target": { "__id": "!module/Methods[showKeyNameValueEdit]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showAddEditKeyNameValue]/Parameters[KeyNameValue]" },
+                                  "parameter": { "__id": "!module/Methods[showKeyNameValueEdit]/Parameters[KeyNameValue]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
+                                        "member": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$KeyNameValue/Properties[selectedItem]" }
                                       }
                                     ]
                                   }
@@ -4744,8 +4751,8 @@
                         ]
                       },
                       {
-                        "displayName": "Delete",
-                        "name": "Delete",
+                        "displayName": "View",
+                        "name": "View",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -4754,135 +4761,24 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "ViewKeyNameValue/Methods[deleteEntity]" }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-remove"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "General",
-                    "name": "General",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "General Row1",
-                        "name": "GeneralRow1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
+                              "target": { "__id": "!module/Methods[showKeyNameValueView]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" } },
+                              "arguments":
                               [
                                 {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Id]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Created]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Modified]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ViewKeyNameValue/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[ModifiedBy]" }
+                                  "parameter": { "__id": "!module/Methods[showKeyNameValueView]/Parameters[KeyNameValue]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "KeyNameValuesList/Properties[KeyNameValues]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$KeyNameValue/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
                                 }
                               ]
                             }
@@ -4911,38 +4807,390 @@
           "methods":
           [
             {
-              "id": "ViewKeyNameValue/Methods[showTab]",
+              "id": "KeyNameValuesList/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ViewKeyNameValue/Methods[showTab]/Parameters[tabName]",
+                  "id": "KeyNameValuesList/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ViewKeyNameValue/Methods[showDialog]",
+              "id": "KeyNameValuesList/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ViewKeyNameValue/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "KeyNameValuesList/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "KeyNameValuesList/Properties[KeyNameValues]",
+              "name": "KeyNameValues",
+              "disableSearch": true,
+              "pageSize": 45,
+              "elementType": { "__id": "KeyNameValue" },
+              "propertyType": { "__id": "CollectionView$KeyNameValue" },
+              "query":
+              {
+                "id": "KeyNameValuesList/Properties[KeyNameValues]/Query",
+                "name": "KeyNameValuesQuery",
+                "elementType": { "__id": "KeyNameValue" },
+                "returnType": { "__id": "KeyNameValue*" },
+                "source":
+                {
+                  "member": { "__id": "BaseData/Members[KeyNameValues]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "KeyNameValuesList/Properties[KeyNameValues]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Key Name Value View",
+          "id": "KeyNameValueView",
+          "name": "KeyNameValueView",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Key",
+                                "name": "Key",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
+                                }
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Value",
+                                "name": "Value",
+                                "kind": "Value",
+                                "view": { "__id": ":Paragraph" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Paragraph" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "KeyNameValue/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "Edit",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showKeyNameValueEdit]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showKeyNameValueEdit]/Parameters[KeyNameValue]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "KeyNameValueView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "KeyNameValueView/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "KeyNameValueView/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "KeyNameValueView/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "KeyNameValueView/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ViewKeyNameValue/Methods[deleteEntity]",
+              "id": "KeyNameValueView/Methods[deleteEntity]",
               "name": "deleteEntity"
             }
           ],
           "properties":
           [
             {
-              "id": "ViewKeyNameValue/Properties[KeyNameValue]",
+              "id": "KeyNameValueView/Properties[KeyNameValue]",
               "name": "KeyNameValue",
               "elementType": { "__id": "KeyNameValue" },
               "propertyType": { "__id": "KeyNameValue" },
@@ -4979,192 +5227,6 @@
                     "name": "Details",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "ViewTask/Properties[Task]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Id",
-                                "name": "Id",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Id]" }
-                                }
-                              },
-                              {
-                                "displayName": "Tid",
-                                "name": "Tid",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Tid]" }
-                                }
-                              },
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Name]" }
-                                }
-                              },
-                              {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Description]" }
-                                }
-                              },
-                              {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Status]" }
-                                }
-                              },
-                              {
-                                "displayName": "Type",
-                                "name": "Type",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Type]" }
-                                }
-                              },
-                              {
-                                "displayName": "Parameters",
-                                "name": "Parameters",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Parameters]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "right",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "c Error",
-                                "name": "c_Error",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[c_Error]" }
-                                }
-                              },
-                              {
-                                "displayName": "End Time",
-                                "name": "EndTime",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[EndTime]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created",
-                                "name": "Created",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Created]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created By",
-                                "name": "CreatedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[CreatedBy]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified",
-                                "name": "Modified",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[Modified]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified By",
-                                "name": "ModifiedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Task/Properties[ModifiedBy]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
                     "commandItems":
                     [
                       {
@@ -5236,195 +5298,33 @@
               "id": "ViewTask/Methods[deleteEntity]",
               "name": "deleteEntity"
             }
-          ],
-          "properties":
-          [
-            {
-              "id": "ViewTask/Properties[Task]",
-              "name": "Task",
-              "elementType": { "__id": "Task" },
-              "propertyType": { "__id": "Task" },
-              ":@IsParameter": { }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Endpoint/Properties[Tid]" } },
-          "id": "Endpoint",
-          "name": "Endpoint",
-          ":@NotSearchable": { },
-          "methods":
-          [
-            {
-              "id": "Endpoint/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "Endpoint/Methods[view]",
-              "name": "view"
-            },
-            {
-              "id": "Endpoint/Methods[edit]",
-              "name": "edit"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "Endpoint/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Endpoint/Properties[Tid]",
-              "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Endpoint/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Endpoint/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Endpoint/Properties[Created]",
-              "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Endpoint/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Endpoint/Properties[Modifed]",
-              "name": "Modifed",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Endpoint/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" }
-            }
-          ]
-        },
-        {
-          "id": "DiagnosticsData",
-          "name": "DiagnosticsData",
-          "dataProvider": "AstoriaDataProvider",
-          "entitySets":
-          [
-            {
-              "id": "DiagnosticsData/Members[Endpoints]",
-              "name": "Endpoints",
-              "elementType": { "__id": "Endpoint" },
-              "entityType": { "__id": "Endpoint" }
-            }
-          ],
-          "queryOperations":
-          [
-            {
-              "id": "DiagnosticsData/Members[Endpoints_Single]",
-              "name": "Endpoints_Single",
-              "elementType": { "__id": "Endpoint" },
-              "query": { "__id": "DiagnosticsData/Members[Endpoints_Single]" },
-              "returnType": { "__id": "Endpoint" },
-              "source":
-              {
-                "member": { "__id": "DiagnosticsData/Members[Endpoints]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "DiagnosticsData/Members[Endpoints_Single]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            },
-            {
-              "id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]",
-              "name": "Endpoints_SingleOrDefault",
-              "elementType": { "__id": "Endpoint" },
-              "query": { "__id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]" },
-              "returnType": { "__id": "Endpoint" },
-              "source":
-              {
-                "member": { "__id": "DiagnosticsData/Members[Endpoints]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            }
           ]
         }
       ],
       "methods":
       [
         {
-          "id": "!module/Methods[showAddEditEndpoint]",
-          "name": "showAddEditEndpoint",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditEndpoint" } }
-        },
-        {
-          "id": "!module/Methods[showAddEditKeyNameValue]",
-          "name": "showAddEditKeyNameValue",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditKeyNameValue" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showAddEditKeyNameValue]/Parameters[KeyNameValue]",
-              "name": "KeyNameValue",
-              "parameterType": { "__id": "KeyNameValue" }
-            }
-          ]
-        },
-        {
           "id": "!module/Methods[showAddEditTask]",
           "name": "showAddEditTask",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditTask" } },
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditTask" } }
+        },
+        {
+          "id": "!module/Methods[showEndpointsBrowse]",
+          "name": "showEndpointsBrowse",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EndpointsBrowse" } }
+        },
+        {
+          "id": "!module/Methods[showEndpointView]",
+          "name": "showEndpointView",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EndpointView" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showAddEditTask]/Parameters[Task]",
-              "name": "Task",
-              "parameterType": { "__id": "Task" }
+              "id": "!module/Methods[showEndpointView]/Parameters[Endpoint]",
+              "name": "Endpoint",
+              "parameterType": { "__id": "Endpoint" }
             }
           ]
-        },
-        {
-          "id": "!module/Methods[showBrowseEndpoints]",
-          "name": "showBrowseEndpoints",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseEndpoints" } }
-        },
-        {
-          "id": "!module/Methods[showBrowseKeyNameValues]",
-          "name": "showBrowseKeyNameValues",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseKeyNameValues" } }
-        },
-        {
-          "id": "!module/Methods[showBrowseTasks]",
-          "name": "showBrowseTasks",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseTasks" } }
         },
         {
           "id": "!module/Methods[showHome]",
@@ -5432,18 +5332,44 @@
           ":@ShowScreenMethod": { "targetScreen": { "__id": "Home" } }
         },
         {
-          "id": "!module/Methods[showViewEndpoint]",
-          "name": "showViewEndpoint",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewEndpoint" } }
-        },
-        {
-          "id": "!module/Methods[showViewKeyNameValue]",
-          "name": "showViewKeyNameValue",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewKeyNameValue" } },
+          "id": "!module/Methods[showKeyNameValueAdd]",
+          "name": "showKeyNameValueAdd",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "KeyNameValueAdd" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showViewKeyNameValue]/Parameters[KeyNameValue]",
+              "id": "!module/Methods[showKeyNameValueAdd]/Parameters[KeyNameValue]",
+              "name": "KeyNameValue",
+              "parameterType": { "__id": "KeyNameValue" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showKeyNameValueEdit]",
+          "name": "showKeyNameValueEdit",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "KeyNameValueEdit" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showKeyNameValueEdit]/Parameters[KeyNameValue]",
+              "name": "KeyNameValue",
+              "parameterType": { "__id": "KeyNameValue" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showKeyNameValuesList]",
+          "name": "showKeyNameValuesList",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "KeyNameValuesList" } }
+        },
+        {
+          "id": "!module/Methods[showKeyNameValueView]",
+          "name": "showKeyNameValueView",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "KeyNameValueView" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showKeyNameValueView]/Parameters[KeyNameValue]",
               "name": "KeyNameValue",
               "parameterType": { "__id": "KeyNameValue" }
             }
@@ -5452,15 +5378,7 @@
         {
           "id": "!module/Methods[showViewTask]",
           "name": "showViewTask",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewTask" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showViewTask]/Parameters[Task]",
-              "name": "Task",
-              "parameterType": { "__id": "Task" }
-            }
-          ]
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewTask" } }
         }
       ],
       "navigationItems":
@@ -5468,17 +5386,12 @@
         {
           "id": "!module/NavigationItems[link]",
           "name": "link",
-          "method": { "__id": "!module/Methods[showBrowseEndpoints]" }
+          "method": { "__id": "!module/Methods[showEndpointsBrowse]" }
         },
         {
           "id": "!module/NavigationItems[link1]",
           "name": "link1",
-          "method": { "__id": "!module/Methods[showBrowseTasks]" }
-        },
-        {
-          "id": "!module/NavigationItems[link2]",
-          "name": "link2",
-          "method": { "__id": "!module/Methods[showBrowseKeyNameValues]" }
+          "method": { "__id": "!module/Methods[showKeyNameValuesList]" }
         }
       ]
     }

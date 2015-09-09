@@ -10,19 +10,19 @@
 
 // Original file name:
 // Generation date: 9/9/2015 11:12:05 AM
-namespace UtilitiesData.UtilitiesDataService
+namespace BaseData.BaseDataService
 {
     
     /// <summary>
-    /// There are no comments for Utilities in the schema.
+    /// There are no comments for Base in the schema.
     /// </summary>
-    public partial class Utilities : global::System.Data.Services.Client.DataServiceContext
+    public partial class Base : global::System.Data.Services.Client.DataServiceContext
     {
         /// <summary>
-        /// Initialize a new Utilities object.
+        /// Initialize a new Base object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Utilities(global::System.Uri serviceRoot) : 
+        public Base(global::System.Uri serviceRoot) : 
                 base(serviceRoot, global::System.Data.Services.Common.DataServiceProtocolVersion.V3)
         {
             this.ResolveName = new global::System.Func<global::System.Type, string>(this.ResolveNameFromType);
@@ -39,7 +39,7 @@ namespace UtilitiesData.UtilitiesDataService
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected global::System.Type ResolveTypeFromName(string typeName)
         {
-            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities", "UtilitiesData.UtilitiesDataService");
+            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base", "BaseData.BaseDataService");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -54,61 +54,61 @@ namespace UtilitiesData.UtilitiesDataService
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected string ResolveNameFromType(global::System.Type clientType)
         {
-            if (clientType.Namespace.Equals("UtilitiesData.UtilitiesDataService", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("BaseData.BaseDataService", global::System.StringComparison.Ordinal))
             {
-                return string.Concat("biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.", clientType.Name);
+                return string.Concat("biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.", clientType.Name);
             }
             return null;
         }
         /// <summary>
-        /// There are no comments for Persons in the schema.
+        /// There are no comments for KeyNameValues in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Person> Persons
+        public global::System.Data.Services.Client.DataServiceQuery<KeyNameValue> KeyNameValues
         {
             get
             {
-                if ((this._Persons == null))
+                if ((this._KeyNameValues == null))
                 {
-                    this._Persons = base.CreateQuery<Person>("Persons");
+                    this._KeyNameValues = base.CreateQuery<KeyNameValue>("KeyNameValues");
                 }
-                return this._Persons;
+                return this._KeyNameValues;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Person> _Persons;
+        private global::System.Data.Services.Client.DataServiceQuery<KeyNameValue> _KeyNameValues;
         /// <summary>
-        /// There are no comments for CatalogueItems in the schema.
+        /// There are no comments for Tasks in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<CatalogueItem> CatalogueItems
+        public global::System.Data.Services.Client.DataServiceQuery<Task> Tasks
         {
             get
             {
-                if ((this._CatalogueItems == null))
+                if ((this._Tasks == null))
                 {
-                    this._CatalogueItems = base.CreateQuery<CatalogueItem>("CatalogueItems");
+                    this._Tasks = base.CreateQuery<Task>("Tasks");
                 }
-                return this._CatalogueItems;
+                return this._Tasks;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<CatalogueItem> _CatalogueItems;
+        private global::System.Data.Services.Client.DataServiceQuery<Task> _Tasks;
         /// <summary>
-        /// There are no comments for Persons in the schema.
+        /// There are no comments for KeyNameValues in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToPersons(Person person)
+        public void AddToKeyNameValues(KeyNameValue keyNameValue)
         {
-            base.AddObject("Persons", person);
+            base.AddObject("KeyNameValues", keyNameValue);
         }
         /// <summary>
-        /// There are no comments for CatalogueItems in the schema.
+        /// There are no comments for Tasks in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToCatalogueItems(CatalogueItem catalogueItem)
+        public void AddToTasks(Task task)
         {
-            base.AddObject("CatalogueItems", catalogueItem);
+            base.AddObject("Tasks", task);
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
@@ -119,26 +119,31 @@ namespace UtilitiesData.UtilitiesDataService
             private const string ModelPart0 = "<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edm" +
                 "x\"><edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" x" +
                 "mlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"><Schema " +
-                "Namespace=\"biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities\" xmlns=\"" +
-                "http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Person\"><Key><Pr" +
-                "opertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false" +
-                "\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Us" +
-                "erName\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"GivenName\" Type=\"Ed" +
-                "m.String\" Nullable=\"false\" /><Property Name=\"LastName\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Email\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
-                "y Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Cr" +
-                "eatedBy\" Type=\"Edm.String\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\"" +
-                " Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" /></EntityType" +
-                "><EntityType Name=\"CatalogueItem\"><Key><PropertyRef Name=\"Id\" /></Key><Property " +
-                "Name=\"Id\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.S" +
-                "tring\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Collec" +
-                "tion\" Type=\"Edm.String\" /></EntityType></Schema><Schema Namespace=\"Default\" xmln" +
-                "s=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Utilitie" +
-                "s\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Persons\" EntityType=\"biz.d" +
-                "fch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.Person\" /><EntitySet Nam" +
-                "e=\"CatalogueItems\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Controllers.OdataService" +
-                "s.Utilities.CatalogueItem\" /></EntityContainer></Schema></edmx:DataServices></ed" +
-                "mx:Edmx>";
+                "Namespace=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base\" xmlns=\"http://" +
+                "schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"KeyNameValue\"><Key><Pro" +
+                "pertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\"" +
+                " /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Key" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" N" +
+                "ullable=\"false\" /><Property Name=\"Value\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
+                "roperty Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Created\" Type=\"Ed" +
+                "m.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"CreatedBy\" Type=\"Edm.String" +
+                "\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Prop" +
+                "erty Name=\"ModifiedBy\" Type=\"Edm.String\" /></EntityType><EntityType Name=\"Task\">" +
+                "<Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullabl" +
+                "e=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
+                "Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Ty" +
+                "pe=\"Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Ty" +
+                "pe\" Type=\"Edm.String\" /><Property Name=\"Parameters\" Type=\"Edm.String\" /><Propert" +
+                "y Name=\"Error\" Type=\"Edm.String\" /><Property Name=\"EndTime\" Type=\"Edm.DateTimeOf" +
+                "fset\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Cre" +
+                "atedBy\" Type=\"Edm.String\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" " +
+                "/><Property Name=\"ModifiedBy\" Type=\"Edm.String\" /></EntityType></Schema><Schema " +
+                "Namespace=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><Entity" +
+                "Container Name=\"Base\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"KeyName" +
+                "Values\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.KeyNam" +
+                "eValue\" /><EntitySet Name=\"Tasks\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints" +
+                ".OdataServices.Base.Task\" /></EntityContainer></Schema></edmx:DataServices></edm" +
+                "x:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -171,38 +176,36 @@ namespace UtilitiesData.UtilitiesDataService
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.Person in the schema.
+    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.KeyNameValue in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
     /// </KeyProperties>
     [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
-    public partial class Person
+    public partial class KeyNameValue
     {
         /// <summary>
-        /// Create a new Person object.
+        /// Create a new KeyNameValue object.
         /// </summary>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
-        /// <param name="userName">Initial value of UserName.</param>
-        /// <param name="givenName">Initial value of GivenName.</param>
-        /// <param name="lastName">Initial value of LastName.</param>
-        /// <param name="email">Initial value of Email.</param>
+        /// <param name="key">Initial value of Key.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="value">Initial value of Value.</param>
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Person CreatePerson(int ID, string tid, string userName, string givenName, string lastName, string email, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static KeyNameValue CreateKeyNameValue(int ID, string tid, string key, string name, string value, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
-            Person person = new Person();
-            person.Id = ID;
-            person.Tid = tid;
-            person.UserName = userName;
-            person.GivenName = givenName;
-            person.LastName = lastName;
-            person.Email = email;
-            person.Created = created;
-            person.Modified = modified;
-            return person;
+            KeyNameValue keyNameValue = new KeyNameValue();
+            keyNameValue.Id = ID;
+            keyNameValue.Tid = tid;
+            keyNameValue.Key = key;
+            keyNameValue.Name = name;
+            keyNameValue.Value = value;
+            keyNameValue.Created = created;
+            keyNameValue.Modified = modified;
+            return keyNameValue;
         }
         /// <summary>
         /// There are no comments for Property Id in the schema.
@@ -247,89 +250,89 @@ namespace UtilitiesData.UtilitiesDataService
         partial void OnTidChanging(string value);
         partial void OnTidChanged();
         /// <summary>
-        /// There are no comments for Property UserName in the schema.
+        /// There are no comments for Property Key in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string UserName
+        public string Key
         {
             get
             {
-                return this._UserName;
+                return this._Key;
             }
             set
             {
-                this.OnUserNameChanging(value);
-                this._UserName = value;
-                this.OnUserNameChanged();
+                this.OnKeyChanging(value);
+                this._Key = value;
+                this.OnKeyChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _UserName;
-        partial void OnUserNameChanging(string value);
-        partial void OnUserNameChanged();
+        private string _Key;
+        partial void OnKeyChanging(string value);
+        partial void OnKeyChanged();
         /// <summary>
-        /// There are no comments for Property GivenName in the schema.
+        /// There are no comments for Property Name in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string GivenName
+        public string Name
         {
             get
             {
-                return this._GivenName;
+                return this._Name;
             }
             set
             {
-                this.OnGivenNameChanging(value);
-                this._GivenName = value;
-                this.OnGivenNameChanged();
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _GivenName;
-        partial void OnGivenNameChanging(string value);
-        partial void OnGivenNameChanged();
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
         /// <summary>
-        /// There are no comments for Property LastName in the schema.
+        /// There are no comments for Property Value in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string LastName
+        public string Value
         {
             get
             {
-                return this._LastName;
+                return this._Value;
             }
             set
             {
-                this.OnLastNameChanging(value);
-                this._LastName = value;
-                this.OnLastNameChanged();
+                this.OnValueChanging(value);
+                this._Value = value;
+                this.OnValueChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _LastName;
-        partial void OnLastNameChanging(string value);
-        partial void OnLastNameChanged();
+        private string _Value;
+        partial void OnValueChanging(string value);
+        partial void OnValueChanged();
         /// <summary>
-        /// There are no comments for Property Email in the schema.
+        /// There are no comments for Property Description in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Email
+        public string Description
         {
             get
             {
-                return this._Email;
+                return this._Description;
             }
             set
             {
-                this.OnEmailChanging(value);
-                this._Email = value;
-                this.OnEmailChanged();
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Email;
-        partial void OnEmailChanging(string value);
-        partial void OnEmailChanged();
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
         /// <summary>
         /// There are no comments for Property Created in the schema.
         /// </summary>
@@ -416,30 +419,34 @@ namespace UtilitiesData.UtilitiesDataService
         partial void OnModifiedByChanged();
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.CatalogueItem in the schema.
+    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.Task in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
     /// </KeyProperties>
     [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
-    public partial class CatalogueItem
+    public partial class Task
     {
         /// <summary>
-        /// Create a new CatalogueItem object.
+        /// Create a new Task object.
         /// </summary>
         /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static CatalogueItem CreateCatalogueItem(string ID)
+        public static Task CreateTask(int ID, string tid, string name)
         {
-            CatalogueItem catalogueItem = new CatalogueItem();
-            catalogueItem.Id = ID;
-            return catalogueItem;
+            Task task = new Task();
+            task.Id = ID;
+            task.Tid = tid;
+            task.Name = name;
+            return task;
         }
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Id
+        public int Id
         {
             get
             {
@@ -453,9 +460,30 @@ namespace UtilitiesData.UtilitiesDataService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Id;
-        partial void OnIdChanging(string value);
+        private int _Id;
+        partial void OnIdChanging(int value);
         partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
         /// <summary>
         /// There are no comments for Property Name in the schema.
         /// </summary>
@@ -499,25 +527,193 @@ namespace UtilitiesData.UtilitiesDataService
         partial void OnDescriptionChanging(string value);
         partial void OnDescriptionChanged();
         /// <summary>
-        /// There are no comments for Property Collection in the schema.
+        /// There are no comments for Property Status in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Collection
+        public string Status
         {
             get
             {
-                return this._Collection;
+                return this._Status;
             }
             set
             {
-                this.OnCollectionChanging(value);
-                this._Collection = value;
-                this.OnCollectionChanged();
+                this.OnStatusChanging(value);
+                this._Status = value;
+                this.OnStatusChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Collection;
-        partial void OnCollectionChanging(string value);
-        partial void OnCollectionChanged();
+        private string _Status;
+        partial void OnStatusChanging(string value);
+        partial void OnStatusChanged();
+        /// <summary>
+        /// There are no comments for Property Type in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Type
+        {
+            get
+            {
+                return this._Type;
+            }
+            set
+            {
+                this.OnTypeChanging(value);
+                this._Type = value;
+                this.OnTypeChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Type;
+        partial void OnTypeChanging(string value);
+        partial void OnTypeChanged();
+        /// <summary>
+        /// There are no comments for Property Parameters in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Parameters
+        {
+            get
+            {
+                return this._Parameters;
+            }
+            set
+            {
+                this.OnParametersChanging(value);
+                this._Parameters = value;
+                this.OnParametersChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Parameters;
+        partial void OnParametersChanging(string value);
+        partial void OnParametersChanged();
+        /// <summary>
+        /// There are no comments for Property Error in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Error
+        {
+            get
+            {
+                return this._Error;
+            }
+            set
+            {
+                this.OnErrorChanging(value);
+                this._Error = value;
+                this.OnErrorChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Error;
+        partial void OnErrorChanging(string value);
+        partial void OnErrorChanged();
+        /// <summary>
+        /// There are no comments for Property EndTime in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTimeOffset> EndTime
+        {
+            get
+            {
+                return this._EndTime;
+            }
+            set
+            {
+                this.OnEndTimeChanging(value);
+                this._EndTime = value;
+                this.OnEndTimeChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _EndTime;
+        partial void OnEndTimeChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnEndTimeChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTimeOffset> Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _Created;
+        partial void OnCreatedChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTimeOffset> Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _Modified;
+        partial void OnModifiedChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
     }
 }

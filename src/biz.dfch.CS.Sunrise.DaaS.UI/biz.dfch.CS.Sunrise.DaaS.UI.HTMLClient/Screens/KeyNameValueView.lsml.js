@@ -1,6 +1,6 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
-myapp.ViewEndpoint.deleteEntity_execute = function (screen) {
+myapp.KeyNameValueView.deleteEntity_execute = function (screen) {
     msls.showMessageBox("Sure, you want to delete?",
         {
             title: "Delete Entity?"
@@ -9,7 +9,7 @@ myapp.ViewEndpoint.deleteEntity_execute = function (screen) {
         }
     ).then(function (result) {
         if (result == msls.MessageBoxResult.yes) {
-            screen.Endpoint.deleteEntity();
+            screen.KeyNameValue.deleteEntity();
             return myapp.commitChanges().then(null, function fail(e) {
                 msls.showMessageBox(e.message,
                     {

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/7/2015 11:17:03 AM
+// Generation date: 9/9/2015 11:12:05 AM
 namespace DiagnosticsData.DiagnosticsDataService
 {
     
@@ -91,7 +91,7 @@ namespace DiagnosticsData.DiagnosticsDataService
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static global::Microsoft.Data.Edm.IEdmModel ParsedModel = LoadModelFromString();
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart0 = @"<edmx:Edmx Version=""1.0"" xmlns:edmx=""http://schemas.microsoft.com/ado/2007/06/edmx""><edmx:DataServices m:DataServiceVersion=""3.0"" m:MaxDataServiceVersion=""3.0"" xmlns:m=""http://schemas.microsoft.com/ado/2007/08/dataservices/metadata""><Schema Namespace=""biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityType Name=""Endpoint""><Key><PropertyRef Name=""Id"" /></Key><Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" /><Property Name=""Tid"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Name"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Description"" Type=""Edm.String"" /><Property Name=""Created"" Type=""Edm.DateTimeOffset"" Nullable=""false"" /><Property Name=""CreatedBy"" Type=""Edm.String"" /><Property Name=""Modifed"" Type=""Edm.DateTimeOffset"" Nullable=""false"" /><Property Name=""ModifiedBy"" Type=""Edm.String"" /></EntityType></Schema><Schema Namespace=""Default"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityContainer Name=""Diagnostics"" m:IsDefaultEntityContainer=""true""><EntitySet Name=""Endpoints"" EntityType=""biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint"" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart0 = @"<edmx:Edmx Version=""1.0"" xmlns:edmx=""http://schemas.microsoft.com/ado/2007/06/edmx""><edmx:DataServices m:DataServiceVersion=""3.0"" m:MaxDataServiceVersion=""3.0"" xmlns:m=""http://schemas.microsoft.com/ado/2007/08/dataservices/metadata""><Schema Namespace=""biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityType Name=""Endpoint""><Key><PropertyRef Name=""Id"" /></Key><Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" /><Property Name=""Tid"" Type=""Edm.String"" /><Property Name=""Name"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Version"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""RouteTemplate"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""RoutePrefix"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""ServerRole"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Priority"" Type=""Edm.Int32"" Nullable=""false"" /><Property Name=""Created"" Type=""Edm.DateTimeOffset"" /><Property Name=""CreatedBy"" Type=""Edm.String"" /><Property Name=""Modified"" Type=""Edm.DateTimeOffset"" /><Property Name=""ModifiedBy"" Type=""Edm.String"" /></EntityType></Schema><Schema Namespace=""Default"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityContainer Name=""Diagnostics"" m:IsDefaultEntityContainer=""true""><EntitySet Name=""Endpoints"" EntityType=""biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint"" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -136,19 +136,23 @@ namespace DiagnosticsData.DiagnosticsDataService
         /// Create a new Endpoint object.
         /// </summary>
         /// <param name="ID">Initial value of Id.</param>
-        /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
-        /// <param name="created">Initial value of Created.</param>
-        /// <param name="modifed">Initial value of Modifed.</param>
+        /// <param name="version">Initial value of Version.</param>
+        /// <param name="routeTemplate">Initial value of RouteTemplate.</param>
+        /// <param name="routePrefix">Initial value of RoutePrefix.</param>
+        /// <param name="serverRole">Initial value of ServerRole.</param>
+        /// <param name="priority">Initial value of Priority.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Endpoint CreateEndpoint(int ID, string tid, string name, global::System.DateTimeOffset created, global::System.DateTimeOffset modifed)
+        public static Endpoint CreateEndpoint(int ID, string name, string version, string routeTemplate, string routePrefix, string serverRole, int priority)
         {
             Endpoint endpoint = new Endpoint();
             endpoint.Id = ID;
-            endpoint.Tid = tid;
             endpoint.Name = name;
-            endpoint.Created = created;
-            endpoint.Modifed = modifed;
+            endpoint.Version = version;
+            endpoint.RouteTemplate = routeTemplate;
+            endpoint.RoutePrefix = routePrefix;
+            endpoint.ServerRole = serverRole;
+            endpoint.Priority = priority;
             return endpoint;
         }
         /// <summary>
@@ -215,31 +219,115 @@ namespace DiagnosticsData.DiagnosticsDataService
         partial void OnNameChanging(string value);
         partial void OnNameChanged();
         /// <summary>
-        /// There are no comments for Property Description in the schema.
+        /// There are no comments for Property Version in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Description
+        public string Version
         {
             get
             {
-                return this._Description;
+                return this._Version;
             }
             set
             {
-                this.OnDescriptionChanging(value);
-                this._Description = value;
-                this.OnDescriptionChanged();
+                this.OnVersionChanging(value);
+                this._Version = value;
+                this.OnVersionChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Description;
-        partial void OnDescriptionChanging(string value);
-        partial void OnDescriptionChanged();
+        private string _Version;
+        partial void OnVersionChanging(string value);
+        partial void OnVersionChanged();
+        /// <summary>
+        /// There are no comments for Property RouteTemplate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string RouteTemplate
+        {
+            get
+            {
+                return this._RouteTemplate;
+            }
+            set
+            {
+                this.OnRouteTemplateChanging(value);
+                this._RouteTemplate = value;
+                this.OnRouteTemplateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _RouteTemplate;
+        partial void OnRouteTemplateChanging(string value);
+        partial void OnRouteTemplateChanged();
+        /// <summary>
+        /// There are no comments for Property RoutePrefix in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string RoutePrefix
+        {
+            get
+            {
+                return this._RoutePrefix;
+            }
+            set
+            {
+                this.OnRoutePrefixChanging(value);
+                this._RoutePrefix = value;
+                this.OnRoutePrefixChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _RoutePrefix;
+        partial void OnRoutePrefixChanging(string value);
+        partial void OnRoutePrefixChanged();
+        /// <summary>
+        /// There are no comments for Property ServerRole in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ServerRole
+        {
+            get
+            {
+                return this._ServerRole;
+            }
+            set
+            {
+                this.OnServerRoleChanging(value);
+                this._ServerRole = value;
+                this.OnServerRoleChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ServerRole;
+        partial void OnServerRoleChanging(string value);
+        partial void OnServerRoleChanged();
+        /// <summary>
+        /// There are no comments for Property Priority in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Priority
+        {
+            get
+            {
+                return this._Priority;
+            }
+            set
+            {
+                this.OnPriorityChanging(value);
+                this._Priority = value;
+                this.OnPriorityChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Priority;
+        partial void OnPriorityChanging(int value);
+        partial void OnPriorityChanged();
         /// <summary>
         /// There are no comments for Property Created in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTimeOffset Created
+        public global::System.Nullable<global::System.DateTimeOffset> Created
         {
             get
             {
@@ -253,8 +341,8 @@ namespace DiagnosticsData.DiagnosticsDataService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTimeOffset _Created;
-        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        private global::System.Nullable<global::System.DateTimeOffset> _Created;
+        partial void OnCreatedChanging(global::System.Nullable<global::System.DateTimeOffset> value);
         partial void OnCreatedChanged();
         /// <summary>
         /// There are no comments for Property CreatedBy in the schema.
@@ -278,26 +366,26 @@ namespace DiagnosticsData.DiagnosticsDataService
         partial void OnCreatedByChanging(string value);
         partial void OnCreatedByChanged();
         /// <summary>
-        /// There are no comments for Property Modifed in the schema.
+        /// There are no comments for Property Modified in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTimeOffset Modifed
+        public global::System.Nullable<global::System.DateTimeOffset> Modified
         {
             get
             {
-                return this._Modifed;
+                return this._Modified;
             }
             set
             {
-                this.OnModifedChanging(value);
-                this._Modifed = value;
-                this.OnModifedChanged();
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTimeOffset _Modifed;
-        partial void OnModifedChanging(global::System.DateTimeOffset value);
-        partial void OnModifedChanged();
+        private global::System.Nullable<global::System.DateTimeOffset> _Modified;
+        partial void OnModifiedChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnModifiedChanged();
         /// <summary>
         /// There are no comments for Property ModifiedBy in the schema.
         /// </summary>

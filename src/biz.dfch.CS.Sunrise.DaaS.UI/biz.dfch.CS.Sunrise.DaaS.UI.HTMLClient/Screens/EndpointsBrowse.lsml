@@ -5,10 +5,10 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="BrowseTasks">
+    Name="EndpointsBrowse">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="UtilitiesData" />
+        EntityContainer="DiagnosticsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -20,29 +20,29 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="TaskList"
+            Name="EndpointList"
             Kind="Group">
             <ContentItem
-              Name="Tasks"
+              Name="Endpoints"
               Kind="Collection"
-              DataType="CollectionView$Task"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              DataType="CollectionView$Endpoint"
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="Tasks" />
+                  Value="Endpoints" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseTasks/Properties[Tasks]" />
+                      Member="EndpointsBrowse/Properties[Endpoints]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
                 Name="rows"
                 Kind="Details"
-                DataType="Task"
+                DataType="Endpoint"
                 View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -54,56 +54,6 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Tid"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Task/Properties[Tid]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Large"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
-                  Name="Id"
-                  Kind="Value"
-                  DataType=":Int32">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Task/Properties[Id]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Small"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
                   Name="Name"
                   Kind="Value"
                   DataType=":String">
@@ -111,22 +61,36 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Task/Properties[Name]" />
+                          Member="Endpoint/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Small"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="Version"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Endpoint/Properties[Version]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="RoutePrefix"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Endpoint/Properties[RoutePrefix]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -147,7 +111,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="BrowseTasks/Properties[Tasks]" />
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -157,7 +121,7 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="SearchTasks"
+                Name="SearchEndpoints"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -169,7 +133,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="BrowseTasks/Properties[Tasks]" />
+                          Member="EndpointsBrowse/Properties[Endpoints]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -188,77 +152,6 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="Add"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditTask]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="BrowseTasks/Properties[Tasks]" />
-                            <CreateNewEntity
-                              TargetParameter="!module/Methods[showAddEditTask]/Parameters[Task]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-add"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="Edit"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditTask]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="BrowseTasks/Properties[Tasks]" />
-                          </CallExpression.Attributes>
-                          <ArgumentExpression
-                            Parameter="Task">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="BrowseTasks/Properties[Tasks]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-edit"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
                 Name="View"
                 Kind="Command">
                 <ContentItem.PropertySources>
@@ -267,16 +160,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showViewTask]">
+                          Target="!module/Methods[showEndpointView]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="BrowseTasks/Properties[Tasks]" />
+                              Collection="EndpointsBrowse/Properties[Endpoints]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
-                            Parameter="Task">
+                            Parameter="Endpoint">
                             <ChainExpression>
                               <MemberExpression
-                                Member="BrowseTasks/Properties[Tasks]" />
+                                Member="EndpointsBrowse/Properties[Endpoints]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -288,6 +181,116 @@
                 </ContentItem.PropertySources>
               </ContentItem>
             </ContentItem.CommandItems>
+          </ContentItem>
+          <ContentItem
+            Name="General"
+            Kind="Group">
+            <ContentItem
+              Name="GeneralRow1"
+              Kind="Group">
+              <ContentItem
+                Name="Endpoints_selectedItem_Id"
+                Kind="Value"
+                DataType=":Int32">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                      <MemberExpression
+                        Member="selectedItem" />
+                      <MemberExpression
+                        Member="Id" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Endpoints_selectedItem_Tid"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                      <MemberExpression
+                        Member="selectedItem" />
+                      <MemberExpression
+                        Member="Tid" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Endpoints_selectedItem_CreatedBy"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                      <MemberExpression
+                        Member="selectedItem" />
+                      <MemberExpression
+                        Member="CreatedBy" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Endpoints_selectedItem_Created"
+                Kind="Value"
+                DataType=":DateTimeOffset?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                      <MemberExpression
+                        Member="selectedItem" />
+                      <MemberExpression
+                        Member="Created" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Endpoints_selectedItem_ModifiedBy"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                      <MemberExpression
+                        Member="selectedItem" />
+                      <MemberExpression
+                        Member="ModifiedBy" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Endpoints_selectedItem_Modified"
+                Kind="Value"
+                DataType=":DateTimeOffset?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                      <MemberExpression
+                        Member="selectedItem" />
+                      <MemberExpression
+                        Member="Modified" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
@@ -334,21 +337,21 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="Tasks"
+        Name="Endpoints"
         DisableSearch="True"
         PageSize="45"
-        PropertyType="CollectionView$Task">
+        PropertyType="CollectionView$Endpoint">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="TasksQuery"
-            ReturnType="Task*">
+            Name="EndpointsQuery"
+            ReturnType="Endpoint*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="UtilitiesData/Members[Tasks]" />
+                  Member="DiagnosticsData/Members[Endpoints]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -356,7 +359,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseTasks/Properties[Tasks]/Query" />
+              Target="EndpointsBrowse/Properties[Endpoints]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -364,10 +367,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showBrowseTasks">
+      Name="showEndpointsBrowse">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="BrowseTasks" />
+          TargetScreen="EndpointsBrowse" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

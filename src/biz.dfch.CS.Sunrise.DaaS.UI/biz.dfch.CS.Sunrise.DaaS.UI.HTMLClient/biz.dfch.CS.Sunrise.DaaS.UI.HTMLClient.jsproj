@@ -66,20 +66,14 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
-    <Content Include="Screens\AddEditEndpoint.lsml.js">
-      <DependentUpon>AddEditEndpoint.lsml</DependentUpon>
-    </Content>
-    <Content Include="Screens\AddEditKeyNameValue.lsml.js">
-      <DependentUpon>AddEditKeyNameValue.lsml</DependentUpon>
-    </Content>
     <Content Include="Screens\AddEditTask.lsml.js">
       <DependentUpon>AddEditTask.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ViewEndpoint.lsml.js">
-      <DependentUpon>ViewEndpoint.lsml</DependentUpon>
+    <Content Include="Screens\KeyNameValueAdd.lsml.js">
+      <DependentUpon>KeyNameValueAdd.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ViewKeyNameValue.lsml.js">
-      <DependentUpon>ViewKeyNameValue.lsml</DependentUpon>
+    <Content Include="Screens\KeyNameValueView.lsml.js">
+      <DependentUpon>KeyNameValueView.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\ViewTask.lsml.js">
       <DependentUpon>ViewTask.lsml</DependentUpon>
@@ -105,21 +99,20 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchModel Include="Properties\BaseData\KeyNameValues.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
-    <LightSwitchModel Include="Properties\UtilitiesData\KeyNameValues.lsml" />
-    <LightSwitchModel Include="Properties\UtilitiesData\Tasks.lsml" />
-    <LightSwitchModel Include="Screens\AddEditEndpoint.lsml" />
-    <LightSwitchModel Include="Screens\AddEditKeyNameValue.lsml" />
     <LightSwitchModel Include="Screens\AddEditTask.lsml" />
-    <LightSwitchModel Include="Screens\BrowseEndpoints.lsml" />
-    <LightSwitchModel Include="Screens\BrowseKeyNameValues.lsml" />
-    <LightSwitchModel Include="Screens\BrowseTasks.lsml" />
+    <LightSwitchModel Include="Screens\EndpointsBrowse.lsml" />
+    <LightSwitchModel Include="Screens\EndpointView.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
-    <LightSwitchModel Include="Screens\ViewEndpoint.lsml" />
-    <LightSwitchModel Include="Screens\ViewKeyNameValue.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValueAdd.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValueEdit.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValuesList.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValueView.lsml" />
     <LightSwitchModel Include="Screens\ViewTask.lsml" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DiagnosticsData2\" />
+    <Folder Include="Properties\UtilitiesData\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\Microsoft.LightSwitch.Build.Tasks.targets" />

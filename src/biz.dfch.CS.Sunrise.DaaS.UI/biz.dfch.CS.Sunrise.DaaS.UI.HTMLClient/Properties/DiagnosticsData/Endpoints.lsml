@@ -7,12 +7,12 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:Task" />
+        Target="ServiceInterface:Endpoint" />
       <DefaultScreen
-        Value="ViewTask">
+        Value="EndpointView">
         <DefaultScreen.Attributes>
           <ScreenParameterMapping
-            ScreenParameter="ViewTask/Properties[Task]" />
+            ScreenParameter="EndpointView/Properties[Endpoint]" />
         </DefaultScreen.Attributes>
       </DefaultScreen>
     </EntityType.Attributes>

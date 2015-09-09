@@ -11,21 +11,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="KeyNameValues">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.KeyNameValue)">
-        <MappingFragment StoreEntitySet="KeyNameValues">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Tid" ColumnName="Tid" />
-          <ScalarProperty Name="Key" ColumnName="Key" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Value" ColumnName="Value" />
-          <ScalarProperty Name="Created" ColumnName="Created" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="Modified" ColumnName="Modified" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Persons">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Person)">
         <MappingFragment StoreEntitySet="Persons">
@@ -35,25 +20,6 @@
           <ScalarProperty Name="GivenName" ColumnName="GivenName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Created" ColumnName="Created" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="Modified" ColumnName="Modified" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Tasks">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Task)">
-        <MappingFragment StoreEntitySet="Tasks">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Tid" ColumnName="Tid" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-          <ScalarProperty Name="Parameters" ColumnName="Parameters" />
-          <ScalarProperty Name="c_Error" ColumnName="Error" />
-          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />

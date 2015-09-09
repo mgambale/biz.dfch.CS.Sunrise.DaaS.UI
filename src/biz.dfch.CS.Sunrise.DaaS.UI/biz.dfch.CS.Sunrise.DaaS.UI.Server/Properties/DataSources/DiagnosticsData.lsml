@@ -28,7 +28,7 @@
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="8bc8ad2f-0dd9-42d7-9e78-bfac73e729c2" />
+        Value="e145c15c-ec9d-4b07-93c9-6cca6ff6d6cc" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="DiagnosticsData" />

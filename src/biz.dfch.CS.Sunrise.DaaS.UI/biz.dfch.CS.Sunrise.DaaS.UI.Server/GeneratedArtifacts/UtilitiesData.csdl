@@ -9,20 +9,6 @@
     <Property Name="Description" Type="Edm.String" MaxLength="Max" />
     <Property Name="Collection" Type="Edm.String" MaxLength="Max" />
   </EntityType>
-  <EntityType Name="KeyNameValue">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="CreatedBy" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="Max" />
-  </EntityType>
   <EntityType Name="Person">
     <Key>
       <PropertyRef Name="Id" />
@@ -38,28 +24,8 @@
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="ModifiedBy" Type="Edm.String" MaxLength="Max" />
   </EntityType>
-  <EntityType Name="Task">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Type" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
-    <Property Name="c_Error" Type="Edm.String" MaxLength="Max" />
-    <Property Name="EndTime" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="CreatedBy" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="Max" />
-  </EntityType>
   <EntityContainer Name="UtilitiesData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="CatalogueItems" EntityType="LightSwitchApplication.CatalogueItem" />
-    <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
     <EntitySet Name="Persons" EntityType="LightSwitchApplication.Person" />
-    <EntitySet Name="Tasks" EntityType="LightSwitchApplication.Task" />
   </EntityContainer>
 </Schema>

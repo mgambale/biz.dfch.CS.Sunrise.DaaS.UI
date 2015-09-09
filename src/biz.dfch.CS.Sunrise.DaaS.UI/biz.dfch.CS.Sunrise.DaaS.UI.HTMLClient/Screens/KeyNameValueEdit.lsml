@@ -5,10 +5,10 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="AddEditKeyNameValue">
+    Name="KeyNameValueEdit">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="UtilitiesData" />
+        EntityContainer="BaseData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -28,17 +28,18 @@
                 Value="Details" />
             </ContentItem.Attributes>
             <ContentItem
-              Name="DetailsRow1"
+              Name="left"
               Kind="Group">
               <ContentItem
                 Name="Key"
                 Kind="Value"
-                DataType=":String">
+                DataType=":String"
+                View="Microsoft.LightSwitch.MobileWeb:TextArea">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
+                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
                       <MemberExpression
                         Member="Key" />
                     </ChainExpression>
@@ -48,12 +49,13 @@
               <ContentItem
                 Name="Name"
                 Kind="Value"
-                DataType=":String">
+                DataType=":String"
+                View="Microsoft.LightSwitch.MobileWeb:TextArea">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
+                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
                       <MemberExpression
                         Member="Name" />
                     </ChainExpression>
@@ -69,9 +71,25 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
+                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
                       <MemberExpression
                         Member="Value" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Description"
+                Kind="Value"
+                DataType=":String?"
+                View="Microsoft.LightSwitch.MobileWeb:TextArea">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                      <MemberExpression
+                        Member="Description" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -104,104 +122,100 @@
             Name="General"
             Kind="Group">
             <ContentItem
-              Name="GeneralRow1"
-              Kind="Group">
-              <ContentItem
-                Name="KeyNameValue_Tid"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Tid" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Id"
-                Kind="Value"
-                DataType=":Int32"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Id" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="CreatedBy"
-                Kind="Value"
-                DataType=":String?"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="CreatedBy" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Created"
-                Kind="Value"
-                DataType=":DateTimeOffset"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Created" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="ModifiedBy"
-                Kind="Value"
-                DataType=":String?"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="ModifiedBy" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Modified"
-                Kind="Value"
-                DataType=":DateTimeOffset"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="AddEditKeyNameValue/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Modified" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
+              Name="KeyNameValue_Tid"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Tid" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="KeyNameValue_Id"
+              Kind="Value"
+              DataType=":Int32"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Id" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="KeyNameValue_Created"
+              Kind="Value"
+              DataType=":DateTimeOffset"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Created" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="KeyNameValue_CreatedBy"
+              Kind="Value"
+              DataType=":String?"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="CreatedBy" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="KeyNameValue_Modified"
+              Kind="Value"
+              DataType=":DateTimeOffset"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Modified" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="KeyNameValue_ModifiedBy"
+              Kind="Value"
+              DataType=":String?"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="ModifiedBy" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
             </ContentItem>
           </ContentItem>
         </ContentItem>
@@ -269,10 +283,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showAddEditKeyNameValue">
+      Name="showKeyNameValueEdit">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="AddEditKeyNameValue" />
+          TargetScreen="KeyNameValueEdit" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
         Name="KeyNameValue"

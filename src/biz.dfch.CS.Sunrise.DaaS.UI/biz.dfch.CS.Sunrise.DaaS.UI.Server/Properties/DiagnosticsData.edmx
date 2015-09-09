@@ -6,12 +6,16 @@
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
-        <Property Name="Description" Type="Edm.String" />
-        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Version" Type="Edm.String" Nullable="false" />
+        <Property Name="RouteTemplate" Type="Edm.String" Nullable="false" />
+        <Property Name="RoutePrefix" Type="Edm.String" Nullable="false" />
+        <Property Name="ServerRole" Type="Edm.String" Nullable="false" />
+        <Property Name="Priority" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" />
         <Property Name="CreatedBy" Type="Edm.String" />
-        <Property Name="Modifed" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" />
         <Property Name="ModifiedBy" Type="Edm.String" />
       </EntityType>
     </Schema>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BaseDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BaseDataStore">
+    <EntitySet Name="KeyNameValues" EntityType="BaseDataStore.KeyNameValue" store:Type="Tables" Schema="dbo" Table="KeyNameValue" />
+    <EntitySet Name="Tasks" EntityType="BaseDataStore.Task" store:Type="Tables" Schema="dbo" Table="Task" />
+  </EntityContainer>
+  <EntityType Name="KeyNameValue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Key" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Parameters" Type="nvarchar(max)" />
+    <Property Name="Error" Type="nvarchar(max)" />
+    <Property Name="EndTime" Type="datetimeoffset" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+  </EntityType>
+</Schema>

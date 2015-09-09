@@ -38,46 +38,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function KeyNameValue(entitySet) {
-        /// <summary>
-        /// Represents the KeyNameValue entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this keyNameValue.
-        /// </param>
-        /// <field name="Id" type="Number">
-        /// Gets or sets the id for this keyNameValue.
-        /// </field>
-        /// <field name="Tid" type="String">
-        /// Gets or sets the tid for this keyNameValue.
-        /// </field>
-        /// <field name="Key" type="String">
-        /// Gets or sets the key for this keyNameValue.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this keyNameValue.
-        /// </field>
-        /// <field name="Value" type="String">
-        /// Gets or sets the value for this keyNameValue.
-        /// </field>
-        /// <field name="Created" type="Date">
-        /// Gets or sets the created for this keyNameValue.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this keyNameValue.
-        /// </field>
-        /// <field name="Modified" type="Date">
-        /// Gets or sets the modified for this keyNameValue.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this keyNameValue.
-        /// </field>
-        /// <field name="details" type="msls.application.KeyNameValue.Details">
-        /// Gets the details for this keyNameValue.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function Person(entitySet) {
         /// <summary>
         /// Represents the Person entity type.
@@ -117,6 +77,98 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="details" type="msls.application.Person.Details">
         /// Gets the details for this person.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function Endpoint(entitySet) {
+        /// <summary>
+        /// Represents the Endpoint entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this endpoint.
+        /// </param>
+        /// <field name="Id" type="Number">
+        /// Gets or sets the id for this endpoint.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this endpoint.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this endpoint.
+        /// </field>
+        /// <field name="Version" type="String">
+        /// Gets or sets the version for this endpoint.
+        /// </field>
+        /// <field name="RouteTemplate" type="String">
+        /// Gets or sets the routeTemplate for this endpoint.
+        /// </field>
+        /// <field name="RoutePrefix" type="String">
+        /// Gets or sets the routePrefix for this endpoint.
+        /// </field>
+        /// <field name="ServerRole" type="String">
+        /// Gets or sets the serverRole for this endpoint.
+        /// </field>
+        /// <field name="Priority" type="Number">
+        /// Gets or sets the priority for this endpoint.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this endpoint.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this endpoint.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this endpoint.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this endpoint.
+        /// </field>
+        /// <field name="details" type="msls.application.Endpoint.Details">
+        /// Gets the details for this endpoint.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function KeyNameValue(entitySet) {
+        /// <summary>
+        /// Represents the KeyNameValue entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this keyNameValue.
+        /// </param>
+        /// <field name="Id" type="Number">
+        /// Gets or sets the id for this keyNameValue.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this keyNameValue.
+        /// </field>
+        /// <field name="Key" type="String">
+        /// Gets or sets the key for this keyNameValue.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this keyNameValue.
+        /// </field>
+        /// <field name="Value" type="String">
+        /// Gets or sets the value for this keyNameValue.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this keyNameValue.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this keyNameValue.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this keyNameValue.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this keyNameValue.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this keyNameValue.
+        /// </field>
+        /// <field name="details" type="msls.application.KeyNameValue.Details">
+        /// Gets the details for this keyNameValue.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -173,43 +225,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function Endpoint(entitySet) {
-        /// <summary>
-        /// Represents the Endpoint entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this endpoint.
-        /// </param>
-        /// <field name="Id" type="Number">
-        /// Gets or sets the id for this endpoint.
-        /// </field>
-        /// <field name="Tid" type="String">
-        /// Gets or sets the tid for this endpoint.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this endpoint.
-        /// </field>
-        /// <field name="Description" type="String">
-        /// Gets or sets the description for this endpoint.
-        /// </field>
-        /// <field name="Created" type="Date">
-        /// Gets or sets the created for this endpoint.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this endpoint.
-        /// </field>
-        /// <field name="Modifed" type="Date">
-        /// Gets or sets the modifed for this endpoint.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this endpoint.
-        /// </field>
-        /// <field name="details" type="msls.application.Endpoint.Details">
-        /// Gets the details for this endpoint.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function UtilitiesData(dataWorkspace) {
         /// <summary>
         /// Represents the UtilitiesData data service.
@@ -220,14 +235,8 @@ window.myapp = msls.application;
         /// <field name="CatalogueItems" type="msls.EntitySet">
         /// Gets the CatalogueItems entity set.
         /// </field>
-        /// <field name="KeyNameValues" type="msls.EntitySet">
-        /// Gets the KeyNameValues entity set.
-        /// </field>
         /// <field name="Persons" type="msls.EntitySet">
         /// Gets the Persons entity set.
-        /// </field>
-        /// <field name="Tasks" type="msls.EntitySet">
-        /// Gets the Tasks entity set.
         /// </field>
         /// <field name="details" type="msls.application.UtilitiesData.Details">
         /// Gets the details for this data service.
@@ -250,6 +259,25 @@ window.myapp = msls.application;
         /// </field>
         $DataService.call(this, dataWorkspace);
     };
+
+    function BaseData(dataWorkspace) {
+        /// <summary>
+        /// Represents the BaseData data service.
+        /// </summary>
+        /// <param name="dataWorkspace" type="msls.DataWorkspace">
+        /// The data workspace that created this data service.
+        /// </param>
+        /// <field name="KeyNameValues" type="msls.EntitySet">
+        /// Gets the KeyNameValues entity set.
+        /// </field>
+        /// <field name="Tasks" type="msls.EntitySet">
+        /// Gets the Tasks entity set.
+        /// </field>
+        /// <field name="details" type="msls.application.BaseData.Details">
+        /// Gets the details for this data service.
+        /// </field>
+        $DataService.call(this, dataWorkspace);
+    };
     function DataWorkspace() {
         /// <summary>
         /// Represents the data workspace.
@@ -259,6 +287,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="DiagnosticsData" type="msls.application.DiagnosticsData">
         /// Gets the DiagnosticsData data service.
+        /// </field>
+        /// <field name="BaseData" type="msls.application.BaseData">
+        /// Gets the BaseData data service.
         /// </field>
         /// <field name="details" type="msls.application.DataWorkspace.Details">
         /// Gets the details for this data workspace.
@@ -275,18 +306,6 @@ window.myapp = msls.application;
             { name: "Collection", type: String }
         ]),
 
-        KeyNameValue: $defineEntity(KeyNameValue, [
-            { name: "Id", type: Number },
-            { name: "Tid", type: String },
-            { name: "Key", type: String },
-            { name: "Name", type: String },
-            { name: "Value", type: String },
-            { name: "Created", type: Date },
-            { name: "CreatedBy", type: String },
-            { name: "Modified", type: Date },
-            { name: "ModifiedBy", type: String }
-        ]),
-
         Person: $defineEntity(Person, [
             { name: "Id", type: Number },
             { name: "Tid", type: String },
@@ -294,6 +313,34 @@ window.myapp = msls.application;
             { name: "GivenName", type: String },
             { name: "LastName", type: String },
             { name: "Email", type: String },
+            { name: "Created", type: Date },
+            { name: "CreatedBy", type: String },
+            { name: "Modified", type: Date },
+            { name: "ModifiedBy", type: String }
+        ]),
+
+        Endpoint: $defineEntity(Endpoint, [
+            { name: "Id", type: Number },
+            { name: "Tid", type: String },
+            { name: "Name", type: String },
+            { name: "Version", type: String },
+            { name: "RouteTemplate", type: String },
+            { name: "RoutePrefix", type: String },
+            { name: "ServerRole", type: String },
+            { name: "Priority", type: Number },
+            { name: "Created", type: Date },
+            { name: "CreatedBy", type: String },
+            { name: "Modified", type: Date },
+            { name: "ModifiedBy", type: String }
+        ]),
+
+        KeyNameValue: $defineEntity(KeyNameValue, [
+            { name: "Id", type: Number },
+            { name: "Tid", type: String },
+            { name: "Key", type: String },
+            { name: "Name", type: String },
+            { name: "Value", type: String },
+            { name: "Description", type: String },
             { name: "Created", type: Date },
             { name: "CreatedBy", type: String },
             { name: "Modified", type: Date },
@@ -316,22 +363,9 @@ window.myapp = msls.application;
             { name: "ModifiedBy", type: String }
         ]),
 
-        Endpoint: $defineEntity(Endpoint, [
-            { name: "Id", type: Number },
-            { name: "Tid", type: String },
-            { name: "Name", type: String },
-            { name: "Description", type: String },
-            { name: "Created", type: Date },
-            { name: "CreatedBy", type: String },
-            { name: "Modifed", type: Date },
-            { name: "ModifiedBy", type: String }
-        ]),
-
         UtilitiesData: $defineDataService(UtilitiesData, lightSwitchApplication.rootUri + "/UtilitiesData.svc", [
             { name: "CatalogueItems", elementType: CatalogueItem },
-            { name: "KeyNameValues", elementType: KeyNameValue },
-            { name: "Persons", elementType: Person },
-            { name: "Tasks", elementType: Task }
+            { name: "Persons", elementType: Person }
         ], [
             {
                 name: "CatalogueItems_SingleOrDefault", value: function (Id) {
@@ -341,23 +375,9 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "KeyNameValues_SingleOrDefault", value: function (Id) {
-                    return new $DataServiceQuery({ _entitySet: this.KeyNameValues },
-                        lightSwitchApplication.rootUri + "/UtilitiesData.svc" + "/KeyNameValues(" + "Id=" + $toODataString(Id, "Int32?") + ")"
-                    );
-                }
-            },
-            {
                 name: "Persons_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Persons },
                         lightSwitchApplication.rootUri + "/UtilitiesData.svc" + "/Persons(" + "Id=" + $toODataString(Id, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "Tasks_SingleOrDefault", value: function (Id) {
-                    return new $DataServiceQuery({ _entitySet: this.Tasks },
-                        lightSwitchApplication.rootUri + "/UtilitiesData.svc" + "/Tasks(" + "Id=" + $toODataString(Id, "Int32?") + ")"
                     );
                 }
             }
@@ -375,9 +395,30 @@ window.myapp = msls.application;
             }
         ]),
 
+        BaseData: $defineDataService(BaseData, lightSwitchApplication.rootUri + "/BaseData.svc", [
+            { name: "KeyNameValues", elementType: KeyNameValue },
+            { name: "Tasks", elementType: Task }
+        ], [
+            {
+                name: "KeyNameValues_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.KeyNameValues },
+                        lightSwitchApplication.rootUri + "/BaseData.svc" + "/KeyNameValues(" + "Id=" + $toODataString(Id, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Tasks_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.Tasks },
+                        lightSwitchApplication.rootUri + "/BaseData.svc" + "/Tasks(" + "Id=" + $toODataString(Id, "Int32?") + ")"
+                    );
+                }
+            }
+        ]),
+
         DataWorkspace: $defineDataWorkspace(DataWorkspace, [
             { name: "UtilitiesData", type: UtilitiesData },
-            { name: "DiagnosticsData", type: DiagnosticsData }
+            { name: "DiagnosticsData", type: DiagnosticsData },
+            { name: "BaseData", type: BaseData }
         ])
 
     });

@@ -28,11 +28,7 @@
       </KeyProperty>
       <EntityProperty
         Name="Tid"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+        PropertyType=":String?" />
       <EntityProperty
         Name="Name"
         PropertyType=":String">
@@ -41,13 +37,45 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Description"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="Created"
-        PropertyType=":DateTimeOffset">
+        Name="Version"
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RouteTemplate"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RoutePrefix"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ServerRole"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Priority"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -55,10 +83,9 @@
         Name="CreatedBy"
         PropertyType=":String?" />
       <EntityProperty
-        Name="Modifed"
-        PropertyType=":DateTimeOffset">
+        Name="Modified"
+        PropertyType=":DateTimeOffset?">
         <EntityProperty.Attributes>
-          <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -74,6 +101,9 @@
     </EntityContainer.Attributes>
     <EntitySet
       Name="Endpoints"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
       EntityType="Endpoint" />
     <QueryOperation
       Name="Endpoints_Single"
@@ -179,8 +209,20 @@
           Name="Name"
           Property="Endpoint/Properties[Name]" />
         <CsdlProperty
-          Name="Description"
-          Property="Endpoint/Properties[Description]" />
+          Name="Version"
+          Property="Endpoint/Properties[Version]" />
+        <CsdlProperty
+          Name="RouteTemplate"
+          Property="Endpoint/Properties[RouteTemplate]" />
+        <CsdlProperty
+          Name="RoutePrefix"
+          Property="Endpoint/Properties[RoutePrefix]" />
+        <CsdlProperty
+          Name="ServerRole"
+          Property="Endpoint/Properties[ServerRole]" />
+        <CsdlProperty
+          Name="Priority"
+          Property="Endpoint/Properties[Priority]" />
         <CsdlProperty
           Name="Created"
           Property="Endpoint/Properties[Created]" />
@@ -188,8 +230,8 @@
           Name="CreatedBy"
           Property="Endpoint/Properties[CreatedBy]" />
         <CsdlProperty
-          Name="Modifed"
-          Property="Endpoint/Properties[Modifed]" />
+          Name="Modified"
+          Property="Endpoint/Properties[Modified]" />
         <CsdlProperty
           Name="ModifiedBy"
           Property="Endpoint/Properties[ModifiedBy]" />

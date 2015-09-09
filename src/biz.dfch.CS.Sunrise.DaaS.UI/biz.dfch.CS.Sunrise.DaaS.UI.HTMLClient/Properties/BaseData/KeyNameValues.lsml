@@ -9,10 +9,10 @@
       <Proxy
         Target="ServiceInterface:KeyNameValue" />
       <DefaultScreen
-        Value="ViewKeyNameValue">
+        Value="KeyNameValueView">
         <DefaultScreen.Attributes>
           <ScreenParameterMapping
-            ScreenParameter="ViewKeyNameValue/Properties[KeyNameValue]" />
+            ScreenParameter="KeyNameValueView/Properties[KeyNameValue]" />
         </DefaultScreen.Attributes>
       </DefaultScreen>
     </EntityType.Attributes>

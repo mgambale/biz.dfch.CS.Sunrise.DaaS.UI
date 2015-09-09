@@ -1,0 +1,45 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="KeyNameValue">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Key" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Value" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="CreatedBy" Type="Edm.String" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="Task">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="Parameters" Type="Edm.String" />
+        <Property Name="Error" Type="Edm.String" />
+        <Property Name="EndTime" Type="Edm.DateTimeOffset" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" />
+        <Property Name="CreatedBy" Type="Edm.String" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" />
+        <Property Name="ModifiedBy" Type="Edm.String" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="Base" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="KeyNameValues" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.KeyNameValue" />
+        <EntitySet Name="Tasks" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.Task" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

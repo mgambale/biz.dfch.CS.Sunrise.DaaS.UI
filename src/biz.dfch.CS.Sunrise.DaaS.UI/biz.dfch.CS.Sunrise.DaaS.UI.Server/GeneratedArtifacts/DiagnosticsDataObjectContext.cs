@@ -112,18 +112,22 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Endpoint object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="tid">Initial value of the Tid property.</param>
         /// <param name="name">Initial value of the Name property.</param>
-        /// <param name="created">Initial value of the Created property.</param>
-        /// <param name="modifed">Initial value of the Modifed property.</param>
-        public static Endpoint CreateEndpoint(global::System.Int32 id, global::System.String tid, global::System.String name, global::System.DateTimeOffset created, global::System.DateTimeOffset modifed)
+        /// <param name="version">Initial value of the Version property.</param>
+        /// <param name="routeTemplate">Initial value of the RouteTemplate property.</param>
+        /// <param name="routePrefix">Initial value of the RoutePrefix property.</param>
+        /// <param name="serverRole">Initial value of the ServerRole property.</param>
+        /// <param name="priority">Initial value of the Priority property.</param>
+        public static Endpoint CreateEndpoint(global::System.Int32 id, global::System.String name, global::System.String version, global::System.String routeTemplate, global::System.String routePrefix, global::System.String serverRole, global::System.Int32 priority)
         {
             Endpoint endpoint = new Endpoint();
             endpoint.Id = id;
-            endpoint.Tid = tid;
             endpoint.Name = name;
-            endpoint.Created = created;
-            endpoint.Modifed = modifed;
+            endpoint.Version = version;
+            endpoint.RouteTemplate = routeTemplate;
+            endpoint.RoutePrefix = routePrefix;
+            endpoint.ServerRole = serverRole;
+            endpoint.Priority = priority;
             return endpoint;
         }
 
@@ -161,7 +165,7 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Tid
         {
@@ -209,33 +213,129 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Description
+        public global::System.String Version
         {
             get
             {
-                return _Description;
+                return _Version;
             }
             set
             {
-                OnDescriptionChanging(value);
-                ReportPropertyChanging("Description");
-                _Description = value;
-                ReportPropertyChanged("Description");
-                OnDescriptionChanged();
+                OnVersionChanging(value);
+                ReportPropertyChanging("Version");
+                _Version = value;
+                ReportPropertyChanged("Version");
+                OnVersionChanged();
             }
         }
-        private global::System.String _Description;
-        partial void OnDescriptionChanging(global::System.String value);
-        partial void OnDescriptionChanged();
+        private global::System.String _Version;
+        partial void OnVersionChanging(global::System.String value);
+        partial void OnVersionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTimeOffset Created
+        public global::System.String RouteTemplate
+        {
+            get
+            {
+                return _RouteTemplate;
+            }
+            set
+            {
+                OnRouteTemplateChanging(value);
+                ReportPropertyChanging("RouteTemplate");
+                _RouteTemplate = value;
+                ReportPropertyChanged("RouteTemplate");
+                OnRouteTemplateChanged();
+            }
+        }
+        private global::System.String _RouteTemplate;
+        partial void OnRouteTemplateChanging(global::System.String value);
+        partial void OnRouteTemplateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RoutePrefix
+        {
+            get
+            {
+                return _RoutePrefix;
+            }
+            set
+            {
+                OnRoutePrefixChanging(value);
+                ReportPropertyChanging("RoutePrefix");
+                _RoutePrefix = value;
+                ReportPropertyChanged("RoutePrefix");
+                OnRoutePrefixChanged();
+            }
+        }
+        private global::System.String _RoutePrefix;
+        partial void OnRoutePrefixChanging(global::System.String value);
+        partial void OnRoutePrefixChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ServerRole
+        {
+            get
+            {
+                return _ServerRole;
+            }
+            set
+            {
+                OnServerRoleChanging(value);
+                ReportPropertyChanging("ServerRole");
+                _ServerRole = value;
+                ReportPropertyChanged("ServerRole");
+                OnServerRoleChanged();
+            }
+        }
+        private global::System.String _ServerRole;
+        partial void OnServerRoleChanging(global::System.String value);
+        partial void OnServerRoleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Priority
+        {
+            get
+            {
+                return _Priority;
+            }
+            set
+            {
+                OnPriorityChanging(value);
+                ReportPropertyChanging("Priority");
+                _Priority = value;
+                ReportPropertyChanged("Priority");
+                OnPriorityChanged();
+            }
+        }
+        private global::System.Int32 _Priority;
+        partial void OnPriorityChanging(global::System.Int32 value);
+        partial void OnPriorityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTimeOffset> Created
         {
             get
             {
@@ -250,8 +350,8 @@ namespace LightSwitchApplication.Implementation
                 OnCreatedChanged();
             }
         }
-        private global::System.DateTimeOffset _Created;
-        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        private Nullable<global::System.DateTimeOffset> _Created;
+        partial void OnCreatedChanging(Nullable<global::System.DateTimeOffset> value);
         partial void OnCreatedChanged();
     
         /// <summary>
@@ -281,26 +381,26 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTimeOffset Modifed
+        public Nullable<global::System.DateTimeOffset> Modified
         {
             get
             {
-                return _Modifed;
+                return _Modified;
             }
             set
             {
-                OnModifedChanging(value);
-                ReportPropertyChanging("Modifed");
-                _Modifed = value;
-                ReportPropertyChanged("Modifed");
-                OnModifedChanged();
+                OnModifiedChanging(value);
+                ReportPropertyChanging("Modified");
+                _Modified = value;
+                ReportPropertyChanged("Modified");
+                OnModifiedChanged();
             }
         }
-        private global::System.DateTimeOffset _Modifed;
-        partial void OnModifedChanging(global::System.DateTimeOffset value);
-        partial void OnModifedChanged();
+        private Nullable<global::System.DateTimeOffset> _Modified;
+        partial void OnModifiedChanging(Nullable<global::System.DateTimeOffset> value);
+        partial void OnModifiedChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

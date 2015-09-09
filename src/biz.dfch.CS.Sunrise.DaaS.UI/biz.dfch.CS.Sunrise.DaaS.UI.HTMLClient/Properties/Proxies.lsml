@@ -22,16 +22,22 @@
         Target="ServiceInterface:UtilitiesData" />
     </EntityContainer.Attributes>
   </EntityContainer>
+  <EntityContainer>
+    <EntityContainer.Attributes>
+      <Proxy
+        Target="ServiceInterface:DiagnosticsData" />
+    </EntityContainer.Attributes>
+  </EntityContainer>
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:Endpoint" />
+        Target="ServiceInterface:Task" />
     </EntityType.Attributes>
   </EntityType>
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
-        Target="ServiceInterface:DiagnosticsData" />
+        Target="ServiceInterface:BaseData" />
     </EntityContainer.Attributes>
   </EntityContainer>
 </Application>

@@ -55,6 +55,9 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
+        Name="Description"
+        PropertyType=":String?" />
+      <EntityProperty
         Name="Created"
         PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
@@ -79,7 +82,7 @@
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
-    Name="UtilitiesData">
+    Name="BaseData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
@@ -171,7 +174,7 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="UtilitiesDataDataService">
+    Name="BaseDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
@@ -180,7 +183,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="KeyNameValue"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities"
+          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base"
           Name="KeyNameValues"
           EntityType="KeyNameValue" />
         <CsdlProperty
@@ -198,6 +201,9 @@
         <CsdlProperty
           Name="Value"
           Property="KeyNameValue/Properties[Value]" />
+        <CsdlProperty
+          Name="Description"
+          Property="KeyNameValue/Properties[Description]" />
         <CsdlProperty
           Name="Created"
           Property="KeyNameValue/Properties[Created]" />
