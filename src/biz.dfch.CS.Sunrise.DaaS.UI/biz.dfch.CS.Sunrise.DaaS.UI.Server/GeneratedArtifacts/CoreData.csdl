@@ -33,7 +33,7 @@
     <Property Name="Modified" Type="Edm.DateTimeOffset" />
     <Property Name="ModifiedBy" Type="Edm.String" MaxLength="Max" />
   </EntityType>
-  <EntityContainer Name="BaseData" m:IsDefaultEntityContainer="true">
+  <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
     <EntitySet Name="Tasks" EntityType="LightSwitchApplication.Task" />
   </EntityContainer>

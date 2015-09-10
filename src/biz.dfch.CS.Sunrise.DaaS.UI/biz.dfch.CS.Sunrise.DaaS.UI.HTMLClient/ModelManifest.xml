@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\CoreData\KeyNameValues.lsml" Checksum="6E28E5192F6D216A78326B2F846DF936C837DEB2E2B46D2DF49693465F007089" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\DiagnosticsData\Endpoints.lsml" Checksum="9E70F4E10D23EFDE144BAAFD4A4311E1B840CDE72E8FA2BEC068C8A26044954A" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Client.lsml" Checksum="E878909A699AABC2D5BA128883C32B3352B46377BDD704348DCEAAD6AC749B50" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Proxies.lsml" Checksum="0FA6001CB6CC6E05F57FC36877655286CD5279F1FFA52CD220E46A49FC6B71DE" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Client.lsml" Checksum="C87AA24AECF9798E0653D8A76576F56FCCB021032EF0E8D4F033C4D31B8C9FDB" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Proxies.lsml" Checksum="A1214491F18D093CCC5E7C81C7353CF00BFD114E17E88062D0CF1D734286654E" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\AddEditTask.lsml" Checksum="3A02CB54EEC56CDC5E39D095D1EA48663906E069052196DADBA275787B3ADB4F" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\EndpointsBrowse.lsml" Checksum="87ADF50DAE49AA1FFA63672203403F468A94EABD86EA8827E3558E489DF89284" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\EndpointView.lsml" Checksum="F2AFAF9A32794A43351B89D8B17DD436D17412ADA768D9CED2B65A5B834F1DF4" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\Home.lsml" Checksum="F1EACE46E1B71B9B32D217425F45F09654F350375828D78A47C241E6F90AFFA6" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValueAdd.lsml" Checksum="5366E9079A75BF65A2E941A02362BAC66FDDF23030DF04DAB5498BE4C04A326D" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValueEdit.lsml" Checksum="5179112828A4A49863DC1AB47FD2CF46787C3133960F101611215CCF0359B906" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValuesList.lsml" Checksum="396DB8DCC71A90305ABB3A6A0FCC384424E2D859ED8F3C92FFB27B065E89F764" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValueView.lsml" Checksum="1D9F526224A7AD51459DC314DCAB64770320ACE6200D1679AC3C3C19875975D3" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\ViewTask.lsml" Checksum="4FB81C399928A0DA3073B3DA774102CCC11781383357DB3FA4051725A3808D10" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValuesList.lsml" Checksum="9835DB05BB9C5E445121934D4707BD1E5525DC831767AA20147A65849DC3CE8C" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValueAdd.lsml" Checksum="0179A01719CA5E0AE0F30D27ECA6D55AFFDED9E98435D0CCDEA39F06223ABDE6" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValueView.lsml" Checksum="5BD824737811B27915078AB43FB2C62D12F2C25078DC762E7DC80244215B0E10" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\BaseData\KeyNameValues.lsml" Checksum="6E28E5192F6D216A78326B2F846DF936C837DEB2E2B46D2DF49693465F007089" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\KeyNameValueEdit.lsml" Checksum="6E4F14E2354FC8CF9A51259258E284E9B12D491C9DCCAA3861F47BEBA3F621FD" />
   </Documents>
 </ModelDocumentManifest>

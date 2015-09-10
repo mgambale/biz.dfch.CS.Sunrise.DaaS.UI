@@ -13,26 +13,26 @@ namespace LightSwitchApplication.Implementation
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class BaseDataDataService
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.BaseData>
+    public class CoreDataDataService
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.CoreData>
     {
     
-        public BaseDataDataService() : base()
+        public CoreDataDataService() : base()
         {
         }
     
         protected override global::Microsoft.LightSwitch.IDataService GetDataService(global::Microsoft.LightSwitch.IDataWorkspace dataWorkspace)
         {
-            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).BaseData;
+            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).CoreData;
         }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class BaseDataServiceImplementation
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.AstoriaDataServiceImplementation<global::LightSwitchApplication.Implementation.BaseData, global::BaseData.BaseDataService.Base>
+    public class CoreDataServiceImplementation
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.AstoriaDataServiceImplementation<global::LightSwitchApplication.Implementation.CoreData, global::CoreData.CoreDataService.Core>
     {
-        public BaseDataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
+        public CoreDataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
         {
         }
     
@@ -54,12 +54,12 @@ namespace LightSwitchApplication.Implementation
             return base.CreateObject(type);
         }
     
-        protected override global::LightSwitchApplication.Implementation.BaseData CreateObjectContext()
+        protected override global::LightSwitchApplication.Implementation.CoreData CreateObjectContext()
         {
             string assemblyName = global::System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            return new global::LightSwitchApplication.Implementation.BaseData(this.GetEntityConnectionString(
-                "BaseData",
-                "res://" + assemblyName + "/BaseData.csdl|res://" + assemblyName + "/BaseData.ssdl|res://" + assemblyName + "/BaseData.msl",
+            return new global::LightSwitchApplication.Implementation.CoreData(this.GetEntityConnectionString(
+                "CoreData",
+                "res://" + assemblyName + "/CoreData.csdl|res://" + assemblyName + "/CoreData.ssdl|res://" + assemblyName + "/CoreData.msl",
                 "System.Data.SqlClient",
                 true));
         }
@@ -81,7 +81,7 @@ namespace LightSwitchApplication.Implementation
         {
             get
             {
-                return "BaseData";
+                return "CoreData";
             }
         }
     
@@ -89,11 +89,11 @@ namespace LightSwitchApplication.Implementation
         {
             if (outerType == typeof(global::LightSwitchApplication.Implementation.KeyNameValue))
             {
-                return typeof(global::BaseData.BaseDataService.KeyNameValue);
+                return typeof(global::CoreData.CoreDataService.KeyNameValue);
             }
             if (outerType == typeof(global::LightSwitchApplication.Implementation.Task))
             {
-                return typeof(global::BaseData.BaseDataService.Task);
+                return typeof(global::CoreData.CoreDataService.Task);
             }
             return base.ConvertType(outerType);
         }
@@ -117,7 +117,7 @@ namespace LightSwitchApplication.Implementation
             global::LightSwitchApplication.Implementation.KeyNameValue keyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
             if (keyNameValue != null)
             {
-                global::BaseData.BaseDataService.KeyNameValue result = new global::BaseData.BaseDataService.KeyNameValue();
+                global::CoreData.CoreDataService.KeyNameValue result = new global::CoreData.CoreDataService.KeyNameValue();
                 result.Id = keyNameValue.Id;
                 result.Tid = keyNameValue.Tid;
                 result.Key = keyNameValue.Key;
@@ -133,7 +133,7 @@ namespace LightSwitchApplication.Implementation
             global::LightSwitchApplication.Implementation.Task task = outerEntity as global::LightSwitchApplication.Implementation.Task;
             if (task != null)
             {
-                global::BaseData.BaseDataService.Task result = new global::BaseData.BaseDataService.Task();
+                global::CoreData.CoreDataService.Task result = new global::CoreData.CoreDataService.Task();
                 result.Id = task.Id;
                 result.Tid = task.Tid;
                 result.Name = task.Name;
@@ -155,7 +155,7 @@ namespace LightSwitchApplication.Implementation
         protected override void UpdateResult(object outerEntity, object innerResult)
         {
             global::LightSwitchApplication.Implementation.KeyNameValue outerKeyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
-            global::BaseData.BaseDataService.KeyNameValue innerKeyNameValue = innerResult as global::BaseData.BaseDataService.KeyNameValue;
+            global::CoreData.CoreDataService.KeyNameValue innerKeyNameValue = innerResult as global::CoreData.CoreDataService.KeyNameValue;
             if ((outerKeyNameValue != null) && (innerKeyNameValue != null))
             {
                 outerKeyNameValue.Id = innerKeyNameValue.Id;
@@ -171,7 +171,7 @@ namespace LightSwitchApplication.Implementation
                 return;
             }
             global::LightSwitchApplication.Implementation.Task outerTask = outerEntity as global::LightSwitchApplication.Implementation.Task;
-            global::BaseData.BaseDataService.Task innerTask = innerResult as global::BaseData.BaseDataService.Task;
+            global::CoreData.CoreDataService.Task innerTask = innerResult as global::CoreData.CoreDataService.Task;
             if ((outerTask != null) && (innerTask != null))
             {
                 outerTask.Id = innerTask.Id;
@@ -483,9 +483,9 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.IDataService CreateDataService(global::System.Type dataServiceType)
         {
-            if (dataServiceType == typeof(global::LightSwitchApplication.BaseDataService))
+            if (dataServiceType == typeof(global::LightSwitchApplication.CoreDataService))
             {
-                return new global::LightSwitchApplication.BaseDataService();
+                return new global::LightSwitchApplication.CoreDataService();
             }
             if (dataServiceType == typeof(global::LightSwitchApplication.DiagnosticsDataService))
             {
@@ -500,9 +500,9 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.Internal.IDataServiceImplementation CreateDataServiceImplementation<TDataService>(TDataService dataService)
         {
-            if (typeof(TDataService) == typeof(global::LightSwitchApplication.BaseDataService))
+            if (typeof(TDataService) == typeof(global::LightSwitchApplication.CoreDataService))
             {
-                return new global::LightSwitchApplication.Implementation.BaseDataServiceImplementation(dataService);
+                return new global::LightSwitchApplication.Implementation.CoreDataServiceImplementation(dataService);
             }
             if (typeof(TDataService) == typeof(global::LightSwitchApplication.DiagnosticsDataService))
             {

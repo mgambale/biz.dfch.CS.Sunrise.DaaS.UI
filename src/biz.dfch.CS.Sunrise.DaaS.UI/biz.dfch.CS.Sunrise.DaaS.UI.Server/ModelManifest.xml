@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\CoreData\KeyNameValues.lsml" Checksum="9C15CEB8EF409BABF2DF0CC16CC8D0E80E29538830F37C66EDBC0A0F3A98B509" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\CoreData\Tasks.lsml" Checksum="F182EF1A2A0CA01CC0E35395AA677FF51192365DCCE94D36CF405C616CA4A4BA" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\DiagnosticsData\Endpoints.lsml" Checksum="2ABC8171F88C0E8E65810DB2A9AB5C976C3D9C264E86C51F275F649542C2C2B7" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\UtilitiesData\CatalogueItems.lsml" Checksum="F06CF8F126D3F8CD646728A99DB862CADE72DBA67DCD80A372C048B9087D5CDA" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\UtilitiesData\Persons.lsml" Checksum="A7DD7D050002AD9766A284A65B0B644D4AEF4FCEA1A42CDC27AE4801A307BC81" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\Properties\DataSources\CoreData.lsml" Checksum="1474840B180E33AC15BA26B30FEB749917C42D4B2BA4838800B975C073DACB22" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\Properties\DataSources\DiagnosticsData.lsml" Checksum="C370D33F312D7CA873CAEE9C5E4B5ED713A95E9A55DB60E9A7AE8A083C86131E" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\Properties\DataSources\UtilitiesData.lsml" Checksum="2F9EFF2BA19566E2622E249D54E2BB3B5D53D66CFC76B5629E8882E88F91EA78" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\Properties\Service.lsml" Checksum="0FDA77CEB252877E4716649F681512999A3781C254FC37870B688D441CE40BFF" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\BaseData\KeyNameValues.lsml" Checksum="CBA5E2BA56F650C13591215F443D73A26745BD0CCA9A665622645FDDBE3A86A3" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\DataSources\BaseData\Tasks.lsml" Checksum="2A31FD9ECA386DCF4032B28CFF3EA62F107D29776D03912686CB5F95C084A059" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\Properties\DataSources\BaseData.lsml" Checksum="4FFC547A4549E0B13C258F58152ED789D66CAAC91295BFED7954CADB4BCE404C" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.Server\Properties\Service.lsml" Checksum="CC4A6A6B0D0237565702A2A6A0F4885D6B103B16D9C3BBFFB70FC48154C797BC" />
   </Documents>
 </ModelDocumentManifest>

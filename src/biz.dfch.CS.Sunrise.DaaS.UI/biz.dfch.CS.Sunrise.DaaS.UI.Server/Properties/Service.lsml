@@ -28,8 +28,8 @@
       Name="DiagnosticsData"
       EntityContainer="DiagnosticsData" />
     <EntityContainerGroupProperty
-      Name="BaseData"
-      EntityContainer="BaseData" />
+      Name="CoreData"
+      EntityContainer="CoreData" />
   </EntityContainerGroup>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">

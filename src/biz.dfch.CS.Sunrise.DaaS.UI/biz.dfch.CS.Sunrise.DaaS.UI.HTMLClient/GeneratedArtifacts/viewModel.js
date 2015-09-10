@@ -236,7 +236,7 @@
             {
                 name: "KeyNameValues", kind: "collection", elementType: lightSwitchApplication.KeyNameValue,
                 createQuery: function () {
-                    return this.dataWorkspace.BaseData.KeyNameValues;
+                    return this.dataWorkspace.CoreData.KeyNameValues;
                 }
             }
         ], [

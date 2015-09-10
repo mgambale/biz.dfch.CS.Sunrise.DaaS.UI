@@ -2109,7 +2109,8 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
           "name": "EmailAddress",
-          "underlyingType": { "__id": ":String" }
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
         },
         {
           "__isSemanticType": 1,
@@ -2127,13 +2128,15 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
           "name": "PhoneNumber",
-          "underlyingType": { "__id": ":String" }
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
         },
         {
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:Percent",
           "name": "Percent",
           "underlyingType": { "__id": ":Decimal" },
+          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
           ":@DecimalConstraint":
           {
             "scale": 9
@@ -2143,7 +2146,8 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:WebAddress",
           "name": "WebAddress",
-          "underlyingType": { "__id": ":String" }
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
         }
       ]
     },
@@ -2177,9 +2181,9 @@
               "entityContainer": { "__id": "DiagnosticsData" }
             },
             {
-              "id": "DataWorkspace/Members[BaseData]",
-              "name": "BaseData",
-              "entityContainer": { "__id": "BaseData" }
+              "id": "DataWorkspace/Members[CoreData]",
+              "name": "CoreData",
+              "entityContainer": { "__id": "CoreData" }
             }
           ]
         },
@@ -3074,14 +3078,14 @@
           ]
         },
         {
-          "id": "BaseData",
-          "name": "BaseData",
+          "id": "CoreData",
+          "name": "CoreData",
           "dataProvider": "AstoriaDataProvider",
           ":@Partial": { "isPrimary": true },
           "entitySets":
           [
             {
-              "id": "BaseData/Members[KeyNameValues]",
+              "id": "CoreData/Members[KeyNameValues]",
               "name": "KeyNameValues",
               "canDelete": true,
               "canInsert": true,
@@ -3090,7 +3094,7 @@
               "entityType": { "__id": "KeyNameValue" }
             },
             {
-              "id": "BaseData/Members[Tasks]",
+              "id": "CoreData/Members[Tasks]",
               "name": "Tasks",
               "canDelete": true,
               "canInsert": true,
@@ -3102,76 +3106,76 @@
           "queryOperations":
           [
             {
-              "id": "BaseData/Members[KeyNameValues_Single]",
+              "id": "CoreData/Members[KeyNameValues_Single]",
               "name": "KeyNameValues_Single",
               "elementType": { "__id": "KeyNameValue" },
-              "query": { "__id": "BaseData/Members[KeyNameValues_Single]" },
+              "query": { "__id": "CoreData/Members[KeyNameValues_Single]" },
               "returnType": { "__id": "KeyNameValue" },
               "source":
               {
-                "member": { "__id": "BaseData/Members[KeyNameValues]" }
+                "member": { "__id": "CoreData/Members[KeyNameValues]" }
               },
               "parameters":
               [
                 {
-                  "id": "BaseData/Members[KeyNameValues_Single]/Parameters[Id]",
+                  "id": "CoreData/Members[KeyNameValues_Single]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
             },
             {
-              "id": "BaseData/Members[KeyNameValues_SingleOrDefault]",
+              "id": "CoreData/Members[KeyNameValues_SingleOrDefault]",
               "name": "KeyNameValues_SingleOrDefault",
               "elementType": { "__id": "KeyNameValue" },
-              "query": { "__id": "BaseData/Members[KeyNameValues_SingleOrDefault]" },
+              "query": { "__id": "CoreData/Members[KeyNameValues_SingleOrDefault]" },
               "returnType": { "__id": "KeyNameValue" },
               "source":
               {
-                "member": { "__id": "BaseData/Members[KeyNameValues]" }
+                "member": { "__id": "CoreData/Members[KeyNameValues]" }
               },
               "parameters":
               [
                 {
-                  "id": "BaseData/Members[KeyNameValues_SingleOrDefault]/Parameters[Id]",
+                  "id": "CoreData/Members[KeyNameValues_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
             },
             {
-              "id": "BaseData/Members[Tasks_Single]",
+              "id": "CoreData/Members[Tasks_Single]",
               "name": "Tasks_Single",
               "elementType": { "__id": "Task" },
-              "query": { "__id": "BaseData/Members[Tasks_Single]" },
+              "query": { "__id": "CoreData/Members[Tasks_Single]" },
               "returnType": { "__id": "Task" },
               "source":
               {
-                "member": { "__id": "BaseData/Members[Tasks]" }
+                "member": { "__id": "CoreData/Members[Tasks]" }
               },
               "parameters":
               [
                 {
-                  "id": "BaseData/Members[Tasks_Single]/Parameters[Id]",
+                  "id": "CoreData/Members[Tasks_Single]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
             },
             {
-              "id": "BaseData/Members[Tasks_SingleOrDefault]",
+              "id": "CoreData/Members[Tasks_SingleOrDefault]",
               "name": "Tasks_SingleOrDefault",
               "elementType": { "__id": "Task" },
-              "query": { "__id": "BaseData/Members[Tasks_SingleOrDefault]" },
+              "query": { "__id": "CoreData/Members[Tasks_SingleOrDefault]" },
               "returnType": { "__id": "Task" },
               "source":
               {
-                "member": { "__id": "BaseData/Members[Tasks]" }
+                "member": { "__id": "CoreData/Members[Tasks]" }
               },
               "parameters":
               [
                 {
-                  "id": "BaseData/Members[Tasks_SingleOrDefault]/Parameters[Id]",
+                  "id": "CoreData/Members[Tasks_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
@@ -4075,7 +4079,7 @@
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
-            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
           },
           "rootContentItem":
           {
@@ -4240,7 +4244,7 @@
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
-            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
           },
           "rootContentItem":
           {
@@ -4541,7 +4545,7 @@
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
-            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
           },
           "rootContentItem":
           {
@@ -4848,7 +4852,7 @@
                 "returnType": { "__id": "KeyNameValue*" },
                 "source":
                 {
-                  "member": { "__id": "BaseData/Members[KeyNameValues]" }
+                  "member": { "__id": "CoreData/Members[KeyNameValues]" }
                 }
               },
               "source":
@@ -4865,7 +4869,7 @@
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
-            "property": { "__id": "DataWorkspace/Members[BaseData]" }
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
           },
           "rootContentItem":
           {

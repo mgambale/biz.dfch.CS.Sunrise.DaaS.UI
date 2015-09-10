@@ -24,30 +24,30 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class BaseData : ObjectContext
+    public partial class CoreData : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new BaseData object using the connection string found in the 'BaseData' section of the application configuration file.
+        /// Initializes a new CoreData object using the connection string found in the 'CoreData' section of the application configuration file.
         /// </summary>
-        public BaseData() : base("name=BaseData", "BaseData")
+        public CoreData() : base("name=CoreData", "CoreData")
         {
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new BaseData object.
+        /// Initialize a new CoreData object.
         /// </summary>
-        public BaseData(string connectionString) : base(connectionString, "BaseData")
+        public CoreData(string connectionString) : base(connectionString, "CoreData")
         {
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new BaseData object.
+        /// Initialize a new CoreData object.
         /// </summary>
-        public BaseData(EntityConnection connection) : base(connection, "BaseData")
+        public CoreData(EntityConnection connection) : base(connection, "CoreData")
         {
             OnContextCreated();
         }

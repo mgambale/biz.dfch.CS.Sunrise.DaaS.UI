@@ -8,7 +8,7 @@
     Name="KeyNameValueAdd">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="BaseData" />
+        EntityContainer="CoreData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem

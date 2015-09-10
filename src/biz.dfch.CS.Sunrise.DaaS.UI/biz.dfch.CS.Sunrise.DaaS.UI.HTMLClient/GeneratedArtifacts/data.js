@@ -260,9 +260,9 @@ window.myapp = msls.application;
         $DataService.call(this, dataWorkspace);
     };
 
-    function BaseData(dataWorkspace) {
+    function CoreData(dataWorkspace) {
         /// <summary>
-        /// Represents the BaseData data service.
+        /// Represents the CoreData data service.
         /// </summary>
         /// <param name="dataWorkspace" type="msls.DataWorkspace">
         /// The data workspace that created this data service.
@@ -273,7 +273,7 @@ window.myapp = msls.application;
         /// <field name="Tasks" type="msls.EntitySet">
         /// Gets the Tasks entity set.
         /// </field>
-        /// <field name="details" type="msls.application.BaseData.Details">
+        /// <field name="details" type="msls.application.CoreData.Details">
         /// Gets the details for this data service.
         /// </field>
         $DataService.call(this, dataWorkspace);
@@ -288,8 +288,8 @@ window.myapp = msls.application;
         /// <field name="DiagnosticsData" type="msls.application.DiagnosticsData">
         /// Gets the DiagnosticsData data service.
         /// </field>
-        /// <field name="BaseData" type="msls.application.BaseData">
-        /// Gets the BaseData data service.
+        /// <field name="CoreData" type="msls.application.CoreData">
+        /// Gets the CoreData data service.
         /// </field>
         /// <field name="details" type="msls.application.DataWorkspace.Details">
         /// Gets the details for this data workspace.
@@ -395,21 +395,21 @@ window.myapp = msls.application;
             }
         ]),
 
-        BaseData: $defineDataService(BaseData, lightSwitchApplication.rootUri + "/BaseData.svc", [
+        CoreData: $defineDataService(CoreData, lightSwitchApplication.rootUri + "/CoreData.svc", [
             { name: "KeyNameValues", elementType: KeyNameValue },
             { name: "Tasks", elementType: Task }
         ], [
             {
                 name: "KeyNameValues_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.KeyNameValues },
-                        lightSwitchApplication.rootUri + "/BaseData.svc" + "/KeyNameValues(" + "Id=" + $toODataString(Id, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/KeyNameValues(" + "Id=" + $toODataString(Id, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "Tasks_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Tasks },
-                        lightSwitchApplication.rootUri + "/BaseData.svc" + "/Tasks(" + "Id=" + $toODataString(Id, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/Tasks(" + "Id=" + $toODataString(Id, "Int32?") + ")"
                     );
                 }
             }
@@ -418,7 +418,7 @@ window.myapp = msls.application;
         DataWorkspace: $defineDataWorkspace(DataWorkspace, [
             { name: "UtilitiesData", type: UtilitiesData },
             { name: "DiagnosticsData", type: DiagnosticsData },
-            { name: "BaseData", type: BaseData }
+            { name: "CoreData", type: CoreData }
         ])
 
     });

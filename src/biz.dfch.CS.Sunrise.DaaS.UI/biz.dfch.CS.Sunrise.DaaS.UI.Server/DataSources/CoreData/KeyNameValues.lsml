@@ -82,7 +82,7 @@
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
-    Name="BaseData">
+    Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
@@ -174,7 +174,7 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="BaseDataDataService">
+    Name="CoreDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
@@ -183,7 +183,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="KeyNameValue"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base"
+          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
           Name="KeyNameValues"
           EntityType="KeyNameValue" />
         <CsdlProperty

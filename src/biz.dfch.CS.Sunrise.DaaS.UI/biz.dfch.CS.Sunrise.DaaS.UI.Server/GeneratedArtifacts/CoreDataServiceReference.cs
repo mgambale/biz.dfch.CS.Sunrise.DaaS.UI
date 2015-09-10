@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/9/2015 11:12:05 AM
-namespace BaseData.BaseDataService
+// Generation date: 9/10/2015 8:00:25 AM
+namespace CoreData.CoreDataService
 {
     
     /// <summary>
-    /// There are no comments for Base in the schema.
+    /// There are no comments for Core in the schema.
     /// </summary>
-    public partial class Base : global::System.Data.Services.Client.DataServiceContext
+    public partial class Core : global::System.Data.Services.Client.DataServiceContext
     {
         /// <summary>
-        /// Initialize a new Base object.
+        /// Initialize a new Core object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Base(global::System.Uri serviceRoot) : 
+        public Core(global::System.Uri serviceRoot) : 
                 base(serviceRoot, global::System.Data.Services.Common.DataServiceProtocolVersion.V3)
         {
             this.ResolveName = new global::System.Func<global::System.Type, string>(this.ResolveNameFromType);
@@ -39,7 +39,7 @@ namespace BaseData.BaseDataService
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected global::System.Type ResolveTypeFromName(string typeName)
         {
-            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base", "BaseData.BaseDataService");
+            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core", "CoreData.CoreDataService");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -54,9 +54,9 @@ namespace BaseData.BaseDataService
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected string ResolveNameFromType(global::System.Type clientType)
         {
-            if (clientType.Namespace.Equals("BaseData.BaseDataService", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("CoreData.CoreDataService", global::System.StringComparison.Ordinal))
             {
-                return string.Concat("biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.", clientType.Name);
+                return string.Concat("biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.", clientType.Name);
             }
             return null;
         }
@@ -119,7 +119,7 @@ namespace BaseData.BaseDataService
             private const string ModelPart0 = "<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edm" +
                 "x\"><edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" x" +
                 "mlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"><Schema " +
-                "Namespace=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base\" xmlns=\"http://" +
+                "Namespace=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core\" xmlns=\"http://" +
                 "schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"KeyNameValue\"><Key><Pro" +
                 "pertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\"" +
                 " /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Key" +
@@ -139,10 +139,10 @@ namespace BaseData.BaseDataService
                 "atedBy\" Type=\"Edm.String\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" " +
                 "/><Property Name=\"ModifiedBy\" Type=\"Edm.String\" /></EntityType></Schema><Schema " +
                 "Namespace=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><Entity" +
-                "Container Name=\"Base\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"KeyName" +
-                "Values\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.KeyNam" +
+                "Container Name=\"Core\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"KeyName" +
+                "Values\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.KeyNam" +
                 "eValue\" /><EntitySet Name=\"Tasks\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints" +
-                ".OdataServices.Base.Task\" /></EntityContainer></Schema></edmx:DataServices></edm" +
+                ".OdataServices.Core.Task\" /></EntityContainer></Schema></edmx:DataServices></edm" +
                 "x:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
@@ -176,7 +176,7 @@ namespace BaseData.BaseDataService
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.KeyNameValue in the schema.
+    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.KeyNameValue in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
@@ -419,7 +419,7 @@ namespace BaseData.BaseDataService
         partial void OnModifiedByChanged();
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Base.Task in the schema.
+    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Task in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id

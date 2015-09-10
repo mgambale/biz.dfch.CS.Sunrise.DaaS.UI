@@ -99,7 +99,7 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
-    <LightSwitchModel Include="Properties\BaseData\KeyNameValues.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\KeyNameValues.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>

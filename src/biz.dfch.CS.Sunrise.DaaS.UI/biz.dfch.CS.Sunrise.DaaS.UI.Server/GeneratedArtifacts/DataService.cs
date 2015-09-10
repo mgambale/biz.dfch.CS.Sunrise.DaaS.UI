@@ -12,16 +12,16 @@ namespace LightSwitchApplication
     #region Data Services
     
     /// <summary>
-    /// Provides members to query and update data in the BaseData datasource.
+    /// Provides members to query and update data in the CoreData datasource.
     /// </summary>
-    public sealed partial class BaseDataService
-        : global::LightSwitchApplication.BaseData
+    public sealed partial class CoreDataService
+        : global::LightSwitchApplication.CoreData
     {
         #region Constructors
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public BaseDataService() : base()
+        public CoreDataService() : base()
         {
         }
     
@@ -147,10 +147,10 @@ namespace LightSwitchApplication
         partial void Query_ExecuteFailed(global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BaseData_SendingRequest(global::Microsoft.LightSwitch.ODataSendingState state);
+        partial void CoreData_SendingRequest(global::Microsoft.LightSwitch.ODataSendingState state);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BaseData_ReceivedResponse(global::Microsoft.LightSwitch.ODataReceivedState state);
+        partial void CoreData_ReceivedResponse(global::Microsoft.LightSwitch.ODataReceivedState state);
     
         #endregion
     
@@ -169,204 +169,204 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.BaseDataService, global::LightSwitchApplication.KeyNameValue>
-                __KeyNameValuesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.BaseDataService, global::LightSwitchApplication.KeyNameValue>(
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.KeyNameValue>
+                __KeyNameValuesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.KeyNameValue>(
                     "KeyNameValues",
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_CanInsert,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_CanUpdate,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_CanDelete,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_CanRead,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Inserting,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Inserted,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Updating,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Updated,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Deleting,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Deleted,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__KeyNameValues_Validate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_CanInsert,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_CanUpdate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_CanDelete,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_CanRead,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Inserting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Inserted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Updating,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Updated,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Deleting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Deleted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__KeyNameValues_Validate,
                     null);
-            private static bool __KeyNameValues_CanInsert(global::LightSwitchApplication.BaseDataService d)
+            private static bool __KeyNameValues_CanInsert(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.KeyNameValues_CanInsert(ref result);
                 return result;
             }
-            private static bool __KeyNameValues_CanUpdate(global::LightSwitchApplication.BaseDataService d)
+            private static bool __KeyNameValues_CanUpdate(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.KeyNameValues_CanUpdate(ref result);
                 return result;
             }
-            private static bool __KeyNameValues_CanDelete(global::LightSwitchApplication.BaseDataService d)
+            private static bool __KeyNameValues_CanDelete(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.KeyNameValues_CanDelete(ref result);
                 return result;
             }
-            private static bool __KeyNameValues_CanRead(global::LightSwitchApplication.BaseDataService d)
+            private static bool __KeyNameValues_CanRead(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.KeyNameValues_CanRead(ref result);
                 return result;
             }
-            private static void __KeyNameValues_Inserting(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e)
+            private static void __KeyNameValues_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e)
             {
                 d.KeyNameValues_Inserting(e);
             }
-            private static void __KeyNameValues_Inserted(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e)
+            private static void __KeyNameValues_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e)
             {
                 d.KeyNameValues_Inserted(e);
             }
-            private static void __KeyNameValues_Updating(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e)
+            private static void __KeyNameValues_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e)
             {
                 d.KeyNameValues_Updating(e);
             }
-            private static void __KeyNameValues_Updated(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e)
+            private static void __KeyNameValues_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e)
             {
                 d.KeyNameValues_Updated(e);
             }
-            private static void __KeyNameValues_Deleting(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e)
+            private static void __KeyNameValues_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e)
             {
                 d.KeyNameValues_Deleting(e);
             }
-            private static void __KeyNameValues_Deleted(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e)
+            private static void __KeyNameValues_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e)
             {
                 d.KeyNameValues_Deleted(e);
             }
-            private static void __KeyNameValues_Validate(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.KeyNameValue e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            private static void __KeyNameValues_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
                 d.KeyNameValues_Validate(e, r);
             }
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.BaseDataService, global::LightSwitchApplication.Task>
-                __TasksEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.BaseDataService, global::LightSwitchApplication.Task>(
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.Task>
+                __TasksEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.Task>(
                     "Tasks",
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_CanInsert,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_CanUpdate,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_CanDelete,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_CanRead,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Inserting,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Inserted,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Updating,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Updated,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Deleting,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Deleted,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Tasks_Validate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_CanInsert,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_CanUpdate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_CanDelete,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_CanRead,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Inserting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Inserted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Updating,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Updated,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Deleting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Deleted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Tasks_Validate,
                     null);
-            private static bool __Tasks_CanInsert(global::LightSwitchApplication.BaseDataService d)
+            private static bool __Tasks_CanInsert(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.Tasks_CanInsert(ref result);
                 return result;
             }
-            private static bool __Tasks_CanUpdate(global::LightSwitchApplication.BaseDataService d)
+            private static bool __Tasks_CanUpdate(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.Tasks_CanUpdate(ref result);
                 return result;
             }
-            private static bool __Tasks_CanDelete(global::LightSwitchApplication.BaseDataService d)
+            private static bool __Tasks_CanDelete(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.Tasks_CanDelete(ref result);
                 return result;
             }
-            private static bool __Tasks_CanRead(global::LightSwitchApplication.BaseDataService d)
+            private static bool __Tasks_CanRead(global::LightSwitchApplication.CoreDataService d)
             {
                 bool result = true;
                 d.Tasks_CanRead(ref result);
                 return result;
             }
-            private static void __Tasks_Inserting(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e)
+            private static void __Tasks_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e)
             {
                 d.Tasks_Inserting(e);
             }
-            private static void __Tasks_Inserted(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e)
+            private static void __Tasks_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e)
             {
                 d.Tasks_Inserted(e);
             }
-            private static void __Tasks_Updating(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e)
+            private static void __Tasks_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e)
             {
                 d.Tasks_Updating(e);
             }
-            private static void __Tasks_Updated(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e)
+            private static void __Tasks_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e)
             {
                 d.Tasks_Updated(e);
             }
-            private static void __Tasks_Deleting(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e)
+            private static void __Tasks_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e)
             {
                 d.Tasks_Deleting(e);
             }
-            private static void __Tasks_Deleted(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e)
+            private static void __Tasks_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e)
             {
                 d.Tasks_Deleted(e);
             }
-            private static void __Tasks_Validate(global::LightSwitchApplication.BaseDataService d, global::LightSwitchApplication.Task e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            private static void __Tasks_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Task e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
                 d.Tasks_Validate(e, r);
             }
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.BaseDataService>
-                __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.BaseDataService>(
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.CoreDataService>
+                __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.CoreDataService>(
                     "SaveChanges",
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__SaveChanges_CanExecute,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__SaveChanges_Executing,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__SaveChanges_Executed,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__SaveChanges_Failed);
-            private static bool __SaveChanges_CanExecute(global::LightSwitchApplication.BaseDataService d, bool r)
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__SaveChanges_CanExecute,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__SaveChanges_Executing,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__SaveChanges_Executed,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__SaveChanges_Failed);
+            private static bool __SaveChanges_CanExecute(global::LightSwitchApplication.CoreDataService d, bool r)
             {
                 d.SaveChanges_CanExecute(ref r);
                 return r;
             }
-            private static void __SaveChanges_Executing(global::LightSwitchApplication.BaseDataService d, object[] args)
+            private static void __SaveChanges_Executing(global::LightSwitchApplication.CoreDataService d, object[] args)
             {
                 d.SaveChanges_Executing();
             }
-            private static void __SaveChanges_Executed(global::LightSwitchApplication.BaseDataService d, object[] args)
+            private static void __SaveChanges_Executed(global::LightSwitchApplication.CoreDataService d, object[] args)
             {
                 d.SaveChanges_Executed();
             }
-            private static void __SaveChanges_Failed(global::LightSwitchApplication.BaseDataService d, object[] args, global::System.Exception ex)
+            private static void __SaveChanges_Failed(global::LightSwitchApplication.CoreDataService d, object[] args, global::System.Exception ex)
             {
                 d.SaveChanges_ExecuteFailed(ex);
             }
     
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.BaseDataService>
-                ___QueryEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.BaseDataService>(
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Query_Executing,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Query_Executed,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__Query_Failed);
-            private static void __Query_Executing(global::LightSwitchApplication.BaseDataService d, global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.CoreDataService>
+                ___QueryEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.CoreDataService>(
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Query_Executing,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Query_Executed,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Query_Failed);
+            private static void __Query_Executing(global::LightSwitchApplication.CoreDataService d, global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor)
             {
                 d.Query_Executing(queryDescriptor);
             }
-            private static void __Query_Executed(global::LightSwitchApplication.BaseDataService d, global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor)
+            private static void __Query_Executed(global::LightSwitchApplication.CoreDataService d, global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor)
             {
                 d.Query_Executed(queryDescriptor);
             }
-            private static void __Query_Failed(global::LightSwitchApplication.BaseDataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
+            private static void __Query_Failed(global::LightSwitchApplication.CoreDataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
             {
                 d.Query_ExecuteFailed(queryDescriptor);
             }
     
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.ODataServiceAuthEntry<global::LightSwitchApplication.BaseDataService>
-                ___ODataServiceAuthEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.ODataServiceAuthEntry<global::LightSwitchApplication.BaseDataService>(
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__BaseData_SendingRequest,
-                    global::LightSwitchApplication.BaseDataService.DetailsClass.__BaseData_ReceivedResponse);
-            private static void __BaseData_SendingRequest(global::LightSwitchApplication.BaseDataService d, global::Microsoft.LightSwitch.ODataSendingState state)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.ODataServiceAuthEntry<global::LightSwitchApplication.CoreDataService>
+                ___ODataServiceAuthEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.ODataServiceAuthEntry<global::LightSwitchApplication.CoreDataService>(
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CoreData_SendingRequest,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CoreData_ReceivedResponse);
+            private static void __CoreData_SendingRequest(global::LightSwitchApplication.CoreDataService d, global::Microsoft.LightSwitch.ODataSendingState state)
             {
-                d.BaseData_SendingRequest(state);
+                d.CoreData_SendingRequest(state);
             }
-            private static void __BaseData_ReceivedResponse(global::LightSwitchApplication.BaseDataService d, global::Microsoft.LightSwitch.ODataReceivedState state)
+            private static void __CoreData_ReceivedResponse(global::LightSwitchApplication.CoreDataService d, global::Microsoft.LightSwitch.ODataReceivedState state)
             {
-                d.BaseData_ReceivedResponse(state);
+                d.CoreData_ReceivedResponse(state);
             }
         }
     

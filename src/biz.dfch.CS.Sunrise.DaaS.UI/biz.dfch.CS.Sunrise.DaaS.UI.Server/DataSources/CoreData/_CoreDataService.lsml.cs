@@ -9,7 +9,7 @@ using System.Web;
 
 namespace LightSwitchApplication
 {
-    public partial class BaseDataService
+    public partial class CoreDataService
     {
         // will hold the impersonation context between sending and receiving
         private System.Security.Principal.WindowsImpersonationContext _impersonationContext;

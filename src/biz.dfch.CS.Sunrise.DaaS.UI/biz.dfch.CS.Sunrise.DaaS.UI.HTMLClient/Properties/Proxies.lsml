@@ -37,7 +37,7 @@
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
-        Target="ServiceInterface:BaseData" />
+        Target="ServiceInterface:CoreData" />
     </EntityContainer.Attributes>
   </EntityContainer>
 </Application>
