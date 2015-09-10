@@ -15,7 +15,7 @@ namespace LightSwitchApplication
         private System.Security.Principal.WindowsImpersonationContext _impersonationContext;
 
         // set up impersonation ...
-        partial void BaseData_SendingRequest(ODataSendingState state)
+        partial void CoreData_SendingRequest(ODataSendingState state)
         {
             System.Security.Principal.WindowsIdentity identity;
             if (HttpContext.Current.User.Identity.GetType().Name == "GenericIdentity")
@@ -37,7 +37,7 @@ namespace LightSwitchApplication
         }
 
         // ... and revert after completion of request
-        partial void BaseData_ReceivedResponse(ODataReceivedState state)
+        partial void CoreData_ReceivedResponse(ODataReceivedState state)
         {
             if (null == _impersonationContext)
             {
