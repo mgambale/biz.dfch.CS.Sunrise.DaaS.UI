@@ -6,6 +6,7 @@ using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Security.Server;
 using System.Data.Services.Client;
 using System.Web;
+using biz.dfch.CS.Utilities.General;
 
 namespace LightSwitchApplication
 {
@@ -21,13 +22,12 @@ namespace LightSwitchApplication
             if (HttpContext.Current.User.Identity.GetType().Name == "GenericIdentity")
             {
                 identity = System.Security.Principal.WindowsIdentity.GetCurrent();
-                System.Diagnostics.Trace.WriteLine(String.Format("{0}: '{1}' @{2}", "BaseData_SendingRequest", identity.Name, HttpContext.Current.User.Identity.GetType().Name));
             }
             else
             {
                 identity = (System.Security.Principal.WindowsIdentity) HttpContext.Current.User.Identity;
-                System.Diagnostics.Trace.WriteLine(String.Format("{0}: '{1}' @{2}", "BaseData_SendingRequest", identity.Name, HttpContext.Current.User.Identity.GetType().Name));
             }
+            biz.dfch.CS.Utilities.Logging.Trace.WriteLine("{0}: '{1}' @{2}", Method.fn(), identity.Name, HttpContext.Current.User.Identity.GetType().Name);
 
             state.Request.Headers.Add("Biz-Dfch-Impersonated-User", string.Format("{0}-{1}", identity.AuthenticationType, identity.Name));
             state.Request.PreAuthenticate = true;
