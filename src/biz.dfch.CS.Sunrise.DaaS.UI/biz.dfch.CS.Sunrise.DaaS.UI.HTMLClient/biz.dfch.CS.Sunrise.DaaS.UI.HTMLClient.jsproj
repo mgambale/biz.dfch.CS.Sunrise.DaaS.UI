@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|AnyCPU">
       <Configuration>Debug</Configuration>
@@ -16,6 +17,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{340d15d9-8973-4f3d-a378-0b1ea722ae7e}</ProjectGuid>
     <LightSwitchVersion>v4.5</LightSwitchVersion>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
@@ -27,7 +29,7 @@
     <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
     <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <SupportedCultures>en-US</SupportedCultures>
+    <SupportedCultures>en,en-US</SupportedCultures>
     <DefaultPlatform>AnyCPU</DefaultPlatform>
     <ClientProjectName>HTMLClient</ClientProjectName>
     <ServerProjectReference>..\biz.dfch.CS.Sunrise.DaaS.UI.Server\biz.dfch.CS.Sunrise.DaaS.UI.Server.csproj</ServerProjectReference>
@@ -35,6 +37,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\dark-theme-2.5.1.css" />
+    <Content Include="Content\Icons\Add-To-Cart.png" />
+    <Content Include="Content\Icons\Audit.png" />
+    <Content Include="Content\Icons\Basket.png" />
+    <Content Include="Content\Icons\Document.png" />
+    <Content Include="Content\Icons\Folders.png" />
+    <Content Include="Content\Icons\Home.png" />
+    <Content Include="Content\Icons\I-Phone.png" />
+    <Content Include="Content\Icons\IPad.png" />
+    <Content Include="Content\Icons\Key.png" />
+    <Content Include="Content\Icons\RequestItem.png" />
+    <Content Include="Content\Icons\Uris.png" />
+    <Content Include="Content\Icons\Users.png" />
     <Content Include="Content\Images\ajax-loader.gif" />
     <Content Include="Content\Images\icons-18-black.png" />
     <Content Include="Content\Images\icons-18-white.png" />
@@ -58,6 +72,14 @@
     <Content Include="Content\msls-2.5.1.min.css" />
     <Content Include="Content\msls-dark-2.5.1.css" />
     <Content Include="Content\msls-light-2.5.1.css" />
+    <Content Include="Content\Resources\client.lang-en.resjson" />
+    <Content Include="Content\select2-dark.css" />
+    <Content Include="Content\select2-light.css" />
+    <Content Include="Content\select2-remove-arrow.css" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\select2_locale_de.js" />
+    <Content Include="Content\sp.css" />
+    <Content Include="Content\sunrise.css" />
     <Content Include="default.htm" />
     <Content Include="Content\user-customization.css" />
     <Content Include="Content\Images\user-logo.png" />
@@ -69,6 +91,9 @@
     <Content Include="Screens\AddEditTask.lsml.js">
       <DependentUpon>AddEditTask.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\Home.lsml.js">
+      <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\KeyNameValueAdd.lsml.js">
       <DependentUpon>KeyNameValueAdd.lsml</DependentUpon>
     </Content>
@@ -78,8 +103,13 @@
     <Content Include="Screens\ViewTask.lsml.js">
       <DependentUpon>ViewTask.lsml</DependentUpon>
     </Content>
+    <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
+    <Content Include="Scripts\dfchls.js" />
+    <Content Include="Scripts\jaydata.min.js" />
+    <Content Include="Scripts\jaydataproviders\oDataProvider.js" />
+    <Content Include="Scripts\jaydataproviders\oDataProvider.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -90,6 +120,11 @@
     <Content Include="Scripts\msls-2.5.1-vsdoc.js" />
     <Content Include="Scripts\msls-2.5.1.js" />
     <Content Include="Scripts\msls-2.5.1.min.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\select2_locale_de.js" />
+    <Content Include="Scripts\select2_locale_en.js" />
+    <TypeScriptCompile Include="Scripts\UtilitiesData.d.ts" />
+    <Content Include="Scripts\UtilitiesData.js" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
   </ItemGroup>

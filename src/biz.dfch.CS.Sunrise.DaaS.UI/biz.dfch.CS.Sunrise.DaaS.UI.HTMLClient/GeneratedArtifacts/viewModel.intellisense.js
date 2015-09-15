@@ -512,6 +512,34 @@
             data: lightSwitchApplication.Home,
             value: lightSwitchApplication.Home
         },
+        Group1: {
+            _$class: msls.ContentItem,
+            _$name: "Group1",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Home,
+            data: lightSwitchApplication.Home,
+            value: lightSwitchApplication.Home
+        },
+        Endpoints: {
+            _$class: msls.ContentItem,
+            _$name: "Endpoints",
+            _$parentName: "Group1",
+            screen: lightSwitchApplication.Home
+        },
+        Group2: {
+            _$class: msls.ContentItem,
+            _$name: "Group2",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Home,
+            data: lightSwitchApplication.Home,
+            value: lightSwitchApplication.Home
+        },
+        Configuration: {
+            _$class: msls.ContentItem,
+            _$name: "Configuration",
+            _$parentName: "Group2",
+            screen: lightSwitchApplication.Home
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -535,7 +563,27 @@
         /// Called after the Group content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Group_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group"); }]
+        Group_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group"); }],
+        /// <field>
+        /// Called after the Group1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group1_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group1"); }],
+        /// <field>
+        /// Called after the Endpoints content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Endpoints_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Endpoints"); }],
+        /// <field>
+        /// Called after the Group2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group2_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group2"); }],
+        /// <field>
+        /// Called after the Configuration content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Configuration_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Configuration"); }]
     });
 
     lightSwitchApplication.KeyNameValueAdd.prototype._$contentItems = {

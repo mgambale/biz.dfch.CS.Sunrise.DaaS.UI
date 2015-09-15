@@ -1,0 +1,15 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "Home"              : "Home",
+    "BrowseAssets"     : "Browse Assets (Admin only)",
+	"BrowseAuditTrails"     : "Browse Audit Trails (Admin only)",
+	"BrowseManagementCredentials" : "Browse Management Credentials (Admin only)",
+	"BrowseManagementUris" : "Browse Management Uris (Admin only)",
+	"BrowseOrders" : "Browse Orders",
+	"BrowseProducts" : "Browse Products",
+	"BrowseProjectDocuments" : "Browse Project Documents",
+	"BrowseProjectFolders" : "Browse Project Folders",
+	"BrowseRequestItems" : "Browse Request Items",
+	"BrowseUsers" : "Browse Users"
+}

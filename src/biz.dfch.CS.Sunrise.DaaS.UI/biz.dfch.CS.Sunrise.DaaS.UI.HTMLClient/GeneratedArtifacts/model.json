@@ -2192,62 +2192,410 @@
           "name": "LightSwitchServiceApplicationGroup"
         },
         {
-          "id": "Task*",
-          "name": "Task*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Task" }
-        },
-        {
-          "id": "CollectionView$Task",
-          "name": "CollectionView$Task",
+          "id": "CollectionView$ActiveDirectoryUser",
+          "name": "CollectionView$ActiveDirectoryUser",
           "kind": "CollectionView",
-          "elementType": { "__id": "Task" },
+          "elementType": { "__id": "ActiveDirectoryUser" },
           "methods":
           [
             {
-              "id": "CollectionView$Task/Methods[addNew]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[addNew]",
               "name": "addNew",
-              "returnType": { "__id": "Task" }
+              "returnType": { "__id": "ActiveDirectoryUser" }
             },
             {
-              "id": "CollectionView$Task/Methods[addAndEditNew]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[addAndEditNew]",
               "name": "addAndEditNew",
-              "returnType": { "__id": "Task" }
+              "returnType": { "__id": "ActiveDirectoryUser" }
             },
             {
-              "id": "CollectionView$Task/Methods[showSearch]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[showSearch]",
               "name": "showSearch",
-              "returnType": { "__id": "Task" }
+              "returnType": { "__id": "ActiveDirectoryUser" }
             },
             {
-              "id": "CollectionView$Task/Methods[editSelected]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[editSelected]",
               "name": "editSelected"
             },
             {
-              "id": "CollectionView$Task/Methods[deleteSelected]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[deleteSelected]",
               "name": "deleteSelected"
             },
             {
-              "id": "CollectionView$Task/Methods[removeSelected]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[removeSelected]",
               "name": "removeSelected"
             },
             {
-              "id": "CollectionView$Task/Methods[refresh]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[refresh]",
               "name": "refresh"
             },
             {
-              "id": "CollectionView$Task/Methods[viewSelected]",
+              "id": "CollectionView$ActiveDirectoryUser/Methods[viewSelected]",
               "name": "viewSelected"
             }
           ],
           "properties":
           [
             {
-              "id": "CollectionView$Task/Properties[selectedItem]",
+              "id": "CollectionView$ActiveDirectoryUser/Properties[selectedItem]",
               "name": "selectedItem",
-              "propertyType": { "__id": "Task" }
+              "propertyType": { "__id": "ActiveDirectoryUser" }
             }
           ]
+        },
+        {
+          "id": "ActiveDirectoryUser*",
+          "name": "ActiveDirectoryUser*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "ActiveDirectoryUser" }
+        },
+        {
+          "id": "CollectionView$Approval",
+          "name": "CollectionView$Approval",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Approval" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Approval/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Approval" }
+            },
+            {
+              "id": "CollectionView$Approval/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Approval" }
+            },
+            {
+              "id": "CollectionView$Approval/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Approval" }
+            },
+            {
+              "id": "CollectionView$Approval/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Approval/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Approval/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Approval/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Approval/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Approval/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Approval" }
+            }
+          ]
+        },
+        {
+          "id": "Approval*",
+          "name": "Approval*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Approval" }
+        },
+        {
+          "id": "CollectionView$Ace",
+          "name": "CollectionView$Ace",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Ace" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Ace/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Ace" }
+            },
+            {
+              "id": "CollectionView$Ace/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Ace" }
+            },
+            {
+              "id": "CollectionView$Ace/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Ace" }
+            },
+            {
+              "id": "CollectionView$Ace/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Ace/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Ace/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Ace/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Ace/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Ace/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Ace" }
+            }
+          ]
+        },
+        {
+          "id": "Ace*",
+          "name": "Ace*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Ace" }
+        },
+        {
+          "id": "CollectionView$OrderItem",
+          "name": "CollectionView$OrderItem",
+          "kind": "CollectionView",
+          "elementType": { "__id": "OrderItem" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$OrderItem/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "OrderItem" }
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "OrderItem" }
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "OrderItem" }
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$OrderItem/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$OrderItem/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "OrderItem" }
+            }
+          ]
+        },
+        {
+          "id": "OrderItem*",
+          "name": "OrderItem*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "OrderItem" }
+        },
+        {
+          "id": "CollectionView$Order",
+          "name": "CollectionView$Order",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Order" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Order/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Order" }
+            },
+            {
+              "id": "CollectionView$Order/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Order" }
+            },
+            {
+              "id": "CollectionView$Order/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Order" }
+            },
+            {
+              "id": "CollectionView$Order/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Order/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Order/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Order/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Order/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Order/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Order" }
+            }
+          ]
+        },
+        {
+          "id": "Order*",
+          "name": "Order*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Order" }
+        },
+        {
+          "id": "CollectionView$CatalogueItem1",
+          "name": "CollectionView$CatalogueItem1",
+          "kind": "CollectionView",
+          "elementType": { "__id": "CatalogueItem1" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "CatalogueItem1" }
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "CatalogueItem1" }
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "CatalogueItem1" }
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$CatalogueItem1/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$CatalogueItem1/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "CatalogueItem1" }
+            }
+          ]
+        },
+        {
+          "id": "CatalogueItem1*",
+          "name": "CatalogueItem1*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "CatalogueItem1" }
+        },
+        {
+          "id": "CollectionView$Job",
+          "name": "CollectionView$Job",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Job" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Job/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Job" }
+            },
+            {
+              "id": "CollectionView$Job/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Job" }
+            },
+            {
+              "id": "CollectionView$Job/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Job" }
+            },
+            {
+              "id": "CollectionView$Job/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Job/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Job/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Job/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Job/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Job/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Job" }
+            }
+          ]
+        },
+        {
+          "id": "Job*",
+          "name": "Job*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Job" }
         },
         {
           "id": "CatalogueItem*",
@@ -2559,7 +2907,12 @@
             {
               "id": "KeyNameValue/Properties[CreatedBy]",
               "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" }
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
             },
             {
               "id": "KeyNameValue/Properties[Modified]",
@@ -2571,7 +2924,12 @@
             {
               "id": "KeyNameValue/Properties[ModifiedBy]",
               "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" }
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
             }
           ]
         },
@@ -2980,108 +3338,31 @@
           ]
         },
         {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Task/Properties[Tid]" } },
-          "id": "Task",
-          "name": "Task",
-          ":@NotSearchable": { },
-          "methods":
-          [
-            {
-              "id": "Task/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "Task/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "Task/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "Task/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Task/Properties[Tid]",
-              "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Task/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Task/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[Status]",
-              "name": "Status",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[Type]",
-              "name": "Type",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[Parameters]",
-              "name": "Parameters",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[c_Error]",
-              "name": "c_Error",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[EndTime]",
-              "name": "EndTime",
-              "propertyType": { "__id": ":DateTimeOffset?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Task/Properties[Created]",
-              "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Task/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Task/Properties[Modified]",
-              "name": "Modified",
-              "propertyType": { "__id": ":DateTimeOffset?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Task/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" }
-            }
-          ]
-        },
-        {
           "id": "CoreData",
           "name": "CoreData",
           "dataProvider": "AstoriaDataProvider",
           ":@Partial": { "isPrimary": true },
+          "associationSets":
+          [
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]",
+              "name": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde",
+              "association": { "__id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItemsPartner]",
+                  "name": "OrderItemsPartner",
+                  "entitySet": { "__id": "CoreData/Members[Orders]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItems]",
+                  "name": "OrderItems",
+                  "entitySet": { "__id": "CoreData/Members[OrderItems]" }
+                }
+              ]
+            }
+          ],
           "entitySets":
           [
             {
@@ -3094,13 +3375,67 @@
               "entityType": { "__id": "KeyNameValue" }
             },
             {
-              "id": "CoreData/Members[Tasks]",
-              "name": "Tasks",
+              "id": "CoreData/Members[Jobs]",
+              "name": "Jobs",
               "canDelete": true,
               "canInsert": true,
               "canUpdate": true,
-              "elementType": { "__id": "Task" },
-              "entityType": { "__id": "Task" }
+              "elementType": { "__id": "Job" },
+              "entityType": { "__id": "Job" }
+            },
+            {
+              "id": "CoreData/Members[CatalogueItems]",
+              "name": "CatalogueItems",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "CatalogueItem1" },
+              "entityType": { "__id": "CatalogueItem1" }
+            },
+            {
+              "id": "CoreData/Members[Orders]",
+              "name": "Orders",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Order" },
+              "entityType": { "__id": "Order" }
+            },
+            {
+              "id": "CoreData/Members[OrderItems]",
+              "name": "OrderItems",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "OrderItem" },
+              "entityType": { "__id": "OrderItem" }
+            },
+            {
+              "id": "CoreData/Members[Aces]",
+              "name": "Aces",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Ace" },
+              "entityType": { "__id": "Ace" }
+            },
+            {
+              "id": "CoreData/Members[Approvals]",
+              "name": "Approvals",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Approval" },
+              "entityType": { "__id": "Approval" }
+            },
+            {
+              "id": "CoreData/Members[ActiveDirectoryUsers]",
+              "name": "ActiveDirectoryUsers",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "ActiveDirectoryUser" },
+              "entityType": { "__id": "ActiveDirectoryUser" }
             }
           ],
           "queryOperations":
@@ -3144,40 +3479,268 @@
               ]
             },
             {
-              "id": "CoreData/Members[Tasks_Single]",
-              "name": "Tasks_Single",
-              "elementType": { "__id": "Task" },
-              "query": { "__id": "CoreData/Members[Tasks_Single]" },
-              "returnType": { "__id": "Task" },
+              "id": "CoreData/Members[Jobs_Single]",
+              "name": "Jobs_Single",
+              "elementType": { "__id": "Job" },
+              "query": { "__id": "CoreData/Members[Jobs_Single]" },
+              "returnType": { "__id": "Job" },
               "source":
               {
-                "member": { "__id": "CoreData/Members[Tasks]" }
+                "member": { "__id": "CoreData/Members[Jobs]" }
               },
               "parameters":
               [
                 {
-                  "id": "CoreData/Members[Tasks_Single]/Parameters[Id]",
+                  "id": "CoreData/Members[Jobs_Single]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
             },
             {
-              "id": "CoreData/Members[Tasks_SingleOrDefault]",
-              "name": "Tasks_SingleOrDefault",
-              "elementType": { "__id": "Task" },
-              "query": { "__id": "CoreData/Members[Tasks_SingleOrDefault]" },
-              "returnType": { "__id": "Task" },
+              "id": "CoreData/Members[Jobs_SingleOrDefault]",
+              "name": "Jobs_SingleOrDefault",
+              "elementType": { "__id": "Job" },
+              "query": { "__id": "CoreData/Members[Jobs_SingleOrDefault]" },
+              "returnType": { "__id": "Job" },
               "source":
               {
-                "member": { "__id": "CoreData/Members[Tasks]" }
+                "member": { "__id": "CoreData/Members[Jobs]" }
               },
               "parameters":
               [
                 {
-                  "id": "CoreData/Members[Tasks_SingleOrDefault]/Parameters[Id]",
+                  "id": "CoreData/Members[Jobs_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[CatalogueItems_Single]",
+              "name": "CatalogueItems_Single",
+              "elementType": { "__id": "CatalogueItem1" },
+              "query": { "__id": "CoreData/Members[CatalogueItems_Single]" },
+              "returnType": { "__id": "CatalogueItem1" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[CatalogueItems]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[CatalogueItems_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[CatalogueItems_SingleOrDefault]",
+              "name": "CatalogueItems_SingleOrDefault",
+              "elementType": { "__id": "CatalogueItem1" },
+              "query": { "__id": "CoreData/Members[CatalogueItems_SingleOrDefault]" },
+              "returnType": { "__id": "CatalogueItem1" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[CatalogueItems]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[CatalogueItems_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Orders_Single]",
+              "name": "Orders_Single",
+              "elementType": { "__id": "Order" },
+              "query": { "__id": "CoreData/Members[Orders_Single]" },
+              "returnType": { "__id": "Order" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Orders]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Orders_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Orders_SingleOrDefault]",
+              "name": "Orders_SingleOrDefault",
+              "elementType": { "__id": "Order" },
+              "query": { "__id": "CoreData/Members[Orders_SingleOrDefault]" },
+              "returnType": { "__id": "Order" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Orders]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Orders_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[OrderItems_Single]",
+              "name": "OrderItems_Single",
+              "elementType": { "__id": "OrderItem" },
+              "query": { "__id": "CoreData/Members[OrderItems_Single]" },
+              "returnType": { "__id": "OrderItem" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[OrderItems]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[OrderItems_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[OrderItems_SingleOrDefault]",
+              "name": "OrderItems_SingleOrDefault",
+              "elementType": { "__id": "OrderItem" },
+              "query": { "__id": "CoreData/Members[OrderItems_SingleOrDefault]" },
+              "returnType": { "__id": "OrderItem" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[OrderItems]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[OrderItems_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Aces_Single]",
+              "name": "Aces_Single",
+              "elementType": { "__id": "Ace" },
+              "query": { "__id": "CoreData/Members[Aces_Single]" },
+              "returnType": { "__id": "Ace" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Aces]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Aces_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Aces_SingleOrDefault]",
+              "name": "Aces_SingleOrDefault",
+              "elementType": { "__id": "Ace" },
+              "query": { "__id": "CoreData/Members[Aces_SingleOrDefault]" },
+              "returnType": { "__id": "Ace" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Aces]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Aces_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Approvals_Single]",
+              "name": "Approvals_Single",
+              "elementType": { "__id": "Approval" },
+              "query": { "__id": "CoreData/Members[Approvals_Single]" },
+              "returnType": { "__id": "Approval" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Approvals]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Approvals_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Approvals_SingleOrDefault]",
+              "name": "Approvals_SingleOrDefault",
+              "elementType": { "__id": "Approval" },
+              "query": { "__id": "CoreData/Members[Approvals_SingleOrDefault]" },
+              "returnType": { "__id": "Approval" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Approvals]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Approvals_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[ActiveDirectoryUsers_Single]",
+              "name": "ActiveDirectoryUsers_Single",
+              "elementType": { "__id": "ActiveDirectoryUser" },
+              "query": { "__id": "CoreData/Members[ActiveDirectoryUsers_Single]" },
+              "returnType": { "__id": "ActiveDirectoryUser" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[ActiveDirectoryUsers]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[ActiveDirectoryUsers_Single]/Parameters[cn]",
+                  "name": "cn",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[ActiveDirectoryUsers_SingleOrDefault]",
+              "name": "ActiveDirectoryUsers_SingleOrDefault",
+              "elementType": { "__id": "ActiveDirectoryUser" },
+              "query": { "__id": "CoreData/Members[ActiveDirectoryUsers_SingleOrDefault]" },
+              "returnType": { "__id": "ActiveDirectoryUser" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[ActiveDirectoryUsers]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[ActiveDirectoryUsers_SingleOrDefault]/Parameters[cn]",
+                  "name": "cn",
+                  "parameterType": { "__id": ":String?" }
                 }
               ]
             }
@@ -4025,7 +4588,60 @@
                     "displayName": "Group",
                     "name": "Group",
                     "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" }
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Group1",
+                        "name": "Group1",
+                        "kind": "Group",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Endpoints",
+                            "name": "Endpoints",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showEndpointsBrowse]" }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Group2",
+                        "name": "Group2",
+                        "kind": "Group",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Configuration",
+                            "name": "Configuration",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showKeyNameValuesList]" }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ],
                 "propertySources":
@@ -5301,6 +5917,765 @@
             {
               "id": "ViewTask/Methods[deleteEntity]",
               "name": "deleteEntity"
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Job/Properties[State]" } },
+          "id": "Job",
+          "name": "Job",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Job/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Job/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "Job/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Job/Properties[State]",
+              "name": "State",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[ReferencedItemId]",
+              "name": "ReferencedItemId",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[Token]",
+              "name": "Token",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[TenantId]",
+              "name": "TenantId",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[c_Error]",
+              "name": "c_Error",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[EndTime]",
+              "name": "EndTime",
+              "propertyType": { "__id": ":DateTimeOffset?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Job/Properties[ParentId]",
+              "name": "ParentId",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Job/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Job/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Job/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "CatalogueItem1/Properties[Collection]" } },
+          "id": "CatalogueItem1",
+          "name": "CatalogueItem1",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "CatalogueItem1/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "CatalogueItem1/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "CatalogueItem1/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CatalogueItem1/Properties[Collection]",
+              "name": "Collection",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Version]",
+              "name": "Version",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "CatalogueItem1/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "CatalogueItem1/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Order/Properties[Status]" } },
+          "id": "Order",
+          "name": "Order",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Order/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Order/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "Order/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Order/Properties[Status]",
+              "name": "Status",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Order/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Order/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Order/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Order/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Order/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Order/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Order/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Order/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Order/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Order/Properties[OrderItems]",
+              "name": "OrderItems",
+              "association": { "__id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" },
+              "elementType": { "__id": "OrderItem" },
+              "fromEnd": { "__id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde/Ends[OrderItemsPartner]" },
+              "propertyType": { "__id": "OrderItem*" },
+              "toEnd": { "__id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde/Ends[OrderItems]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "OrderItem/Properties[Status]" } },
+          "id": "OrderItem",
+          "name": "OrderItem",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "OrderItem/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "OrderItem/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "OrderItem/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "OrderItem/Properties[OrderId]",
+              "name": "OrderId",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "OrderItem/Properties[Status]",
+              "name": "Status",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "OrderItem/Properties[Quantity]",
+              "name": "Quantity",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "OrderItem/Properties[Version]",
+              "name": "Version",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "OrderItem/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "OrderItem/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "OrderItem/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "OrderItem/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "OrderItem/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "OrderItem/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "OrderItem/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "OrderItem/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "OrderItem/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "OrderItem/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Ace/Properties[Resource]" } },
+          "id": "Ace",
+          "name": "Ace",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Ace/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Ace/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "Ace/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Ace/Properties[Resource]",
+              "name": "Resource",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Ace/Properties[Trustee]",
+              "name": "Trustee",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Ace/Properties[Action]",
+              "name": "Action",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Ace/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Ace/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Ace/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Ace/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Ace/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Ace/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Ace/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Ace/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Approval/Properties[State]" } },
+          "id": "Approval",
+          "name": "Approval",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Approval/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Approval/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "Approval/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Approval/Properties[State]",
+              "name": "State",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Approval/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Approval/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Approval/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Approval/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Approval/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Approval/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Approval/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Approval/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "ActiveDirectoryUser/Properties[cn]" } },
+          "id": "ActiveDirectoryUser",
+          "name": "ActiveDirectoryUser",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "ActiveDirectoryUser/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "ActiveDirectoryUser/Methods[view]",
+              "name": "view"
+            },
+            {
+              "id": "ActiveDirectoryUser/Methods[edit]",
+              "name": "edit"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "ActiveDirectoryUser/Properties[cn]",
+              "name": "cn",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[description]",
+              "name": "description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[distinguishedName]",
+              "name": "distinguishedName",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[groupType]",
+              "name": "groupType",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[name]",
+              "name": "name",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[sn]",
+              "name": "sn",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[givenName]",
+              "name": "givenName",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[department]",
+              "name": "department",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[displayName]",
+              "name": "displayName",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[mail]",
+              "name": "mail",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[objectGUID]",
+              "name": "objectGUID",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[objectSID]",
+              "name": "objectSID",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[sAMAccountName]",
+              "name": "sAMAccountName",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[employeeID]",
+              "name": "employeeID",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[telephoneNumber]",
+              "name": "telephoneNumber",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[mobile]",
+              "name": "mobile",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[sAMAccountType]",
+              "name": "sAMAccountType",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[uSNChanged]",
+              "name": "uSNChanged",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[uSNCreated]",
+              "name": "uSNCreated",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[whenChanged]",
+              "name": "whenChanged",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ActiveDirectoryUser/Properties[whenCreated]",
+              "name": "whenCreated",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde",
+          "name": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde/Ends[OrderItemsPartner]",
+              "name": "OrderItemsPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Order" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde/Ends[OrderItems]",
+              "name": "OrderItems",
+              "multiplicity": "Many",
+              "entityType": { "__id": "OrderItem" }
             }
           ]
         }
