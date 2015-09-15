@@ -22,9 +22,6 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="UtilitiesData"
-      EntityContainer="UtilitiesData" />
-    <EntityContainerGroupProperty
       Name="DiagnosticsData"
       EntityContainer="DiagnosticsData" />
     <EntityContainerGroupProperty

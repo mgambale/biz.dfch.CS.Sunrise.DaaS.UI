@@ -4,24 +4,6 @@
   <Application.Attributes>
     <Partial />
   </Application.Attributes>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:Person" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:CatalogueItem" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityContainer>
-    <EntityContainer.Attributes>
-      <Proxy
-        Target="ServiceInterface:UtilitiesData" />
-    </EntityContainer.Attributes>
-  </EntityContainer>
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
@@ -37,37 +19,7 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:Job" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:CatalogueItem1" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:Order" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:OrderItem" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:Ace" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:Approval" />
     </EntityType.Attributes>
   </EntityType>
   <EntityType>

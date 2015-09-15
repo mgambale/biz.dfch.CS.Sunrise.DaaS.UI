@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="KeyNameValuesList">
+    Name="ApprovalView">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="CoreData" />
@@ -20,63 +20,45 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="KeyNameValueList"
-            Kind="Group">
+            Name="Details"
+            Kind="Group"
+            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Details" />
+            </ContentItem.Attributes>
             <ContentItem
-              Name="KeyNameValues"
-              Kind="Collection"
-              DataType="CollectionView$KeyNameValue"
-              View="Microsoft.LightSwitch.MobileWeb:Table">
+              Name="columns"
+              Kind="Details"
+              DataType="Approval"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="KeyNameValues" />
+                  Value="columns" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="KeyNameValuesList/Properties[KeyNameValues]" />
+                      Member="ApprovalView/Properties[Approval]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="rows"
-                Kind="Details"
-                DataType="KeyNameValue"
-                View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="rows" />
-                </ContentItem.Attributes>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression />
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+                Name="left"
+                Kind="Group">
                 <ContentItem
-                  Name="Key"
+                  Name="State"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="KeyNameValue/Properties[Key]" />
+                          Member="Approval/Properties[State]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Small"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
                   Name="Name"
@@ -86,68 +68,86 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="KeyNameValue/Properties[Name]" />
+                          Member="Approval/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Value"
+                  Name="Description"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?"
+                  View="Microsoft.LightSwitch.MobileWeb:Paragraph">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="KeyNameValue/Properties[Value]" />
+                          Member="Approval/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <ConstantExpression
-                          Value="FitToContent"
-                          ResultType=":String" />
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="KeyNameValuesList/Properties[KeyNameValues]" />
-                      <CallExpression
-                        Target="viewSelected" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
+              <ContentItem
+                Name="right"
+                Kind="Group">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="SearchKeyNameValues"
+                Name="Approve"
                 Kind="Command">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="Search" />
-                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
                     <ScreenExpressionTree>
                       <ChainExpression>
-                        <MemberExpression
-                          Member="KeyNameValuesList/Properties[KeyNameValues]" />
                         <CallExpression
-                          Target="showSearch" />
+                          Target="ApprovalView/Methods[approve]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -156,39 +156,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <ConstantExpression
-                          Value="msls-search"
-                          ResultType="Microsoft.LightSwitch:String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="Add"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showKeyNameValueAdd]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
-                            <CreateNewEntity
-                              TargetParameter="!module/Methods[showKeyNameValueAdd]/Parameters[KeyNameValue]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-add"
+                          Value="msls-accept"
                           ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
@@ -196,7 +164,7 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="Edit"
+                Name="Decline"
                 Kind="Command">
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -204,21 +172,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showKeyNameValueEdit]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
-                          </CallExpression.Attributes>
-                          <ArgumentExpression
-                            Parameter="KeyNameValue">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="KeyNameValuesList/Properties[KeyNameValues]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
+                          Target="ApprovalView/Methods[decline]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -227,7 +181,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <ConstantExpression
-                          Value="msls-edit"
+                          Value="msls-decline"
                           ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
@@ -235,7 +189,7 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="View"
+                Name="Refresh"
                 Kind="Command">
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -243,27 +197,121 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showKeyNameValueView]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
-                          </CallExpression.Attributes>
-                          <ArgumentExpression
-                            Parameter="KeyNameValue">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="KeyNameValuesList/Properties[KeyNameValues]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
+                          Target="ApprovalView/Methods[refresh]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-refresh"
+                          ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
             </ContentItem.CommandItems>
+          </ContentItem>
+          <ContentItem
+            Name="General"
+            Kind="Group">
+            <ContentItem
+              Name="GeneralGroup1"
+              Kind="Group">
+              <ContentItem
+                Name="Tid"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ApprovalView/Properties[Approval]" />
+                      <MemberExpression
+                        Member="Tid" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Id"
+                Kind="Value"
+                DataType=":Int32">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ApprovalView/Properties[Approval]" />
+                      <MemberExpression
+                        Member="Id" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="CreatedBy"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ApprovalView/Properties[Approval]" />
+                      <MemberExpression
+                        Member="CreatedBy" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Created"
+                Kind="Value"
+                DataType=":DateTimeOffset">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ApprovalView/Properties[Approval]" />
+                      <MemberExpression
+                        Member="Created" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="ModifiedBy"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ApprovalView/Properties[Approval]" />
+                      <MemberExpression
+                        Member="ModifiedBy" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Modified"
+                Kind="Value"
+                DataType=":DateTimeOffset">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ApprovalView/Properties[Approval]" />
+                      <MemberExpression
+                        Member="Modified" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
@@ -307,44 +355,33 @@
           Name="dialogName"
           ParameterType=":String" />
       </ScreenMethod>
+      <ScreenMethod
+        Name="approve" />
+      <ScreenMethod
+        Name="decline" />
+      <ScreenMethod
+        Name="refresh" />
     </Screen.Methods>
     <Screen.Properties>
-      <ScreenCollectionProperty
-        Name="KeyNameValues"
-        DisableSearch="True"
-        PageSize="45"
-        PropertyType="CollectionView$KeyNameValue">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="KeyNameValuesQuery"
-            ReturnType="KeyNameValue*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <MemberExpression
-                  Member="CoreData/Members[KeyNameValues]" />
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="KeyNameValuesList/Properties[KeyNameValues]/Query" />
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="Approval"
+        PropertyType="Approval">
+        <ScreenProperty.Attributes>
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
     </Screen.Properties>
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showKeyNameValuesList">
+      Name="showApprovalView">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="KeyNameValuesList" />
+          TargetScreen="ApprovalView" />
       </ApplicationMethod.Attributes>
+      <ApplicationMethodParameter
+        Name="Approval"
+        ParameterType="Approval" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

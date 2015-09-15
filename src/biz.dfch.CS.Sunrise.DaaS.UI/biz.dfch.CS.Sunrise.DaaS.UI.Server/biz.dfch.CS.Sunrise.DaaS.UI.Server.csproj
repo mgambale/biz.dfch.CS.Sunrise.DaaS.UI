@@ -228,11 +228,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiagnosticsData.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\UtilitiesData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UtilitiesData.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Service.lsml">
@@ -243,14 +238,6 @@
     <_ServerFile Include="LogIn.aspx" />
     <_ServerFile Include="LogOut.aspx" />
     <Content Include="Web.config" />
-    <LightSwitchModel Include="DataSources\UtilitiesData\Persons.lsml" />
-    <LightSwitchModel Include="DataSources\UtilitiesData\CatalogueItems.lsml" />
-    <LightSwitchModel Include="Properties\DataSources\UtilitiesData.lsml" />
-    <LightSwitchExternalDataSource Include="Properties\UtilitiesData.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UtilitiesData.Designer.cs</LastGenOutput>
-      <EntityContainer>UtilitiesData</EntityContainer>
-    </LightSwitchExternalDataSource>
     <LightSwitchModel Include="DataSources\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\DataSources\DiagnosticsData.lsml" />
     <LightSwitchExternalDataSource Include="Properties\DiagnosticsData.edmx">

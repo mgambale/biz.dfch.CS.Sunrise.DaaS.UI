@@ -1,92 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-  <EntityType Name="KeyNameValue">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="Job">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="State" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ReferencedItemId" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Token" Type="Edm.String" MaxLength="Max" />
-    <Property Name="TenantId" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
-    <Property Name="c_Error" Type="Edm.String" MaxLength="Max" />
-    <Property Name="EndTime" Type="Edm.DateTimeOffset" />
-    <Property Name="ParentId" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CatalogueItem1">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Collection" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Version" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Order">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <NavigationProperty Name="OrderItems" Relationship="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" ToRole="OrderItems" FromRole="OrderItemsPartner" />
-  </EntityType>
-  <EntityType Name="OrderItem">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="OrderId" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Parameters" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-  </EntityType>
   <EntityType Name="Ace">
     <Key>
       <PropertyRef Name="Id" />
@@ -94,20 +7,6 @@
     <Property Name="Resource" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Trustee" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Action" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Approval">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="State" Type="Edm.String" MaxLength="Max" />
     <Property Name="Id" Type="Edm.Int32" Nullable="false" />
     <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
@@ -143,19 +42,120 @@
     <Property Name="whenChanged" Type="Edm.DateTime" Nullable="false" />
     <Property Name="whenCreated" Type="Edm.DateTime" Nullable="false" />
   </EntityType>
+  <EntityType Name="Approval">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="State" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatalogueItem1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Collection" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Version" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="State" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ReferencedItemId" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Token" Type="Edm.String" MaxLength="Max" />
+    <Property Name="TenantId" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
+    <Property Name="c_Error" Type="Edm.String" MaxLength="Max" />
+    <Property Name="EndTime" Type="Edm.DateTimeOffset" />
+    <Property Name="ParentId" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KeyNameValue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="OrderId" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Parameters" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <NavigationProperty Name="OrderItems" Relationship="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" ToRole="OrderItems" FromRole="OrderItemsPartner" />
+  </EntityType>
   <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
     <End Role="OrderItemsPartner" Type="LightSwitchApplication.Order" Multiplicity="0..1" />
     <End Role="OrderItems" Type="LightSwitchApplication.OrderItem" Multiplicity="*" />
   </Association>
   <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
-    <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
-    <EntitySet Name="Jobs" EntityType="LightSwitchApplication.Job" />
-    <EntitySet Name="CatalogueItems" EntityType="LightSwitchApplication.CatalogueItem1" />
-    <EntitySet Name="Orders" EntityType="LightSwitchApplication.Order" />
-    <EntitySet Name="OrderItems" EntityType="LightSwitchApplication.OrderItem" />
     <EntitySet Name="Aces" EntityType="LightSwitchApplication.Ace" />
-    <EntitySet Name="Approvals" EntityType="LightSwitchApplication.Approval" />
     <EntitySet Name="ActiveDirectoryUsers" EntityType="LightSwitchApplication.ActiveDirectoryUser" />
+    <EntitySet Name="Approvals" EntityType="LightSwitchApplication.Approval" />
+    <EntitySet Name="CatalogueItems" EntityType="LightSwitchApplication.CatalogueItem1" />
+    <EntitySet Name="Jobs" EntityType="LightSwitchApplication.Job" />
+    <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
+    <EntitySet Name="OrderItems" EntityType="LightSwitchApplication.OrderItem" />
+    <EntitySet Name="Orders" EntityType="LightSwitchApplication.Order" />
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <End Role="OrderItemsPartner" EntitySet="Orders" />
       <End Role="OrderItems" EntitySet="OrderItems" />

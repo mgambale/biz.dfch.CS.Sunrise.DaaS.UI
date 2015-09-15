@@ -27,9 +27,6 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="UtilitiesData"
-      EntityContainer="UtilitiesData" />
-    <EntityContainerGroupProperty
       Name="DiagnosticsData"
       EntityContainer="DiagnosticsData" />
     <EntityContainerGroupProperty
@@ -49,5 +46,20 @@
     <ApplicationNavigationMethodLink
       Name="link1"
       Method="!module/Methods[showKeyNameValuesList]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showOrdersList]" />
+    <ApplicationNavigationMethodLink
+      Name="link3"
+      Method="!module/Methods[showApprovalsList]" />
+    <ApplicationNavigationMethodLink
+      Name="link4"
+      Method="!module/Methods[showCatalogueItemsList]" />
+    <ApplicationNavigationMethodLink
+      Name="link5"
+      Method="!module/Methods[showJobsList]" />
+    <ApplicationNavigationMethodLink
+      Name="link6"
+      Method="!module/Methods[showOrderItemsList]" />
   </Application.NavigationItems>
 </Application>

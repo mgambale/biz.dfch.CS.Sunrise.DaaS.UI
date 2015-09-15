@@ -71,7 +71,8 @@
 }
 
 .ui-body-a {
-    background: #fff !important;
+    background: #fff;
+    background-color: #fff;
 }
 /* Uncomment the following lines if you want to use certain jQuery Mobile listview features such as 
     count bubbles and icons inside LightSwitch lists. jQuery Mobile relies on list items using 

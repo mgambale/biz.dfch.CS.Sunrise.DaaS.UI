@@ -2,68 +2,12 @@
 
 (function (lightSwitchApplication) {
 
-    msls._addEntryPoints(lightSwitchApplication.CatalogueItem, {
-        /// <field>
-        /// Called when a new catalogueItem is created.
-        /// <br/>created(msls.application.CatalogueItem entity)
-        /// </field>
-        created: [lightSwitchApplication.CatalogueItem]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.Person, {
-        /// <field>
-        /// Called when a new person is created.
-        /// <br/>created(msls.application.Person entity)
-        /// </field>
-        created: [lightSwitchApplication.Person]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.Endpoint, {
         /// <field>
         /// Called when a new endpoint is created.
         /// <br/>created(msls.application.Endpoint entity)
         /// </field>
         created: [lightSwitchApplication.Endpoint]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.KeyNameValue, {
-        /// <field>
-        /// Called when a new keyNameValue is created.
-        /// <br/>created(msls.application.KeyNameValue entity)
-        /// </field>
-        created: [lightSwitchApplication.KeyNameValue]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.Job, {
-        /// <field>
-        /// Called when a new job is created.
-        /// <br/>created(msls.application.Job entity)
-        /// </field>
-        created: [lightSwitchApplication.Job]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.CatalogueItem1, {
-        /// <field>
-        /// Called when a new catalogueItem1 is created.
-        /// <br/>created(msls.application.CatalogueItem1 entity)
-        /// </field>
-        created: [lightSwitchApplication.CatalogueItem1]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.Order, {
-        /// <field>
-        /// Called when a new order is created.
-        /// <br/>created(msls.application.Order entity)
-        /// </field>
-        created: [lightSwitchApplication.Order]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.OrderItem, {
-        /// <field>
-        /// Called when a new orderItem is created.
-        /// <br/>created(msls.application.OrderItem entity)
-        /// </field>
-        created: [lightSwitchApplication.OrderItem]
     });
 
     msls._addEntryPoints(lightSwitchApplication.Ace, {
@@ -74,6 +18,14 @@
         created: [lightSwitchApplication.Ace]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.ActiveDirectoryUser, {
+        /// <field>
+        /// Called when a new activeDirectoryUser is created.
+        /// <br/>created(msls.application.ActiveDirectoryUser entity)
+        /// </field>
+        created: [lightSwitchApplication.ActiveDirectoryUser]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.Approval, {
         /// <field>
         /// Called when a new approval is created.
@@ -82,12 +34,44 @@
         created: [lightSwitchApplication.Approval]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.ActiveDirectoryUser, {
+    msls._addEntryPoints(lightSwitchApplication.CatalogueItem1, {
         /// <field>
-        /// Called when a new activeDirectoryUser is created.
-        /// <br/>created(msls.application.ActiveDirectoryUser entity)
+        /// Called when a new catalogueItem1 is created.
+        /// <br/>created(msls.application.CatalogueItem1 entity)
         /// </field>
-        created: [lightSwitchApplication.ActiveDirectoryUser]
+        created: [lightSwitchApplication.CatalogueItem1]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Job, {
+        /// <field>
+        /// Called when a new job is created.
+        /// <br/>created(msls.application.Job entity)
+        /// </field>
+        created: [lightSwitchApplication.Job]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.KeyNameValue, {
+        /// <field>
+        /// Called when a new keyNameValue is created.
+        /// <br/>created(msls.application.KeyNameValue entity)
+        /// </field>
+        created: [lightSwitchApplication.KeyNameValue]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.OrderItem, {
+        /// <field>
+        /// Called when a new orderItem is created.
+        /// <br/>created(msls.application.OrderItem entity)
+        /// </field>
+        created: [lightSwitchApplication.OrderItem]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Order, {
+        /// <field>
+        /// Called when a new order is created.
+        /// <br/>created(msls.application.Order entity)
+        /// </field>
+        created: [lightSwitchApplication.Order]
     });
 
 }(msls.application));

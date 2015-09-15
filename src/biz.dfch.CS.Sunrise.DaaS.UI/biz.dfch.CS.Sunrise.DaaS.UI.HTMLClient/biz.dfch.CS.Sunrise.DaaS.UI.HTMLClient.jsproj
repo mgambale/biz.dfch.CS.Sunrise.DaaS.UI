@@ -88,8 +88,11 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
-    <Content Include="Screens\AddEditTask.lsml.js">
-      <DependentUpon>AddEditTask.lsml</DependentUpon>
+    <Content Include="Screens\ApprovalsList.lsml.js">
+      <DependentUpon>ApprovalsList.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ApprovalView.lsml.js">
+      <DependentUpon>ApprovalView.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\Home.lsml.js">
       <DependentUpon>Home.lsml</DependentUpon>
@@ -100,8 +103,8 @@
     <Content Include="Screens\KeyNameValueView.lsml.js">
       <DependentUpon>KeyNameValueView.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ViewTask.lsml.js">
-      <DependentUpon>ViewTask.lsml</DependentUpon>
+    <Content Include="Screens\OrderAdd.lsml.js">
+      <DependentUpon>OrderAdd.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
@@ -134,21 +137,37 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchModel Include="Properties\CoreData\Approvals.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\CatalogueItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Jobs.lsml" />
     <LightSwitchModel Include="Properties\CoreData\KeyNameValues.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\CoreData\OrderItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Orders.lsml" />
     <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
-    <LightSwitchModel Include="Screens\AddEditTask.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalsList.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalView.lsml" />
+    <LightSwitchModel Include="Screens\CatalogueItemsList.lsml" />
+    <LightSwitchModel Include="Screens\CatalogueItemView.lsml" />
     <LightSwitchModel Include="Screens\EndpointsBrowse.lsml" />
     <LightSwitchModel Include="Screens\EndpointView.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\JobsList.lsml" />
+    <LightSwitchModel Include="Screens\JobView.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValueAdd.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValueEdit.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValuesList.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValueView.lsml" />
-    <LightSwitchModel Include="Screens\ViewTask.lsml" />
+    <LightSwitchModel Include="Screens\OrderAdd.lsml" />
+    <LightSwitchModel Include="Screens\OrderAddSpecial.lsml" />
+    <LightSwitchModel Include="Screens\OrderItemsList.lsml" />
+    <LightSwitchModel Include="Screens\OrderItemView.lsml" />
+    <LightSwitchModel Include="Screens\OrdersList.lsml" />
+    <LightSwitchModel Include="Screens\OrderView.lsml" />
+    <LightSwitchModel Include="Screens\OrderViewDetails.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">

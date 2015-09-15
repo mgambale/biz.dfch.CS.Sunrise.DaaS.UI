@@ -71,86 +71,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<KeyNameValue> KeyNameValues
-        {
-            get
-            {
-                if ((_KeyNameValues == null))
-                {
-                    _KeyNameValues = base.CreateObjectSet<KeyNameValue>("KeyNameValues");
-                }
-                return _KeyNameValues;
-            }
-        }
-        private ObjectSet<KeyNameValue> _KeyNameValues;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Job> Jobs
-        {
-            get
-            {
-                if ((_Jobs == null))
-                {
-                    _Jobs = base.CreateObjectSet<Job>("Jobs");
-                }
-                return _Jobs;
-            }
-        }
-        private ObjectSet<Job> _Jobs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<CatalogueItem1> CatalogueItems
-        {
-            get
-            {
-                if ((_CatalogueItems == null))
-                {
-                    _CatalogueItems = base.CreateObjectSet<CatalogueItem1>("CatalogueItems");
-                }
-                return _CatalogueItems;
-            }
-        }
-        private ObjectSet<CatalogueItem1> _CatalogueItems;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Order> Orders
-        {
-            get
-            {
-                if ((_Orders == null))
-                {
-                    _Orders = base.CreateObjectSet<Order>("Orders");
-                }
-                return _Orders;
-            }
-        }
-        private ObjectSet<Order> _Orders;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<OrderItem> OrderItems
-        {
-            get
-            {
-                if ((_OrderItems == null))
-                {
-                    _OrderItems = base.CreateObjectSet<OrderItem>("OrderItems");
-                }
-                return _OrderItems;
-            }
-        }
-        private ObjectSet<OrderItem> _OrderItems;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<Ace> Aces
         {
             get
@@ -163,6 +83,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Ace> _Aces;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ActiveDirectoryUser> ActiveDirectoryUsers
+        {
+            get
+            {
+                if ((_ActiveDirectoryUsers == null))
+                {
+                    _ActiveDirectoryUsers = base.CreateObjectSet<ActiveDirectoryUser>("ActiveDirectoryUsers");
+                }
+                return _ActiveDirectoryUsers;
+            }
+        }
+        private ObjectSet<ActiveDirectoryUser> _ActiveDirectoryUsers;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -183,62 +119,86 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<ActiveDirectoryUser> ActiveDirectoryUsers
+        public ObjectSet<CatalogueItem1> CatalogueItems
         {
             get
             {
-                if ((_ActiveDirectoryUsers == null))
+                if ((_CatalogueItems == null))
                 {
-                    _ActiveDirectoryUsers = base.CreateObjectSet<ActiveDirectoryUser>("ActiveDirectoryUsers");
+                    _CatalogueItems = base.CreateObjectSet<CatalogueItem1>("CatalogueItems");
                 }
-                return _ActiveDirectoryUsers;
+                return _CatalogueItems;
             }
         }
-        private ObjectSet<ActiveDirectoryUser> _ActiveDirectoryUsers;
+        private ObjectSet<CatalogueItem1> _CatalogueItems;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Job> Jobs
+        {
+            get
+            {
+                if ((_Jobs == null))
+                {
+                    _Jobs = base.CreateObjectSet<Job>("Jobs");
+                }
+                return _Jobs;
+            }
+        }
+        private ObjectSet<Job> _Jobs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<KeyNameValue> KeyNameValues
+        {
+            get
+            {
+                if ((_KeyNameValues == null))
+                {
+                    _KeyNameValues = base.CreateObjectSet<KeyNameValue>("KeyNameValues");
+                }
+                return _KeyNameValues;
+            }
+        }
+        private ObjectSet<KeyNameValue> _KeyNameValues;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<OrderItem> OrderItems
+        {
+            get
+            {
+                if ((_OrderItems == null))
+                {
+                    _OrderItems = base.CreateObjectSet<OrderItem>("OrderItems");
+                }
+                return _OrderItems;
+            }
+        }
+        private ObjectSet<OrderItem> _OrderItems;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Order> Orders
+        {
+            get
+            {
+                if ((_Orders == null))
+                {
+                    _Orders = base.CreateObjectSet<Order>("Orders");
+                }
+                return _Orders;
+            }
+        }
+        private ObjectSet<Order> _Orders;
 
         #endregion
 
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the KeyNameValues EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToKeyNameValues(KeyNameValue keyNameValue)
-        {
-            base.AddObject("KeyNameValues", keyNameValue);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Jobs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToJobs(Job job)
-        {
-            base.AddObject("Jobs", job);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the CatalogueItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCatalogueItems(CatalogueItem1 catalogueItem1)
-        {
-            base.AddObject("CatalogueItems", catalogueItem1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Orders EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToOrders(Order order)
-        {
-            base.AddObject("Orders", order);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the OrderItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToOrderItems(OrderItem orderItem)
-        {
-            base.AddObject("OrderItems", orderItem);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the Aces EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -246,6 +206,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToAces(Ace ace)
         {
             base.AddObject("Aces", ace);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ActiveDirectoryUsers EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToActiveDirectoryUsers(ActiveDirectoryUser activeDirectoryUser)
+        {
+            base.AddObject("ActiveDirectoryUsers", activeDirectoryUser);
         }
     
         /// <summary>
@@ -257,11 +225,43 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the ActiveDirectoryUsers EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the CatalogueItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToActiveDirectoryUsers(ActiveDirectoryUser activeDirectoryUser)
+        public void AddToCatalogueItems(CatalogueItem1 catalogueItem1)
         {
-            base.AddObject("ActiveDirectoryUsers", activeDirectoryUser);
+            base.AddObject("CatalogueItems", catalogueItem1);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Jobs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToJobs(Job job)
+        {
+            base.AddObject("Jobs", job);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the KeyNameValues EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToKeyNameValues(KeyNameValue keyNameValue)
+        {
+            base.AddObject("KeyNameValues", keyNameValue);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the OrderItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrderItems(OrderItem orderItem)
+        {
+            base.AddObject("OrderItems", orderItem);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Orders EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrders(Order order)
+        {
+            base.AddObject("Orders", order);
         }
 
         #endregion

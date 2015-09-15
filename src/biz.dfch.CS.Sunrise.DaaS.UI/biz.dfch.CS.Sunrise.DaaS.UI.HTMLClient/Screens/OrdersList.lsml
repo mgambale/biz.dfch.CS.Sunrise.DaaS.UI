@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="KeyNameValuesList">
+    Name="OrdersList">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="CoreData" />
@@ -20,29 +20,29 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="KeyNameValueList"
+            Name="OrderList"
             Kind="Group">
             <ContentItem
-              Name="KeyNameValues"
+              Name="Orders"
               Kind="Collection"
-              DataType="CollectionView$KeyNameValue"
-              View="Microsoft.LightSwitch.MobileWeb:Table">
+              DataType="CollectionView$Order"
+              View="Microsoft.LightSwitch.MobileWeb:TileList">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="KeyNameValues" />
+                  Value="Orders" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="KeyNameValuesList/Properties[KeyNameValues]" />
+                      Member="OrdersList/Properties[Orders]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
                 Name="rows"
                 Kind="Details"
-                DataType="KeyNameValue"
+                DataType="Order"
                 View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -54,14 +54,52 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Key"
+                  Name="Name"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="KeyNameValue/Properties[Key]" />
+                          Member="Order/Properties[Name]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Large"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="Status"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Order/Properties[Status]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Created"
+                  Kind="Value"
+                  DataType=":DateTimeOffset">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Order/Properties[Created]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -79,30 +117,30 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
-                  Name="Name"
+                  Name="Description"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?"
+                  View="Microsoft.LightSwitch.MobileWeb:Paragraph">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="KeyNameValue/Properties[Name]" />
+                          Member="Order/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Value"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="KeyNameValue/Properties[Value]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Small"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -123,7 +161,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="KeyNameValuesList/Properties[KeyNameValues]" />
+                        Member="OrdersList/Properties[Orders]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -133,7 +171,7 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="SearchKeyNameValues"
+                Name="SearchOrders"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -145,7 +183,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="KeyNameValuesList/Properties[KeyNameValues]" />
+                          Member="OrdersList/Properties[Orders]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -164,7 +202,7 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="Add"
+                Name="View"
                 Kind="Command">
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -172,12 +210,80 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showKeyNameValueAdd]">
+                          Target="!module/Methods[showOrderView]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
+                              Collection="OrdersList/Properties[Orders]" />
+                          </CallExpression.Attributes>
+                          <ArgumentExpression
+                            Parameter="Order">
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="OrdersList/Properties[Orders]" />
+                              <MemberExpression
+                                Member="selectedItem" />
+                            </ChainExpression>
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ViewDetails"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showOrderViewDetails]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="OrdersList/Properties[Orders]" />
+                          </CallExpression.Attributes>
+                          <ArgumentExpression
+                            Parameter="Order">
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="OrdersList/Properties[Orders]" />
+                              <MemberExpression
+                                Member="selectedItem" />
+                            </ChainExpression>
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-document"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="AddOrder"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showOrderAdd]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="OrdersList/Properties[Orders]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showKeyNameValueAdd]/Parameters[KeyNameValue]" />
+                              TargetParameter="!module/Methods[showOrderAdd]/Parameters[Order]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -196,28 +302,25 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="Edit"
+                Name="OrderAdmin"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Order (Admin only)" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showKeyNameValueEdit]">
+                          Target="!module/Methods[showOrderAddSpecial]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
+                              Collection="OrdersList/Properties[Orders]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showOrderAddSpecial]/Parameters[Order]" />
                           </CallExpression.Attributes>
-                          <ArgumentExpression
-                            Parameter="KeyNameValue">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="KeyNameValuesList/Properties[KeyNameValues]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                            </ChainExpression>
-                          </ArgumentExpression>
                         </CallExpression>
                       </ChainExpression>
                     </ScreenExpressionTree>
@@ -227,37 +330,8 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <ConstantExpression
-                          Value="msls-edit"
+                          Value="msls-warning"
                           ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="View"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showKeyNameValueView]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="KeyNameValuesList/Properties[KeyNameValues]" />
-                          </CallExpression.Attributes>
-                          <ArgumentExpression
-                            Parameter="KeyNameValue">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="KeyNameValuesList/Properties[KeyNameValues]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -310,21 +384,21 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="KeyNameValues"
+        Name="Orders"
         DisableSearch="True"
         PageSize="45"
-        PropertyType="CollectionView$KeyNameValue">
+        PropertyType="CollectionView$Order">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="KeyNameValuesQuery"
-            ReturnType="KeyNameValue*">
+            Name="OrdersQuery"
+            ReturnType="Order*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="CoreData/Members[KeyNameValues]" />
+                  Member="CoreData/Members[Orders]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -332,7 +406,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="KeyNameValuesList/Properties[KeyNameValues]/Query" />
+              Target="OrdersList/Properties[Orders]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -340,10 +414,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showKeyNameValuesList">
+      Name="showOrdersList">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="KeyNameValuesList" />
+          TargetScreen="OrdersList" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

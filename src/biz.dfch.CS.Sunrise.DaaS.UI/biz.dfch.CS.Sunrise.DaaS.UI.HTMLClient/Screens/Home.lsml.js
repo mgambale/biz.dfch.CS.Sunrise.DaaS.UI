@@ -9,6 +9,7 @@ myapp.Home.ShowAddEditOrder_postRender = function (element, contentItem) {
 myapp.Home.created = function (screen) {
     // Write code here.
 
+    screen.findContentItem("Orders").isVisible = true;
     screen.findContentItem("Endpoints").isVisible = true;
     screen.findContentItem("Configuration").isVisible = true;
 
@@ -129,8 +130,26 @@ myapp.Home.ShowBrowseProjectDocuments_postRender = function (element, contentIte
 };
 
 myapp.Home.Endpoints_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/folders.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'Content/Icons/Uris.png', { height: height, width: width });
 };
 myapp.Home.Configuration_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'Content/Icons/document.png', { height: height, width: width });
+};
+myapp.Home.Orders_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'Content/Icons/basket.png', { height: height, width: width });
+};
+myapp.Home.Approvals_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'Content/Icons/key.png', { height: height, width: width });
+};
+myapp.Home.Catalogue_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'Content/Icons/folders.png', { height: height, width: width });
+};
+myapp.Home.Jobs_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'Content/Icons/audit.png', { height: height, width: width });
+};
+myapp.Home.NewOrder_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'Content/Icons/add-to-cart.png', { height: height, width: width });
+};
+myapp.Home.OrderItems_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'Content/Icons/document.png', { height: height, width: width });
 };
