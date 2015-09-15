@@ -172,7 +172,7 @@
             <ContentItem
               Name="KeyNameValue_CreatedBy"
               Kind="Value"
-              DataType=":String?"
+              DataType=":String"
               View="Microsoft.LightSwitch.MobileWeb:Text">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
@@ -204,7 +204,7 @@
             <ContentItem
               Name="KeyNameValue_ModifiedBy"
               Kind="Value"
-              DataType=":String?"
+              DataType=":String"
               View="Microsoft.LightSwitch.MobileWeb:Text">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>

@@ -28,16 +28,58 @@
         Target="ServiceInterface:DiagnosticsData" />
     </EntityContainer.Attributes>
   </EntityContainer>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:Task" />
-    </EntityType.Attributes>
-  </EntityType>
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
         Target="ServiceInterface:CoreData" />
     </EntityContainer.Attributes>
   </EntityContainer>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Job" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:CatalogueItem1" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Order" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:OrderItem" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Ace" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Approval" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:ActiveDirectoryUser" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" />
+    </Association.Attributes>
+  </Association>
 </Application>

@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Task">
+    Name="OrderItem">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,46 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="OrderId"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="Quantity"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Version"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <KeyProperty
         Name="Id"
         PropertyType=":Int32">
@@ -44,44 +84,35 @@
         Name="Description"
         PropertyType=":String?" />
       <EntityProperty
-        Name="Status"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="Type"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="Parameters"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="c_Error"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="EndTime"
-        PropertyType=":DateTimeOffset?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        PropertyType=":DateTimeOffset?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="CreatedBy"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="Modified"
-        PropertyType=":DateTimeOffset?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
-          <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="ModifiedBy"
-        PropertyType=":String?" />
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -90,14 +121,14 @@
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Tasks"
+      Name="OrderItems"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Task" />
+      EntityType="OrderItem" />
     <QueryOperation
-      Name="Tasks_Single"
-      ReturnType="Task">
+      Name="OrderItems_Single"
+      ReturnType="OrderItem">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -123,7 +154,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Tasks" />
+            Member="OrderItems" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -136,8 +167,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Tasks_SingleOrDefault"
-      ReturnType="Task">
+      Name="OrderItems_SingleOrDefault"
+      ReturnType="OrderItem">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -163,7 +194,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Tasks" />
+            Member="OrderItems" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -182,52 +213,55 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Tasks">
+      EntitySet="OrderItems">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Task"
+          EntityTypeName="OrderItem"
           EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
-          Name="Tasks"
-          EntityType="Task" />
+          Name="OrderItems"
+          EntityType="OrderItem" />
         <CsdlProperty
-          Name="Id"
-          Property="Task/Properties[Id]" />
-        <CsdlProperty
-          Name="Tid"
-          Property="Task/Properties[Tid]" />
-        <CsdlProperty
-          Name="Name"
-          Property="Task/Properties[Name]" />
-        <CsdlProperty
-          Name="Description"
-          Property="Task/Properties[Description]" />
+          Name="OrderId"
+          Property="OrderItem/Properties[OrderId]" />
         <CsdlProperty
           Name="Status"
-          Property="Task/Properties[Status]" />
+          Property="OrderItem/Properties[Status]" />
+        <CsdlProperty
+          Name="Quantity"
+          Property="OrderItem/Properties[Quantity]" />
+        <CsdlProperty
+          Name="Version"
+          Property="OrderItem/Properties[Version]" />
         <CsdlProperty
           Name="Type"
-          Property="Task/Properties[Type]" />
+          Property="OrderItem/Properties[Type]" />
         <CsdlProperty
           Name="Parameters"
-          Property="Task/Properties[Parameters]" />
+          Property="OrderItem/Properties[Parameters]" />
         <CsdlProperty
-          Name="Error"
-          Property="Task/Properties[c_Error]" />
+          Name="Id"
+          Property="OrderItem/Properties[Id]" />
         <CsdlProperty
-          Name="EndTime"
-          Property="Task/Properties[EndTime]" />
+          Name="Tid"
+          Property="OrderItem/Properties[Tid]" />
         <CsdlProperty
-          Name="Created"
-          Property="Task/Properties[Created]" />
+          Name="Name"
+          Property="OrderItem/Properties[Name]" />
+        <CsdlProperty
+          Name="Description"
+          Property="OrderItem/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Task/Properties[CreatedBy]" />
-        <CsdlProperty
-          Name="Modified"
-          Property="Task/Properties[Modified]" />
+          Property="OrderItem/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Task/Properties[ModifiedBy]" />
+          Property="OrderItem/Properties[ModifiedBy]" />
+        <CsdlProperty
+          Name="Created"
+          Property="OrderItem/Properties[Created]" />
+        <CsdlProperty
+          Name="Modified"
+          Property="OrderItem/Properties[Modified]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

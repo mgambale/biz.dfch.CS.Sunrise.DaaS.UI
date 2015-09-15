@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="KeyNameValue">
+    Name="Approval">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,9 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="State"
+        PropertyType=":String?" />
       <KeyProperty
         Name="Id"
         PropertyType=":Int32">
@@ -34,21 +37,7 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Key"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Name"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Value"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
@@ -58,20 +47,25 @@
         Name="Description"
         PropertyType=":String?" />
       <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="Created"
         PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="CreatedBy"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -82,15 +76,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="ModifiedBy"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -99,14 +84,14 @@
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="KeyNameValues"
+      Name="Approvals"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="KeyNameValue" />
+      EntityType="Approval" />
     <QueryOperation
-      Name="KeyNameValues_Single"
-      ReturnType="KeyNameValue">
+      Name="Approvals_Single"
+      ReturnType="Approval">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -132,7 +117,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="KeyNameValues" />
+            Member="Approvals" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -145,8 +130,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="KeyNameValues_SingleOrDefault"
-      ReturnType="KeyNameValue">
+      Name="Approvals_SingleOrDefault"
+      ReturnType="Approval">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -172,7 +157,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="KeyNameValues" />
+            Member="Approvals" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -191,43 +176,40 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="KeyNameValues">
+      EntitySet="Approvals">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="KeyNameValue"
+          EntityTypeName="Approval"
           EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
-          Name="KeyNameValues"
-          EntityType="KeyNameValue" />
+          Name="Approvals"
+          EntityType="Approval" />
         <CsdlProperty
-          Name="Key"
-          Property="KeyNameValue/Properties[Key]" />
-        <CsdlProperty
-          Name="Value"
-          Property="KeyNameValue/Properties[Value]" />
+          Name="State"
+          Property="Approval/Properties[State]" />
         <CsdlProperty
           Name="Id"
-          Property="KeyNameValue/Properties[Id]" />
+          Property="Approval/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="KeyNameValue/Properties[Tid]" />
+          Property="Approval/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="KeyNameValue/Properties[Name]" />
+          Property="Approval/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="KeyNameValue/Properties[Description]" />
+          Property="Approval/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="KeyNameValue/Properties[CreatedBy]" />
+          Property="Approval/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="KeyNameValue/Properties[ModifiedBy]" />
+          Property="Approval/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="KeyNameValue/Properties[Created]" />
+          Property="Approval/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="KeyNameValue/Properties[Modified]" />
+          Property="Approval/Properties[Modified]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

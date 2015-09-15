@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="KeyNameValue">
+    Name="Ace">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,27 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="Resource"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Trustee"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Action"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <KeyProperty
         Name="Id"
         PropertyType=":Int32">
@@ -34,21 +55,7 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Key"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Name"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Value"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
@@ -58,20 +65,25 @@
         Name="Description"
         PropertyType=":String?" />
       <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="Created"
         PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="CreatedBy"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -82,15 +94,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="ModifiedBy"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -99,14 +102,14 @@
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="KeyNameValues"
+      Name="Aces"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="KeyNameValue" />
+      EntityType="Ace" />
     <QueryOperation
-      Name="KeyNameValues_Single"
-      ReturnType="KeyNameValue">
+      Name="Aces_Single"
+      ReturnType="Ace">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -132,7 +135,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="KeyNameValues" />
+            Member="Aces" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -145,8 +148,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="KeyNameValues_SingleOrDefault"
-      ReturnType="KeyNameValue">
+      Name="Aces_SingleOrDefault"
+      ReturnType="Ace">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -172,7 +175,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="KeyNameValues" />
+            Member="Aces" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -191,43 +194,46 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="KeyNameValues">
+      EntitySet="Aces">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="KeyNameValue"
+          EntityTypeName="Ace"
           EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
-          Name="KeyNameValues"
-          EntityType="KeyNameValue" />
+          Name="Aces"
+          EntityType="Ace" />
         <CsdlProperty
-          Name="Key"
-          Property="KeyNameValue/Properties[Key]" />
+          Name="Resource"
+          Property="Ace/Properties[Resource]" />
         <CsdlProperty
-          Name="Value"
-          Property="KeyNameValue/Properties[Value]" />
+          Name="Trustee"
+          Property="Ace/Properties[Trustee]" />
+        <CsdlProperty
+          Name="Action"
+          Property="Ace/Properties[Action]" />
         <CsdlProperty
           Name="Id"
-          Property="KeyNameValue/Properties[Id]" />
+          Property="Ace/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="KeyNameValue/Properties[Tid]" />
+          Property="Ace/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="KeyNameValue/Properties[Name]" />
+          Property="Ace/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="KeyNameValue/Properties[Description]" />
+          Property="Ace/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="KeyNameValue/Properties[CreatedBy]" />
+          Property="Ace/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="KeyNameValue/Properties[ModifiedBy]" />
+          Property="Ace/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="KeyNameValue/Properties[Created]" />
+          Property="Ace/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="KeyNameValue/Properties[Modified]" />
+          Property="Ace/Properties[Modified]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

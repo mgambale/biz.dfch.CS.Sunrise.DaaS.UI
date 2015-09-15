@@ -237,7 +237,7 @@
             <ContentItem
               Name="CreatedBy"
               Kind="Value"
-              DataType=":String?">
+              DataType=":String">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -267,7 +267,7 @@
             <ContentItem
               Name="ModifiedBy"
               Kind="Value"
-              DataType=":String?">
+              DataType=":String">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>

@@ -259,13 +259,19 @@
       <EntityContainer>DiagnosticsData</EntityContainer>
     </LightSwitchExternalDataSource>
     <LightSwitchModel Include="DataSources\CoreData\KeyNameValues.lsml" />
-    <LightSwitchModel Include="DataSources\CoreData\Tasks.lsml" />
     <LightSwitchModel Include="Properties\DataSources\CoreData.lsml" />
     <LightSwitchExternalDataSource Include="Properties\BaseData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BaseData.Designer.cs</LastGenOutput>
       <EntityContainer>BaseData</EntityContainer>
     </LightSwitchExternalDataSource>
+    <LightSwitchModel Include="DataSources\CoreData\Jobs.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\CatalogueItems.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Orders.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\OrderItems.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Aces.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Approvals.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\ActiveDirectoryUsers.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

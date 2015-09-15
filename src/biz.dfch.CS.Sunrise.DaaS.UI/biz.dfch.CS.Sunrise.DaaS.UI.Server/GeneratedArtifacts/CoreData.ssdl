@@ -2,7 +2,17 @@
 <Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CoreDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="CoreDataStore">
     <EntitySet Name="KeyNameValues" EntityType="CoreDataStore.KeyNameValue" store:Type="Tables" Schema="dbo" Table="KeyNameValue" />
-    <EntitySet Name="Tasks" EntityType="CoreDataStore.Task" store:Type="Tables" Schema="dbo" Table="Task" />
+    <EntitySet Name="Jobs" EntityType="CoreDataStore.Job" store:Type="Tables" Schema="dbo" Table="Job" />
+    <EntitySet Name="CatalogueItems" EntityType="CoreDataStore.CatalogueItem1" store:Type="Tables" Schema="dbo" Table="CatalogueItem" />
+    <EntitySet Name="Orders" EntityType="CoreDataStore.Order" store:Type="Tables" Schema="dbo" Table="Order" />
+    <EntitySet Name="OrderItems" EntityType="CoreDataStore.OrderItem" store:Type="Tables" Schema="dbo" Table="OrderItem" />
+    <EntitySet Name="Aces" EntityType="CoreDataStore.Ace" store:Type="Tables" Schema="dbo" Table="Ace" />
+    <EntitySet Name="Approvals" EntityType="CoreDataStore.Approval" store:Type="Tables" Schema="dbo" Table="Approval" />
+    <EntitySet Name="ActiveDirectoryUsers" EntityType="CoreDataStore.ActiveDirectoryUser" store:Type="Tables" Schema="dbo" Table="ActiveDirectoryUser" />
+    <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="CoreDataStore.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+      <End Role="OrderItemsPartner" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="KeyNameValue">
     <Key>
@@ -15,26 +25,141 @@
     <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Created" Type="datetimeoffset" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
-    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
   </EntityType>
-  <EntityType Name="Task">
+  <EntityType Name="Job">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
+    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReferencedItemId" Type="nvarchar(max)" />
+    <Property Name="Token" Type="nvarchar(max)" />
+    <Property Name="TenantId" Type="nvarchar(max)" />
+    <Property Name="Parameters" Type="nvarchar(max)" />
+    <Property Name="Error" Type="nvarchar(max)" />
+    <Property Name="EndTime" Type="datetimeoffset" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="Status" Type="nvarchar(max)" />
-    <Property Name="Type" Type="nvarchar(max)" />
-    <Property Name="Parameters" Type="nvarchar(max)" />
-    <Property Name="Error" Type="nvarchar(max)" />
-    <Property Name="EndTime" Type="datetimeoffset" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
   </EntityType>
+  <EntityType Name="CatalogueItem1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Collection" Type="nvarchar(max)" />
+    <Property Name="Version" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Parameters" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Parameters" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ace">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Resource" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Trustee" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Action" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Approval">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActiveDirectoryUser">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="distinguishedName" Type="nvarchar(max)" />
+    <Property Name="groupType" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="sn" Type="nvarchar(max)" />
+    <Property Name="givenName" Type="nvarchar(max)" />
+    <Property Name="department" Type="nvarchar(max)" />
+    <Property Name="displayName" Type="nvarchar(max)" />
+    <Property Name="mail" Type="nvarchar(max)" />
+    <Property Name="objectGUID" Type="nvarchar(max)" />
+    <Property Name="objectSID" Type="nvarchar(max)" />
+    <Property Name="sAMAccountName" Type="nvarchar(max)" />
+    <Property Name="employeeID" Type="nvarchar(max)" />
+    <Property Name="telephoneNumber" Type="nvarchar(max)" />
+    <Property Name="mobile" Type="nvarchar(max)" />
+    <Property Name="sAMAccountType" Type="int" Nullable="false" />
+    <Property Name="uSNChanged" Type="bigint" Nullable="false" />
+    <Property Name="uSNCreated" Type="bigint" Nullable="false" />
+    <Property Name="whenChanged" Type="datetime" Nullable="false" />
+    <Property Name="whenCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+    <End Role="OrderItemsPartner" Type="CoreDataStore.Order" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OrderItems" Type="CoreDataStore.OrderItem" Multiplicity="*" />
+  </Association>
 </Schema>

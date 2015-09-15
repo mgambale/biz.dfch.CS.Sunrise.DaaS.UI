@@ -32,6 +32,9 @@
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="BaseData" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="BaseData" />
     </DataService.ConnectionProperties>
   </DataService>
 </ServiceApplication>

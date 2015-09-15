@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="KeyNameValue">
+    Name="Order">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,12 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String?" />
       <KeyProperty
         Name="Id"
         PropertyType=":Int32">
@@ -34,21 +40,7 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Key"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Name"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Value"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
@@ -58,20 +50,25 @@
         Name="Description"
         PropertyType=":String?" />
       <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="Created"
         PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="CreatedBy"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -82,31 +79,51 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="ModifiedBy"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+      <NavigationProperty
+        Name="OrderItems"
+        Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde"
+        FromEnd="OrderItemsPartner"
+        ToEnd="OrderItems" />
     </EntityType.Properties>
   </EntityType>
+  <Association
+    Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+    <AssociationEnd
+      Name="OrderItemsPartner"
+      EntityType="Order">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="OrderItems"
+      Multiplicity="Many"
+      EntityType="OrderItem" />
+  </Association>
   <EntityContainer
     Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="KeyNameValues"
+      Name="Orders"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="KeyNameValue" />
+      EntityType="Order" />
+    <AssociationSet
+      Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde"
+      Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+      <AssociationSetEnd
+        Name="OrderItemsPartner"
+        EntitySet="Orders" />
+      <AssociationSetEnd
+        Name="OrderItems"
+        EntitySet="OrderItems" />
+    </AssociationSet>
     <QueryOperation
-      Name="KeyNameValues_Single"
-      ReturnType="KeyNameValue">
+      Name="Orders_Single"
+      ReturnType="Order">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -132,7 +149,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="KeyNameValues" />
+            Member="Orders" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -145,8 +162,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="KeyNameValues_SingleOrDefault"
-      ReturnType="KeyNameValue">
+      Name="Orders_SingleOrDefault"
+      ReturnType="Order">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -172,7 +189,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="KeyNameValues" />
+            Member="Orders" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -191,44 +208,59 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="KeyNameValues">
+      EntitySet="Orders">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="KeyNameValue"
+          EntityTypeName="Order"
           EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
-          Name="KeyNameValues"
-          EntityType="KeyNameValue" />
+          Name="Orders"
+          EntityType="Order" />
         <CsdlProperty
-          Name="Key"
-          Property="KeyNameValue/Properties[Key]" />
+          Name="Status"
+          Property="Order/Properties[Status]" />
         <CsdlProperty
-          Name="Value"
-          Property="KeyNameValue/Properties[Value]" />
+          Name="Parameters"
+          Property="Order/Properties[Parameters]" />
         <CsdlProperty
           Name="Id"
-          Property="KeyNameValue/Properties[Id]" />
+          Property="Order/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="KeyNameValue/Properties[Tid]" />
+          Property="Order/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="KeyNameValue/Properties[Name]" />
+          Property="Order/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="KeyNameValue/Properties[Description]" />
+          Property="Order/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="KeyNameValue/Properties[CreatedBy]" />
+          Property="Order/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="KeyNameValue/Properties[ModifiedBy]" />
+          Property="Order/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="KeyNameValue/Properties[Created]" />
+          Property="Order/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="KeyNameValue/Properties[Modified]" />
+          Property="Order/Properties[Modified]" />
+        <CsdlProperty
+          Name="OrderItems"
+          Property="Order/Properties[OrderItems]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_OrderItemsPartnerSet"
+          Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItemsPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItems]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>
