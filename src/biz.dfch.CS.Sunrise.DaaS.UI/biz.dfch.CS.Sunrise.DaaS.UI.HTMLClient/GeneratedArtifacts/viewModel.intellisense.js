@@ -290,6 +290,16 @@
         /// </field>
         refresh_execute: [lightSwitchApplication.ApprovalView],
         /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.ApprovalView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.ApprovalView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.ApprovalView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.ApprovalView],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -478,30 +488,30 @@
         Description_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemsList().findContentItem("Description"); }]
     });
 
-    lightSwitchApplication.EndpointsBrowse.prototype._$contentItems = {
+    lightSwitchApplication.EndpointsList.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
             _$name: "Tabs",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.EndpointsBrowse
+            screen: lightSwitchApplication.EndpointsList
         },
         EndpointList: {
             _$class: msls.ContentItem,
             _$name: "EndpointList",
             _$parentName: "Tabs",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: lightSwitchApplication.EndpointsBrowse
+            screen: lightSwitchApplication.EndpointsList,
+            data: lightSwitchApplication.EndpointsList,
+            value: lightSwitchApplication.EndpointsList
         },
         Endpoints: {
             _$class: msls.ContentItem,
             _$name: "Endpoints",
             _$parentName: "EndpointList",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
+            screen: lightSwitchApplication.EndpointsList,
+            data: lightSwitchApplication.EndpointsList,
             value: {
                 _$class: msls.VisualCollection,
-                screen: lightSwitchApplication.EndpointsBrowse,
+                screen: lightSwitchApplication.EndpointsList,
                 _$entry: {
                     elementType: lightSwitchApplication.Endpoint
                 }
@@ -511,7 +521,7 @@
             _$class: msls.ContentItem,
             _$name: "rows",
             _$parentName: "Endpoints",
-            screen: lightSwitchApplication.EndpointsBrowse,
+            screen: lightSwitchApplication.EndpointsList,
             data: lightSwitchApplication.Endpoint,
             value: lightSwitchApplication.Endpoint
         },
@@ -519,7 +529,7 @@
             _$class: msls.ContentItem,
             _$name: "Name",
             _$parentName: "rows",
-            screen: lightSwitchApplication.EndpointsBrowse,
+            screen: lightSwitchApplication.EndpointsList,
             data: lightSwitchApplication.Endpoint,
             value: String
         },
@@ -527,7 +537,7 @@
             _$class: msls.ContentItem,
             _$name: "Version",
             _$parentName: "rows",
-            screen: lightSwitchApplication.EndpointsBrowse,
+            screen: lightSwitchApplication.EndpointsList,
             data: lightSwitchApplication.Endpoint,
             value: String
         },
@@ -535,163 +545,59 @@
             _$class: msls.ContentItem,
             _$name: "RoutePrefix",
             _$parentName: "rows",
-            screen: lightSwitchApplication.EndpointsBrowse,
+            screen: lightSwitchApplication.EndpointsList,
             data: lightSwitchApplication.Endpoint,
             value: String
-        },
-        General: {
-            _$class: msls.ContentItem,
-            _$name: "General",
-            _$parentName: "Tabs",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: lightSwitchApplication.EndpointsBrowse
-        },
-        GeneralRow1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralRow1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: lightSwitchApplication.EndpointsBrowse
-        },
-        Endpoints_selectedItem_Id: {
-            _$class: msls.ContentItem,
-            _$name: "Endpoints_selectedItem_Id",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: Number
-        },
-        Endpoints_selectedItem_Tid: {
-            _$class: msls.ContentItem,
-            _$name: "Endpoints_selectedItem_Tid",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: String
-        },
-        Endpoints_selectedItem_CreatedBy: {
-            _$class: msls.ContentItem,
-            _$name: "Endpoints_selectedItem_CreatedBy",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: String
-        },
-        Endpoints_selectedItem_Created: {
-            _$class: msls.ContentItem,
-            _$name: "Endpoints_selectedItem_Created",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: Date
-        },
-        Endpoints_selectedItem_ModifiedBy: {
-            _$class: msls.ContentItem,
-            _$name: "Endpoints_selectedItem_ModifiedBy",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: String
-        },
-        Endpoints_selectedItem_Modified: {
-            _$class: msls.ContentItem,
-            _$name: "Endpoints_selectedItem_Modified",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointsBrowse,
-            data: lightSwitchApplication.EndpointsBrowse,
-            value: Date
         },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.EndpointsBrowse
+            screen: lightSwitchApplication.EndpointsList
         }
     };
 
-    msls._addEntryPoints(lightSwitchApplication.EndpointsBrowse, {
+    msls._addEntryPoints(lightSwitchApplication.EndpointsList, {
         /// <field>
-        /// Called when a new EndpointsBrowse screen is created.
-        /// <br/>created(msls.application.EndpointsBrowse screen)
+        /// Called when a new EndpointsList screen is created.
+        /// <br/>created(msls.application.EndpointsList screen)
         /// </field>
-        created: [lightSwitchApplication.EndpointsBrowse],
+        created: [lightSwitchApplication.EndpointsList],
         /// <field>
-        /// Called before changes on an active EndpointsBrowse screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.EndpointsBrowse screen)
+        /// Called before changes on an active EndpointsList screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.EndpointsList screen)
         /// </field>
-        beforeApplyChanges: [lightSwitchApplication.EndpointsBrowse],
+        beforeApplyChanges: [lightSwitchApplication.EndpointsList],
         /// <field>
         /// Called after the EndpointList content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        EndpointList_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("EndpointList"); }],
+        EndpointList_postRender: [$element, function () { return new lightSwitchApplication.EndpointsList().findContentItem("EndpointList"); }],
         /// <field>
         /// Called after the Endpoints content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Endpoints_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints"); }],
+        Endpoints_postRender: [$element, function () { return new lightSwitchApplication.EndpointsList().findContentItem("Endpoints"); }],
         /// <field>
         /// Called after the rows content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        rows_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("rows"); }],
+        rows_postRender: [$element, function () { return new lightSwitchApplication.EndpointsList().findContentItem("rows"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Name"); }],
+        Name_postRender: [$element, function () { return new lightSwitchApplication.EndpointsList().findContentItem("Name"); }],
         /// <field>
         /// Called after the Version content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Version_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Version"); }],
+        Version_postRender: [$element, function () { return new lightSwitchApplication.EndpointsList().findContentItem("Version"); }],
         /// <field>
         /// Called after the RoutePrefix content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RoutePrefix_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("RoutePrefix"); }],
-        /// <field>
-        /// Called after the General content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        General_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralRow1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralRow1_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("GeneralRow1"); }],
-        /// <field>
-        /// Called after the Endpoints_selectedItem_Id content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Endpoints_selectedItem_Id_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints_selectedItem_Id"); }],
-        /// <field>
-        /// Called after the Endpoints_selectedItem_Tid content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Endpoints_selectedItem_Tid_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints_selectedItem_Tid"); }],
-        /// <field>
-        /// Called after the Endpoints_selectedItem_CreatedBy content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Endpoints_selectedItem_CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints_selectedItem_CreatedBy"); }],
-        /// <field>
-        /// Called after the Endpoints_selectedItem_Created content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Endpoints_selectedItem_Created_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints_selectedItem_Created"); }],
-        /// <field>
-        /// Called after the Endpoints_selectedItem_ModifiedBy content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Endpoints_selectedItem_ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints_selectedItem_ModifiedBy"); }],
-        /// <field>
-        /// Called after the Endpoints_selectedItem_Modified content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Endpoints_selectedItem_Modified_postRender: [$element, function () { return new lightSwitchApplication.EndpointsBrowse().findContentItem("Endpoints_selectedItem_Modified"); }]
+        RoutePrefix_postRender: [$element, function () { return new lightSwitchApplication.EndpointsList().findContentItem("RoutePrefix"); }]
     });
 
     lightSwitchApplication.EndpointView.prototype._$contentItems = {
@@ -773,34 +679,34 @@
             data: lightSwitchApplication.EndpointView,
             value: lightSwitchApplication.EndpointView
         },
-        GeneralRow1: {
+        GeneralGroup1: {
             _$class: msls.ContentItem,
-            _$name: "GeneralRow1",
+            _$name: "GeneralGroup1",
             _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: lightSwitchApplication.EndpointView
         },
-        Id: {
-            _$class: msls.ContentItem,
-            _$name: "Id",
-            _$parentName: "GeneralRow1",
-            screen: lightSwitchApplication.EndpointView,
-            data: lightSwitchApplication.EndpointView,
-            value: Number
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralRow1",
+            _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
         },
+        Id: {
+            _$class: msls.ContentItem,
+            _$name: "Id",
+            _$parentName: "GeneralGroup1",
+            screen: lightSwitchApplication.EndpointView,
+            data: lightSwitchApplication.EndpointView,
+            value: Number
+        },
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralRow1",
+            _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -808,7 +714,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralRow1",
+            _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: Date
@@ -816,7 +722,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralRow1",
+            _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -824,7 +730,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralRow1",
+            _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: Date
@@ -848,6 +754,16 @@
         /// <br/>beforeApplyChanges(msls.application.EndpointView screen)
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.EndpointView],
+        /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.EndpointView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.EndpointView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.EndpointView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.EndpointView],
         /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -894,20 +810,20 @@
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("General"); }],
         /// <field>
-        /// Called after the GeneralRow1 content item has been rendered.
+        /// Called after the GeneralGroup1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        GeneralRow1_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("GeneralRow1"); }],
-        /// <field>
-        /// Called after the Id content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Id_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Id"); }],
+        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Tid_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Tid"); }],
+        /// <field>
+        /// Called after the Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Id"); }],
         /// <field>
         /// Called after the CreatedBy content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2005,6 +1921,16 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.OrderView],
         /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.OrderView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.OrderView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.OrderView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.OrderView],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -2282,6 +2208,16 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.OrderViewDetails],
         /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.OrderViewDetails screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.OrderViewDetails],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.OrderViewDetails screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.OrderViewDetails],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -2534,6 +2470,16 @@
         /// <br/>beforeApplyChanges(msls.application.CatalogueItemView screen)
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.CatalogueItemView],
+        /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.CatalogueItemView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.CatalogueItemView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.CatalogueItemView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.CatalogueItemView],
         /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2933,6 +2879,16 @@
         /// <br/>beforeApplyChanges(msls.application.JobView screen)
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.JobView],
+        /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.JobView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.JobView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.JobView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.JobView],
         /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3833,6 +3789,16 @@
         /// <br/>beforeApplyChanges(msls.application.OrderItemView screen)
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.OrderItemView],
+        /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.OrderItemView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.OrderItemView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.OrderItemView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.OrderItemView],
         /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

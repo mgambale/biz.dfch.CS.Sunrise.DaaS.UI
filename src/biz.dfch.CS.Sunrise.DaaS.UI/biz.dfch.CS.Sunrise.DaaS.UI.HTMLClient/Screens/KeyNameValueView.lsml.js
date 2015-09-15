@@ -1,30 +1,7 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
 myapp.KeyNameValueView.deleteEntity_execute = function (screen) {
-    msls.showMessageBox("Sure, you want to delete?",
-        {
-            title: "Delete Entity?"
-            ,
-            buttons: msls.MessageBoxButtons.yesNo
-        }
-    ).then(function (result) {
-        if (result == msls.MessageBoxResult.yes) {
-            screen.KeyNameValue.deleteEntity();
-            return myapp.commitChanges().then(null, function fail(e) {
-                msls.showMessageBox(e.message,
-                    {
-                        title: e.title
-                        ,
-                        buttons: msls.MessageBoxButtons.ok
-                    }).then(function (result) {
-                        myapp.cancelChanges();
-                        throw e;
-                    });
-            }
-            );
-        }
-    }
-    );
+    deleteEntity(screen, "KeyNameValue");
 };
 
 /**

@@ -102,7 +102,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showEndpointsBrowse]" />
+                          Target="!module/Methods[showEndpointsList]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

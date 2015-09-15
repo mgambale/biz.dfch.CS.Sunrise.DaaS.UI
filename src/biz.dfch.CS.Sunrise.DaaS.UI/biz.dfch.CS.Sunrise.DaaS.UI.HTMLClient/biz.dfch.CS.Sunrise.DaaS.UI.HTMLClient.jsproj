@@ -94,8 +94,17 @@
     <Content Include="Screens\ApprovalView.lsml.js">
       <DependentUpon>ApprovalView.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\CatalogueItemView.lsml.js">
+      <DependentUpon>CatalogueItemView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\EndpointView.lsml.js">
+      <DependentUpon>EndpointView.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Home.lsml.js">
       <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\JobView.lsml.js">
+      <DependentUpon>JobView.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\KeyNameValueAdd.lsml.js">
       <DependentUpon>KeyNameValueAdd.lsml</DependentUpon>
@@ -105,6 +114,15 @@
     </Content>
     <Content Include="Screens\OrderAdd.lsml.js">
       <DependentUpon>OrderAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrderItemView.lsml.js">
+      <DependentUpon>OrderItemView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrderView.lsml.js">
+      <DependentUpon>OrderView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrderViewDetails.lsml.js">
+      <DependentUpon>OrderViewDetails.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
@@ -152,7 +170,7 @@
     <LightSwitchModel Include="Screens\ApprovalView.lsml" />
     <LightSwitchModel Include="Screens\CatalogueItemsList.lsml" />
     <LightSwitchModel Include="Screens\CatalogueItemView.lsml" />
-    <LightSwitchModel Include="Screens\EndpointsBrowse.lsml" />
+    <LightSwitchModel Include="Screens\EndpointsList.lsml" />
     <LightSwitchModel Include="Screens\EndpointView.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
     <LightSwitchModel Include="Screens\JobsList.lsml" />

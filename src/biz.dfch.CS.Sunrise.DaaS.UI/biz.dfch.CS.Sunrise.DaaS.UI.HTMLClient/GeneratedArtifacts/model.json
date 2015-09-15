@@ -4623,6 +4623,26 @@
                             "value": "msls-refresh"
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "ApprovalView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
                       }
                     ]
                   },
@@ -4806,6 +4826,10 @@
             {
               "id": "ApprovalView/Methods[refresh]",
               "name": "refresh"
+            },
+            {
+              "id": "ApprovalView/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -5073,9 +5097,9 @@
           ]
         },
         {
-          "displayName": "Endpoints Browse",
-          "id": "EndpointsBrowse",
-          "name": "EndpointsBrowse",
+          "displayName": "Endpoints List",
+          "id": "EndpointsList",
+          "name": "EndpointsList",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -5110,7 +5134,7 @@
                         "view": { "__id": ":Table" },
                         "dataSource":
                         {
-                          "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                          "member": { "__id": "EndpointsList/Properties[Endpoints]" }
                         },
                         "childContentItems":
                         [
@@ -5176,7 +5200,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                  "member": { "__id": "EndpointsList/Properties[Endpoints]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Endpoint/Methods[viewSelected]" }
@@ -5203,7 +5227,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                  "member": { "__id": "EndpointsList/Properties[Endpoints]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Endpoint/Methods[showSearch]" }
@@ -5229,7 +5253,7 @@
                             "source":
                             {
                               "target": { "__id": "!module/Methods[showEndpointView]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "EndpointsBrowse/Properties[Endpoints]" } },
+                              ":@AssociatedCollection": { "collection": { "__id": "EndpointsList/Properties[Endpoints]" } },
                               "arguments":
                               [
                                 {
@@ -5239,157 +5263,13 @@
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
+                                        "member": { "__id": "EndpointsList/Properties[Endpoints]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
                                       }
                                     ]
                                   }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "General",
-                    "name": "General",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "General Row1",
-                        "name": "GeneralRow1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Id",
-                            "name": "Endpoints_selectedItem_Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Id]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Tid",
-                            "name": "Endpoints_selectedItem_Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "Endpoints_selectedItem_CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Endpoints_selectedItem_Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Created]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "Endpoints_selectedItem_ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Endpoints_selectedItem_Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointsBrowse/Properties[Endpoints]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$Endpoint/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Modified]" }
                                 }
                               ]
                             }
@@ -5418,24 +5298,24 @@
           "methods":
           [
             {
-              "id": "EndpointsBrowse/Methods[showTab]",
+              "id": "EndpointsList/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "EndpointsBrowse/Methods[showTab]/Parameters[tabName]",
+                  "id": "EndpointsList/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "EndpointsBrowse/Methods[showDialog]",
+              "id": "EndpointsList/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "EndpointsBrowse/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "EndpointsList/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -5445,7 +5325,7 @@
           "properties":
           [
             {
-              "id": "EndpointsBrowse/Properties[Endpoints]",
+              "id": "EndpointsList/Properties[Endpoints]",
               "name": "Endpoints",
               "disableSearch": true,
               "pageSize": 45,
@@ -5453,7 +5333,7 @@
               "propertyType": { "__id": "CollectionView$Endpoint" },
               "query":
               {
-                "id": "EndpointsBrowse/Properties[Endpoints]/Query",
+                "id": "EndpointsList/Properties[Endpoints]/Query",
                 "name": "EndpointsQuery",
                 "elementType": { "__id": "Endpoint" },
                 "returnType": { "__id": "Endpoint*" },
@@ -5464,7 +5344,7 @@
               },
               "source":
               {
-                "target": { "__id": "EndpointsBrowse/Properties[Endpoints]/Query" }
+                "target": { "__id": "EndpointsList/Properties[Endpoints]/Query" }
               }
             }
           ]
@@ -5628,6 +5508,29 @@
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "EndpointView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
+                      }
                     ]
                   },
                   {
@@ -5638,30 +5541,12 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Row1",
-                        "name": "GeneralRow1",
+                        "displayName": "General Group1",
+                        "name": "GeneralGroup1",
                         "kind": "Group",
                         "view": { "__id": ":RowsLayout" },
                         "childContentItems":
                         [
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Id]" }
-                                }
-                              ]
-                            }
-                          },
                           {
                             "displayName": "Tid",
                             "name": "Tid",
@@ -5676,6 +5561,24 @@
                                 },
                                 {
                                   "member": { "__id": "Endpoint/Properties[Tid]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "displayName": "Id",
+                            "name": "Id",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                                },
+                                {
+                                  "member": { "__id": "Endpoint/Properties[Id]" }
                                 }
                               ]
                             }
@@ -5798,6 +5701,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "EndpointView/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -5934,7 +5841,7 @@
                                 "property": { "__id": ":RootControl/Properties[Tap]" },
                                 "source":
                                 {
-                                  "target": { "__id": "!module/Methods[showEndpointsBrowse]" }
+                                  "target": { "__id": "!module/Methods[showEndpointsList]" }
                                 }
                               }
                             ]
@@ -7708,6 +7615,26 @@
                             "value": "msls-add"
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "OrderView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
                       }
                     ]
                   },
@@ -7879,6 +7806,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "OrderView/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -8007,6 +7938,29 @@
                                 "value": 400
                               }
                             ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "OrderViewDetails/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
                           }
                         ]
                       }
@@ -8293,6 +8247,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "OrderViewDetails/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -8445,6 +8403,29 @@
                                 "value": 400
                               }
                             ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CatalogueItemView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
                           }
                         ]
                       }
@@ -8618,6 +8599,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "CatalogueItemView/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -8773,6 +8758,10 @@
                           {
                             "property": { "__id": ":RootCommand/Properties[Icon]" },
                             "value": "msls-search"
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[HiddenIfDisabled]" },
+                            "value": false
                           }
                         ]
                       },
@@ -9102,6 +9091,29 @@
                           ]
                         }
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "JobView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
+                      }
                     ]
                   },
                   {
@@ -9272,6 +9284,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "JobView/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -10384,6 +10400,29 @@
                           ]
                         }
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "OrderItemView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
+                      }
                     ]
                   },
                   {
@@ -10554,6 +10593,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "OrderItemView/Methods[deleteEntity]",
+              "name": "deleteEntity"
             }
           ],
           "properties":
@@ -10594,9 +10637,9 @@
           ":@ShowScreenMethod": { "targetScreen": { "__id": "CatalogueItemsList" } }
         },
         {
-          "id": "!module/Methods[showEndpointsBrowse]",
-          "name": "showEndpointsBrowse",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "EndpointsBrowse" } }
+          "id": "!module/Methods[showEndpointsList]",
+          "name": "showEndpointsList",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EndpointsList" } }
         },
         {
           "id": "!module/Methods[showEndpointView]",
@@ -10772,7 +10815,7 @@
         {
           "id": "!module/NavigationItems[link]",
           "name": "link",
-          "method": { "__id": "!module/Methods[showEndpointsBrowse]" }
+          "method": { "__id": "!module/Methods[showEndpointsList]" }
         },
         {
           "id": "!module/NavigationItems[link1]",

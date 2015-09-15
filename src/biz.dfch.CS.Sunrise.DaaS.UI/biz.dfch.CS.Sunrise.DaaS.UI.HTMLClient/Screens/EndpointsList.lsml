@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="EndpointsBrowse">
+    Name="EndpointsList">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="DiagnosticsData" />
@@ -35,7 +35,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="EndpointsBrowse/Properties[Endpoints]" />
+                      Member="EndpointsList/Properties[Endpoints]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -111,7 +111,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
+                        Member="EndpointsList/Properties[Endpoints]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -133,7 +133,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="EndpointsBrowse/Properties[Endpoints]" />
+                          Member="EndpointsList/Properties[Endpoints]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -163,13 +163,13 @@
                           Target="!module/Methods[showEndpointView]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="EndpointsBrowse/Properties[Endpoints]" />
+                              Collection="EndpointsList/Properties[Endpoints]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Endpoint">
                             <ChainExpression>
                               <MemberExpression
-                                Member="EndpointsBrowse/Properties[Endpoints]" />
+                                Member="EndpointsList/Properties[Endpoints]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -181,116 +181,6 @@
                 </ContentItem.PropertySources>
               </ContentItem>
             </ContentItem.CommandItems>
-          </ContentItem>
-          <ContentItem
-            Name="General"
-            Kind="Group">
-            <ContentItem
-              Name="GeneralRow1"
-              Kind="Group">
-              <ContentItem
-                Name="Endpoints_selectedItem_Id"
-                Kind="Value"
-                DataType=":Int32">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="Id" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Endpoints_selectedItem_Tid"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="Tid" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Endpoints_selectedItem_CreatedBy"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="CreatedBy" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Endpoints_selectedItem_Created"
-                Kind="Value"
-                DataType=":DateTimeOffset?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="Created" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Endpoints_selectedItem_ModifiedBy"
-                Kind="Value"
-                DataType=":String?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="ModifiedBy" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Endpoints_selectedItem_Modified"
-                Kind="Value"
-                DataType=":DateTimeOffset?">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EndpointsBrowse/Properties[Endpoints]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="Modified" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-            </ContentItem>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
@@ -359,7 +249,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="EndpointsBrowse/Properties[Endpoints]/Query" />
+              Target="EndpointsList/Properties[Endpoints]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -367,10 +257,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showEndpointsBrowse">
+      Name="showEndpointsList">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="EndpointsBrowse" />
+          TargetScreen="EndpointsList" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

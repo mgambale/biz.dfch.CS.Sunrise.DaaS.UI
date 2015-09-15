@@ -42,7 +42,7 @@
   <Application.NavigationItems>
     <ApplicationNavigationMethodLink
       Name="link"
-      Method="!module/Methods[showEndpointsBrowse]" />
+      Method="!module/Methods[showEndpointsList]" />
     <ApplicationNavigationMethodLink
       Name="link1"
       Method="!module/Methods[showKeyNameValuesList]" />

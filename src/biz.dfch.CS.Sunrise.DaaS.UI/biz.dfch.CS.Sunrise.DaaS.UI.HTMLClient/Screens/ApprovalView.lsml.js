@@ -83,6 +83,9 @@ myapp.ApprovalView.refresh_execute = function (screen) {
             buttons: msls.MessageBoxButtons.ok
         });
     } else {
-        screen.Approval.selectedItem.details.refresh();
+        screen.Approval.details.refresh();
     }
+};
+myapp.ApprovalView.deleteEntity_execute = function (screen) {
+    deleteEntity(screen, "Approval");
 };

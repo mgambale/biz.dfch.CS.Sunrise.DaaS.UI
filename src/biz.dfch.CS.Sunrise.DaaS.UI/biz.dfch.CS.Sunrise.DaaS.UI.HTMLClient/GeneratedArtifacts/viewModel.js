@@ -74,9 +74,9 @@
         $Screen.call(this, dataWorkspace, "CatalogueItemsList", parameters);
     }
 
-    function EndpointsBrowse(parameters, dataWorkspace) {
+    function EndpointsList(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the EndpointsBrowse screen.
+        /// Represents the EndpointsList screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -87,13 +87,13 @@
         /// <field name="Endpoints" type="msls.VisualCollection" elementType="msls.application.Endpoint">
         /// Gets the endpoints for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.EndpointsBrowse.Details">
+        /// <field name="details" type="msls.application.EndpointsList.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "EndpointsBrowse", parameters);
+        $Screen.call(this, dataWorkspace, "EndpointsList", parameters);
     }
 
     function EndpointView(parameters, dataWorkspace) {
@@ -466,7 +466,8 @@
         ], [
             { name: "approve" },
             { name: "decline" },
-            { name: "refresh" }
+            { name: "refresh" },
+            { name: "deleteEntity" }
         ]),
 
         CatalogueItemsList: $defineScreen(CatalogueItemsList, [
@@ -479,7 +480,7 @@
         ], [
         ]),
 
-        EndpointsBrowse: $defineScreen(EndpointsBrowse, [
+        EndpointsList: $defineScreen(EndpointsList, [
             {
                 name: "Endpoints", kind: "collection", elementType: lightSwitchApplication.Endpoint,
                 createQuery: function () {
@@ -492,6 +493,7 @@
         EndpointView: $defineScreen(EndpointView, [
             { name: "Endpoint", kind: "local", type: lightSwitchApplication.Endpoint }
         ], [
+            { name: "deleteEntity" }
         ]),
 
         Home: $defineScreen(Home, [
@@ -537,6 +539,7 @@
         OrderView: $defineScreen(OrderView, [
             { name: "Order", kind: "local", type: lightSwitchApplication.Order }
         ], [
+            { name: "deleteEntity" }
         ]),
 
         OrderViewDetails: $defineScreen(OrderViewDetails, [
@@ -554,11 +557,13 @@
                 }
             }
         ], [
+            { name: "deleteEntity" }
         ]),
 
         CatalogueItemView: $defineScreen(CatalogueItemView, [
             { name: "CatalogueItem1", kind: "local", type: lightSwitchApplication.CatalogueItem1 }
         ], [
+            { name: "deleteEntity" }
         ]),
 
         JobsList: $defineScreen(JobsList, [
@@ -574,6 +579,7 @@
         JobView: $defineScreen(JobView, [
             { name: "Job", kind: "local", type: lightSwitchApplication.Job }
         ], [
+            { name: "deleteEntity" }
         ]),
 
         OrderAdd: $defineScreen(OrderAdd, [
@@ -599,6 +605,7 @@
         OrderItemView: $defineScreen(OrderItemView, [
             { name: "OrderItem", kind: "local", type: lightSwitchApplication.OrderItem }
         ], [
+            { name: "deleteEntity" }
         ]),
 
         showApprovalsList: $defineShowScreen(function showApprovalsList(options) {
@@ -637,16 +644,16 @@
             return lightSwitchApplication.showScreen("CatalogueItemsList", parameters, options);
         }),
 
-        showEndpointsBrowse: $defineShowScreen(function showEndpointsBrowse(options) {
+        showEndpointsList: $defineShowScreen(function showEndpointsList(options) {
             /// <summary>
-            /// Asynchronously navigates forward to the EndpointsBrowse screen.
+            /// Asynchronously navigates forward to the EndpointsList screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("EndpointsBrowse", parameters, options);
+            return lightSwitchApplication.showScreen("EndpointsList", parameters, options);
         }),
 
         showEndpointView: $defineShowScreen(function showEndpointView(Endpoint, options) {
