@@ -30,7 +30,7 @@
     <AdministratorFullName />
     <AdministratorUserName>Administrator</AdministratorUserName>
     <AllowUntrustedCertificate>False</AllowUntrustedCertificate>
-    <DeployDatabase>True</DeployDatabase>
+    <DeployDatabase>False</DeployDatabase>
     <AddAdministrator>False</AddAdministrator>
     <BootstrapperComponentsUrl />
     <DefaultInstallLocation>biz.dfch.CS.Sunrise.DaaS.UI</DefaultInstallLocation>
@@ -38,7 +38,7 @@
     <PublishNewDatabase>True</PublishNewDatabase>
     <PublishUrl>http://localhost</PublishUrl>
     <PublishSite>Default Web Site/biz.dfch.CS.Sunrise.DaaS.UI</PublishSite>
-    <RemotePublish>True</RemotePublish>
+    <RemotePublish>False</RemotePublish>
     <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
     <UseLightSwitchWebDeploymentProvider>False</UseLightSwitchWebDeploymentProvider>
     <AzureAllowUpgrade>True</AzureAllowUpgrade>
@@ -55,7 +55,7 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>False</RequireSecureConnection>
+    <RequireSecureConnection>True</RequireSecureConnection>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug</OutputPath>
@@ -141,12 +141,6 @@
       <Type>Server</Type>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Extensions.lspkg">
-      <ExtensionId>Microsoft.LightSwitch.Extensions</ExtensionId>
-      <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
-    </LightSwitchExtension>
-  </ItemGroup>
   <ItemGroup Condition="'$(AuthenticationType)' == 'Forms'">
     <_BuildFile Include="biz.dfch.CS.Sunrise.DaaS.UI.Server\LogIn.aspx">
       <SubFolder>
@@ -160,6 +154,12 @@
       <PublishType>
       </PublishType>
     </_BuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Extensions.lspkg">
+      <ExtensionId>Microsoft.LightSwitch.Extensions</ExtensionId>
+      <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
+    </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
