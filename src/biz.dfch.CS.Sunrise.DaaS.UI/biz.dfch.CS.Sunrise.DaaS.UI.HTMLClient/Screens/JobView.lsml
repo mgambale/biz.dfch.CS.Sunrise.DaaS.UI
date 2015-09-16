@@ -48,19 +48,6 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="State"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Job/Properties[State]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Name"
                   Kind="Value"
                   DataType=":String">

@@ -8,6 +8,7 @@
     Name="Approval">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -18,9 +19,6 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="State"
-        PropertyType=":String?" />
       <KeyProperty
         Name="Id"
         PropertyType=":Int32">
@@ -76,6 +74,9 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":String?" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -180,12 +181,12 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Approval"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
           Name="Approvals"
           EntityType="Approval" />
         <CsdlProperty
-          Name="State"
-          Property="Approval/Properties[State]" />
+          Name="Status"
+          Property="Approval/Properties[Status]" />
         <CsdlProperty
           Name="Id"
           Property="Approval/Properties[Id]" />

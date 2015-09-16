@@ -228,6 +228,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="CatalogueItems"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$CatalogueItem1">

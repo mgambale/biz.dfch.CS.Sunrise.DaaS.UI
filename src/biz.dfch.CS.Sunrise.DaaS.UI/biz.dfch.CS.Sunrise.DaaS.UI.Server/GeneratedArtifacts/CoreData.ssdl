@@ -9,6 +9,7 @@
     <EntitySet Name="KeyNameValues" EntityType="CoreDataStore.KeyNameValue" store:Type="Tables" Schema="dbo" Table="KeyNameValue" />
     <EntitySet Name="OrderItems" EntityType="CoreDataStore.OrderItem" store:Type="Tables" Schema="dbo" Table="OrderItem" />
     <EntitySet Name="Orders" EntityType="CoreDataStore.Order" store:Type="Tables" Schema="dbo" Table="Order" />
+    <EntitySet Name="ManagementCredentials" EntityType="CoreDataStore.ManagementCredential" store:Type="Tables" Schema="dbo" Table="ManagementCredential" />
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="CoreDataStore.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <End Role="OrderItemsPartner" EntitySet="Orders" />
       <End Role="OrderItems" EntitySet="OrderItems" />
@@ -60,7 +61,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="State" Type="nvarchar(max)" />
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
@@ -69,6 +69,7 @@
     <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Created" Type="datetimeoffset" Nullable="false" />
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="CatalogueItem1">
     <Key>
@@ -89,7 +90,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ReferencedItemId" Type="nvarchar(max)" />
     <Property Name="Token" Type="nvarchar(max)" />
@@ -106,6 +106,7 @@
     <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Created" Type="datetimeoffset" Nullable="false" />
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="KeyNameValue">
     <Key>
@@ -147,6 +148,22 @@
     </Key>
     <Property Name="Status" Type="nvarchar(max)" />
     <Property Name="Parameters" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="OrderOnBehalfOf" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ManagementCredential">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EncryptedPassword" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />

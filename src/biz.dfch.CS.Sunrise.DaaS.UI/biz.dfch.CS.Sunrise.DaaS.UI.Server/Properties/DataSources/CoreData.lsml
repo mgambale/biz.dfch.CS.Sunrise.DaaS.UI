@@ -19,22 +19,15 @@
     EntityContainer="CoreData">
     <DataService.Attributes>
       <CsdlEntityContainer
-        Format="Json"
         Name="Core"
-        Namespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core" />
+        Namespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core" />
       <Partial
         IsPrimary="True" />
     </DataService.Attributes>
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="a20a11e6-8c17-42bd-9663-acc528c6417a" />
-      <ConnectionProperty
-        Name="ProjectMetadata"
-        Value="BaseData" />
-      <ConnectionProperty
-        Name="ProjectMetadata"
-        Value="BaseData" />
+        Value="873803ed-7418-4daf-a32f-ef996091b2cb" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="BaseData" />

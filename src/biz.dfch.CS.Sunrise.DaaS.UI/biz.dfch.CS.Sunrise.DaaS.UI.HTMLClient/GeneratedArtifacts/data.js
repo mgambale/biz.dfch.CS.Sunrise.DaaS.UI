@@ -56,6 +56,12 @@ window.myapp = msls.application;
         /// <field name="ModifiedBy" type="String">
         /// Gets or sets the modifiedBy for this endpoint.
         /// </field>
+        /// <field name="Address" type="String">
+        /// Gets or sets the address for this endpoint.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this endpoint.
+        /// </field>
         /// <field name="details" type="msls.application.Endpoint.Details">
         /// Gets the details for this endpoint.
         /// </field>
@@ -191,9 +197,6 @@ window.myapp = msls.application;
         /// <param name="entitySet" type="msls.EntitySet" optional="true">
         /// The entity set that should contain this approval.
         /// </param>
-        /// <field name="State" type="String">
-        /// Gets or sets the state for this approval.
-        /// </field>
         /// <field name="Id" type="Number">
         /// Gets or sets the id for this approval.
         /// </field>
@@ -217,6 +220,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Modified" type="Date">
         /// Gets or sets the modified for this approval.
+        /// </field>
+        /// <field name="Status" type="String">
+        /// Gets or sets the status for this approval.
         /// </field>
         /// <field name="details" type="msls.application.Approval.Details">
         /// Gets the details for this approval.
@@ -274,9 +280,6 @@ window.myapp = msls.application;
         /// <param name="entitySet" type="msls.EntitySet" optional="true">
         /// The entity set that should contain this job.
         /// </param>
-        /// <field name="State" type="String">
-        /// Gets or sets the state for this job.
-        /// </field>
         /// <field name="Type" type="String">
         /// Gets or sets the type for this job.
         /// </field>
@@ -324,6 +327,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Modified" type="Date">
         /// Gets or sets the modified for this job.
+        /// </field>
+        /// <field name="Status" type="String">
+        /// Gets or sets the status for this job.
         /// </field>
         /// <field name="details" type="msls.application.Job.Details">
         /// Gets the details for this job.
@@ -469,8 +475,54 @@ window.myapp = msls.application;
         /// <field name="OrderItems" type="msls.EntityCollection" elementType="msls.application.OrderItem">
         /// Gets the orderItems for this order.
         /// </field>
+        /// <field name="OrderOnBehalfOf" type="String">
+        /// Gets or sets the orderOnBehalfOf for this order.
+        /// </field>
         /// <field name="details" type="msls.application.Order.Details">
         /// Gets the details for this order.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function ManagementCredential(entitySet) {
+        /// <summary>
+        /// Represents the ManagementCredential entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this managementCredential.
+        /// </param>
+        /// <field name="Username" type="String">
+        /// Gets or sets the username for this managementCredential.
+        /// </field>
+        /// <field name="EncryptedPassword" type="String">
+        /// Gets or sets the encryptedPassword for this managementCredential.
+        /// </field>
+        /// <field name="Id" type="Number">
+        /// Gets or sets the id for this managementCredential.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this managementCredential.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this managementCredential.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this managementCredential.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this managementCredential.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this managementCredential.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this managementCredential.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this managementCredential.
+        /// </field>
+        /// <field name="details" type="msls.application.ManagementCredential.Details">
+        /// Gets the details for this managementCredential.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -522,6 +574,9 @@ window.myapp = msls.application;
         /// <field name="Orders" type="msls.EntitySet">
         /// Gets the Orders entity set.
         /// </field>
+        /// <field name="ManagementCredentials" type="msls.EntitySet">
+        /// Gets the ManagementCredentials entity set.
+        /// </field>
         /// <field name="details" type="msls.application.CoreData.Details">
         /// Gets the details for this data service.
         /// </field>
@@ -557,7 +612,9 @@ window.myapp = msls.application;
             { name: "Created", type: Date },
             { name: "CreatedBy", type: String },
             { name: "Modified", type: Date },
-            { name: "ModifiedBy", type: String }
+            { name: "ModifiedBy", type: String },
+            { name: "Address", type: String },
+            { name: "Description", type: String }
         ]),
 
         Ace: $defineEntity(Ace, [
@@ -599,7 +656,6 @@ window.myapp = msls.application;
         ]),
 
         Approval: $defineEntity(Approval, [
-            { name: "State", type: String },
             { name: "Id", type: Number },
             { name: "Tid", type: String },
             { name: "Name", type: String },
@@ -607,7 +663,8 @@ window.myapp = msls.application;
             { name: "CreatedBy", type: String },
             { name: "ModifiedBy", type: String },
             { name: "Created", type: Date },
-            { name: "Modified", type: Date }
+            { name: "Modified", type: Date },
+            { name: "Status", type: String }
         ]),
 
         CatalogueItem1: $defineEntity(CatalogueItem1, [
@@ -624,7 +681,6 @@ window.myapp = msls.application;
         ]),
 
         Job: $defineEntity(Job, [
-            { name: "State", type: String },
             { name: "Type", type: String },
             { name: "ReferencedItemId", type: String },
             { name: "Token", type: String },
@@ -640,7 +696,8 @@ window.myapp = msls.application;
             { name: "CreatedBy", type: String },
             { name: "ModifiedBy", type: String },
             { name: "Created", type: Date },
-            { name: "Modified", type: Date }
+            { name: "Modified", type: Date },
+            { name: "Status", type: String }
         ]),
 
         KeyNameValue: $defineEntity(KeyNameValue, [
@@ -684,7 +741,21 @@ window.myapp = msls.application;
             { name: "ModifiedBy", type: String },
             { name: "Created", type: Date },
             { name: "Modified", type: Date },
-            { name: "OrderItems", kind: "collection", elementType: OrderItem }
+            { name: "OrderItems", kind: "collection", elementType: OrderItem },
+            { name: "OrderOnBehalfOf", type: String }
+        ]),
+
+        ManagementCredential: $defineEntity(ManagementCredential, [
+            { name: "Username", type: String },
+            { name: "EncryptedPassword", type: String },
+            { name: "Id", type: Number },
+            { name: "Tid", type: String },
+            { name: "Name", type: String },
+            { name: "Description", type: String },
+            { name: "CreatedBy", type: String },
+            { name: "ModifiedBy", type: String },
+            { name: "Created", type: Date },
+            { name: "Modified", type: Date }
         ]),
 
         DiagnosticsData: $defineDataService(DiagnosticsData, lightSwitchApplication.rootUri + "/DiagnosticsData.svc", [
@@ -707,7 +778,8 @@ window.myapp = msls.application;
             { name: "Jobs", elementType: Job },
             { name: "KeyNameValues", elementType: KeyNameValue },
             { name: "OrderItems", elementType: OrderItem },
-            { name: "Orders", elementType: Order }
+            { name: "Orders", elementType: Order },
+            { name: "ManagementCredentials", elementType: ManagementCredential }
         ], [
             {
                 name: "Aces_SingleOrDefault", value: function (Id) {
@@ -762,6 +834,13 @@ window.myapp = msls.application;
                 name: "Orders_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Orders },
                         lightSwitchApplication.rootUri + "/CoreData.svc" + "/Orders(" + "Id=" + $toODataString(Id, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "ManagementCredentials_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.ManagementCredentials },
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/ManagementCredentials(" + "Id=" + $toODataString(Id, "Int32?") + ")"
                     );
                 }
             }

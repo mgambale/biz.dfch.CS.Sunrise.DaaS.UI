@@ -34,4 +34,10 @@
         Target="ServiceInterface:biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:ManagementCredential" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

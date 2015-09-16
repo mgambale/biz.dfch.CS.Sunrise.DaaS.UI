@@ -290,6 +290,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="OrderItems"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$OrderItem">

@@ -311,6 +311,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="KeyNameValues"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$KeyNameValue">

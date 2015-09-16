@@ -8,6 +8,7 @@
     Name="KeyNameValue">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -191,7 +192,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="KeyNameValue"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
           Name="KeyNameValues"
           EntityType="KeyNameValue" />
         <CsdlProperty

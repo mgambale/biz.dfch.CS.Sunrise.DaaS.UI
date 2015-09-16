@@ -83,30 +83,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string State
-        {
-            get
-            {
-                return global::LightSwitchApplication.Approval.DetailsClass.GetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.State);
-            }
-            set
-            {
-                global::LightSwitchApplication.Approval.DetailsClass.SetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.State, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void State_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void State_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void State_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public int Id
         {
             get
@@ -294,6 +270,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Modified_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Status
+        {
+            get
+            {
+                return global::LightSwitchApplication.Approval.DetailsClass.GetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.Status);
+            }
+            set
+            {
+                global::LightSwitchApplication.Approval.DetailsClass.SetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.Status, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Status_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Status_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Status_Changed();
+
         #endregion
     
         #region Details Class
@@ -313,7 +313,7 @@ namespace LightSwitchApplication
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.State;
+                var initializeEntry = global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.Id;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -376,14 +376,6 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string> State
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.State) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, int> Id
                 {
                     get
@@ -448,13 +440,20 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string> Status
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.Status) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new string State { get; set; }
                 new int Id { get; set; }
                 new string Tid { get; set; }
                 new string Name { get; set; }
@@ -463,6 +462,7 @@ namespace LightSwitchApplication
                 new string ModifiedBy { get; set; }
                 new global::System.DateTimeOffset Created { get; set; }
                 new global::System.DateTimeOffset Modified { get; set; }
+                new string Status { get; set; }
             }
             #pragma warning restore 109
     
@@ -471,43 +471,6 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal class PropertySetProperties
             {
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Entry
-                    State = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Entry(
-                        "State",
-                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._State_Stub,
-                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._State_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._State_Validate,
-                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._State_GetImplementationValue,
-                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._State_SetImplementationValue,
-                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._State_OnValueChanged);
-                private static void _State_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Approval.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Data> c, global::LightSwitchApplication.Approval.DetailsClass d, object sf)
-                {
-                    c(d, ref d._State, sf);
-                }
-                private static bool _State_ComputeIsReadOnly(global::LightSwitchApplication.Approval e)
-                {
-                    bool result = false;
-                    e.State_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _State_Validate(global::LightSwitchApplication.Approval e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.State_Validate(r);
-                }
-                private static string _State_GetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d)
-                {
-                    return d.ImplementationEntity.State;
-                }
-                private static void _State_SetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.State = v;
-                }
-                private static void _State_OnValueChanged(global::LightSwitchApplication.Approval e)
-                {
-                    e.State_Changed();
-                }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, int>.Entry
@@ -805,11 +768,45 @@ namespace LightSwitchApplication
                     e.Modified_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Entry
+                    Status = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Entry(
+                        "Status",
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._Status_Stub,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._Status_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._Status_Validate,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._Status_GetImplementationValue,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._Status_SetImplementationValue,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._Status_OnValueChanged);
+                private static void _Status_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Approval.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Data> c, global::LightSwitchApplication.Approval.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Status, sf);
+                }
+                private static bool _Status_ComputeIsReadOnly(global::LightSwitchApplication.Approval e)
+                {
+                    bool result = false;
+                    e.Status_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Status_Validate(global::LightSwitchApplication.Approval e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Status_Validate(r);
+                }
+                private static string _Status_GetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Status;
+                }
+                private static void _Status_SetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Status = v;
+                }
+                private static void _Status_OnValueChanged(global::LightSwitchApplication.Approval e)
+                {
+                    e.Status_Changed();
+                }
+    
             }
     
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Data _State;
-            
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, int>.Data _Id;
             
@@ -833,6 +830,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Data _Modified;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, string>.Data _Status;
             
         }
     

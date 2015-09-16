@@ -8,6 +8,7 @@
     Name="Job">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -18,13 +19,6 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="State"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <EntityProperty
         Name="Type"
         PropertyType=":String">
@@ -115,6 +109,13 @@
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
@@ -221,12 +222,12 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Job"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
           Name="Jobs"
           EntityType="Job" />
         <CsdlProperty
-          Name="State"
-          Property="Job/Properties[State]" />
+          Name="Status"
+          Property="Job/Properties[Status]" />
         <CsdlProperty
           Name="Type"
           Property="Job/Properties[Type]" />

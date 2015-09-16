@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class Endpoint : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass>
+    public sealed partial class ManagementCredential : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the Endpoint entity.
+        /// Initializes a new instance of the ManagementCredential entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Endpoint()
+        public ManagementCredential()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Endpoint(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Endpoint> entitySet)
+        public ManagementCredential(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ManagementCredential> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Endpoint.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.ManagementCredential.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Endpoint_Created();
+        partial void ManagementCredential_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Endpoint_AllowSaveWithErrors(ref bool result);
+        partial void ManagementCredential_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,15 +83,63 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Username
+        {
+            get
+            {
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Username);
+            }
+            set
+            {
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Username, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Username_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Username_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Username_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EncryptedPassword
+        {
+            get
+            {
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.EncryptedPassword);
+            }
+            set
+            {
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.EncryptedPassword, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EncryptedPassword_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EncryptedPassword_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EncryptedPassword_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public int Id
         {
             get
             {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Id);
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Id);
             }
             set
             {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Id, value);
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Id, value);
             }
         }
         
@@ -111,11 +159,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Tid);
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Tid);
             }
             set
             {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Tid, value);
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Tid, value);
             }
         }
         
@@ -135,11 +183,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Name);
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Name);
             }
             set
             {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Name, value);
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Name, value);
             }
         }
         
@@ -155,144 +203,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Version
+        public string Description
         {
             get
             {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Version);
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Description);
             }
             set
             {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Version, value);
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Description, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Version_IsReadOnly(ref bool result);
+        partial void Description_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Version_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Description_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Version_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RouteTemplate
-        {
-            get
-            {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.RouteTemplate);
-            }
-            set
-            {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.RouteTemplate, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RouteTemplate_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RouteTemplate_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RouteTemplate_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RoutePrefix
-        {
-            get
-            {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.RoutePrefix);
-            }
-            set
-            {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.RoutePrefix, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoutePrefix_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoutePrefix_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoutePrefix_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string ServerRole
-        {
-            get
-            {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.ServerRole);
-            }
-            set
-            {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.ServerRole, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ServerRole_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ServerRole_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ServerRole_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Priority
-        {
-            get
-            {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Priority);
-            }
-            set
-            {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Priority, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Priority_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Priority_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Priority_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTimeOffset> Created
-        {
-            get
-            {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Created);
-            }
-            set
-            {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Created, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Created_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Created_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Created_Changed();
+        partial void Description_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -303,11 +231,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.CreatedBy);
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.CreatedBy);
             }
             set
             {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.CreatedBy, value);
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.CreatedBy, value);
             }
         }
         
@@ -323,39 +251,15 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTimeOffset> Modified
-        {
-            get
-            {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Modified);
-            }
-            set
-            {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Modified, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Modified_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Modified_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Modified_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string ModifiedBy
         {
             get
             {
-                return global::LightSwitchApplication.Endpoint.DetailsClass.GetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.ModifiedBy);
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.ModifiedBy);
             }
             set
             {
-                global::LightSwitchApplication.Endpoint.DetailsClass.SetValue(this, global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.ModifiedBy, value);
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.ModifiedBy, value);
             }
         }
         
@@ -366,6 +270,54 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ModifiedBy_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Created);
+            }
+            set
+            {
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Created, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Created_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Created_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Created_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return global::LightSwitchApplication.ManagementCredential.DetailsClass.GetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Modified);
+            }
+            set
+            {
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.SetValue(this, global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Modified, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Modified_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Modified_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Modified_Changed();
+
         #endregion
     
         #region Details Class
@@ -375,37 +327,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Endpoint,
-                global::LightSwitchApplication.Endpoint.DetailsClass,
-                global::LightSwitchApplication.Endpoint.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Endpoint.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass>>
+                global::LightSwitchApplication.ManagementCredential,
+                global::LightSwitchApplication.ManagementCredential.DetailsClass,
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.IImplementation,
+                global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Id;
+                var initializeEntry = global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Username;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass>.Entry
-                __EndpointEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Endpoint.DetailsClass.__Endpoint_CreateNew,
-                    global::LightSwitchApplication.Endpoint.DetailsClass.__Endpoint_Created,
-                    global::LightSwitchApplication.Endpoint.DetailsClass.__Endpoint_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Endpoint __Endpoint_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Endpoint> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass>.Entry
+                __ManagementCredentialEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass>.Entry(
+                    global::LightSwitchApplication.ManagementCredential.DetailsClass.__ManagementCredential_CreateNew,
+                    global::LightSwitchApplication.ManagementCredential.DetailsClass.__ManagementCredential_Created,
+                    global::LightSwitchApplication.ManagementCredential.DetailsClass.__ManagementCredential_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.ManagementCredential __ManagementCredential_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ManagementCredential> es)
             {
-                return new global::LightSwitchApplication.Endpoint(es);
+                return new global::LightSwitchApplication.ManagementCredential(es);
             }
-            private static void __Endpoint_Created(global::LightSwitchApplication.Endpoint e)
+            private static void __ManagementCredential_Created(global::LightSwitchApplication.ManagementCredential e)
             {
-                e.Endpoint_Created();
+                e.ManagementCredential_Created();
             }
-            private static bool __Endpoint_AllowSaveWithErrors(global::LightSwitchApplication.Endpoint e)
+            private static bool __ManagementCredential_AllowSaveWithErrors(global::LightSwitchApplication.ManagementCredential e)
             {
                 bool result = false;
-                e.Endpoint_AllowSaveWithErrors(ref result);
+                e.ManagementCredential_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -413,7 +365,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass> Commands
             {
                 get
                 {
@@ -421,7 +373,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass> Methods
             {
                 get
                 {
@@ -429,7 +381,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Endpoint.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -441,106 +393,90 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int> Id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> Username
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Username) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> Tid
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> EncryptedPassword
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Tid) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.EncryptedPassword) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> Name
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, int> Id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Name) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> Version
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> Tid
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Version) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Tid) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> RouteTemplate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> Name
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.RouteTemplate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Name) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> RoutePrefix
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> Description
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.RoutePrefix) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Description) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> ServerRole
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> CreatedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.ServerRole) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int> Priority
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string> ModifiedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Priority) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>> Created
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset> Created
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Created) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Created) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> CreatedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset> Modified
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>> Modified
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.Modified) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string> ModifiedBy
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties.Modified) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>;
                     }
                 }
                 
@@ -550,18 +486,16 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
+                new string Username { get; set; }
+                new string EncryptedPassword { get; set; }
                 new int Id { get; set; }
                 new string Tid { get; set; }
                 new string Name { get; set; }
-                new string Version { get; set; }
-                new string RouteTemplate { get; set; }
-                new string RoutePrefix { get; set; }
-                new string ServerRole { get; set; }
-                new int Priority { get; set; }
-                new global::System.Nullable<global::System.DateTimeOffset> Created { get; set; }
+                new string Description { get; set; }
                 new string CreatedBy { get; set; }
-                new global::System.Nullable<global::System.DateTimeOffset> Modified { get; set; }
                 new string ModifiedBy { get; set; }
+                new global::System.DateTimeOffset Created { get; set; }
+                new global::System.DateTimeOffset Modified { get; set; }
             }
             #pragma warning restore 109
     
@@ -572,486 +506,406 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Entry
-                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    Username = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
+                        "Username",
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Username_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Username_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Username_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Username_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Username_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Username_OnValueChanged);
+                private static void _Username_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Username, sf);
+                }
+                private static bool _Username_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    bool result = false;
+                    e.Username_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Username_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Username_Validate(r);
+                }
+                private static string _Username_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Username;
+                }
+                private static void _Username_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Username = v;
+                }
+                private static void _Username_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    e.Username_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    EncryptedPassword = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
+                        "EncryptedPassword",
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._EncryptedPassword_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._EncryptedPassword_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._EncryptedPassword_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._EncryptedPassword_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._EncryptedPassword_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._EncryptedPassword_OnValueChanged);
+                private static void _EncryptedPassword_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EncryptedPassword, sf);
+                }
+                private static bool _EncryptedPassword_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    bool result = false;
+                    e.EncryptedPassword_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EncryptedPassword_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EncryptedPassword_Validate(r);
+                }
+                private static string _EncryptedPassword_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EncryptedPassword;
+                }
+                private static void _EncryptedPassword_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.EncryptedPassword = v;
+                }
+                private static void _EncryptedPassword_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    e.EncryptedPassword_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, int>.Entry
+                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, int>.Entry(
                         "Id",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Id_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Id_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Id_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Id_OnValueChanged);
-                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Id_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Id_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Id_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Id_OnValueChanged);
+                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, int>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
                 {
                     c(d, ref d._Id, sf);
                 }
-                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
+                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
                 {
                     bool result = false;
                     e.Id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Id_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Id_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Id_Validate(r);
                 }
-                private static int _Id_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
+                private static int _Id_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
                 {
                     return d.ImplementationEntity.Id;
                 }
-                private static void _Id_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, int v)
+                private static void _Id_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, int v)
                 {
                     d.ImplementationEntity.Id = v;
                 }
-                private static void _Id_OnValueChanged(global::LightSwitchApplication.Endpoint e)
+                private static void _Id_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
                 {
                     e.Id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    Tid = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    Tid = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
                         "Tid",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Tid_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Tid_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Tid_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Tid_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Tid_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Tid_OnValueChanged);
-                private static void _Tid_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Tid_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Tid_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Tid_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Tid_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Tid_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Tid_OnValueChanged);
+                private static void _Tid_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
                 {
                     c(d, ref d._Tid, sf);
                 }
-                private static bool _Tid_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
+                private static bool _Tid_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
                 {
                     bool result = false;
                     e.Tid_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Tid_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Tid_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Tid_Validate(r);
                 }
-                private static string _Tid_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
+                private static string _Tid_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
                 {
                     return d.ImplementationEntity.Tid;
                 }
-                private static void _Tid_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
+                private static void _Tid_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.Tid = v;
                 }
-                private static void _Tid_OnValueChanged(global::LightSwitchApplication.Endpoint e)
+                private static void _Tid_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
                 {
                     e.Tid_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    Name = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    Name = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
                         "Name",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Name_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Name_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Name_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Name_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Name_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Name_OnValueChanged);
-                private static void _Name_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Name_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Name_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Name_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Name_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Name_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Name_OnValueChanged);
+                private static void _Name_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
                 {
                     c(d, ref d._Name, sf);
                 }
-                private static bool _Name_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
+                private static bool _Name_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
                 {
                     bool result = false;
                     e.Name_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Name_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Name_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Name_Validate(r);
                 }
-                private static string _Name_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
+                private static string _Name_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
                 {
                     return d.ImplementationEntity.Name;
                 }
-                private static void _Name_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
+                private static void _Name_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.Name = v;
                 }
-                private static void _Name_OnValueChanged(global::LightSwitchApplication.Endpoint e)
+                private static void _Name_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
                 {
                     e.Name_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    Version = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
-                        "Version",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Version_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Version_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Version_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Version_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Version_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Version_OnValueChanged);
-                private static void _Version_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    Description = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
+                        "Description",
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Description_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Description_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Description_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Description_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Description_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Description_OnValueChanged);
+                private static void _Description_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Version, sf);
+                    c(d, ref d._Description, sf);
                 }
-                private static bool _Version_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
+                private static bool _Description_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
                 {
                     bool result = false;
-                    e.Version_IsReadOnly(ref result);
+                    e.Description_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Version_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Description_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Version_Validate(r);
+                    e.Description_Validate(r);
                 }
-                private static string _Version_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
+                private static string _Description_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Version;
+                    return d.ImplementationEntity.Description;
                 }
-                private static void _Version_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
+                private static void _Description_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.Version = v;
+                    d.ImplementationEntity.Description = v;
                 }
-                private static void _Version_OnValueChanged(global::LightSwitchApplication.Endpoint e)
+                private static void _Description_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
                 {
-                    e.Version_Changed();
+                    e.Description_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    RouteTemplate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
-                        "RouteTemplate",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RouteTemplate_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RouteTemplate_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RouteTemplate_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RouteTemplate_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RouteTemplate_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RouteTemplate_OnValueChanged);
-                private static void _RouteTemplate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
-                {
-                    c(d, ref d._RouteTemplate, sf);
-                }
-                private static bool _RouteTemplate_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
-                {
-                    bool result = false;
-                    e.RouteTemplate_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _RouteTemplate_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.RouteTemplate_Validate(r);
-                }
-                private static string _RouteTemplate_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
-                {
-                    return d.ImplementationEntity.RouteTemplate;
-                }
-                private static void _RouteTemplate_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.RouteTemplate = v;
-                }
-                private static void _RouteTemplate_OnValueChanged(global::LightSwitchApplication.Endpoint e)
-                {
-                    e.RouteTemplate_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    RoutePrefix = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
-                        "RoutePrefix",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RoutePrefix_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RoutePrefix_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RoutePrefix_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RoutePrefix_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RoutePrefix_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._RoutePrefix_OnValueChanged);
-                private static void _RoutePrefix_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
-                {
-                    c(d, ref d._RoutePrefix, sf);
-                }
-                private static bool _RoutePrefix_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
-                {
-                    bool result = false;
-                    e.RoutePrefix_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _RoutePrefix_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.RoutePrefix_Validate(r);
-                }
-                private static string _RoutePrefix_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
-                {
-                    return d.ImplementationEntity.RoutePrefix;
-                }
-                private static void _RoutePrefix_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.RoutePrefix = v;
-                }
-                private static void _RoutePrefix_OnValueChanged(global::LightSwitchApplication.Endpoint e)
-                {
-                    e.RoutePrefix_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    ServerRole = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
-                        "ServerRole",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ServerRole_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ServerRole_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ServerRole_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ServerRole_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ServerRole_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ServerRole_OnValueChanged);
-                private static void _ServerRole_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ServerRole, sf);
-                }
-                private static bool _ServerRole_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
-                {
-                    bool result = false;
-                    e.ServerRole_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _ServerRole_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.ServerRole_Validate(r);
-                }
-                private static string _ServerRole_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ServerRole;
-                }
-                private static void _ServerRole_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.ServerRole = v;
-                }
-                private static void _ServerRole_OnValueChanged(global::LightSwitchApplication.Endpoint e)
-                {
-                    e.ServerRole_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Entry
-                    Priority = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Entry(
-                        "Priority",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Priority_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Priority_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Priority_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Priority_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Priority_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Priority_OnValueChanged);
-                private static void _Priority_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Priority, sf);
-                }
-                private static bool _Priority_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
-                {
-                    bool result = false;
-                    e.Priority_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Priority_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Priority_Validate(r);
-                }
-                private static int _Priority_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Priority;
-                }
-                private static void _Priority_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.Priority = v;
-                }
-                private static void _Priority_OnValueChanged(global::LightSwitchApplication.Endpoint e)
-                {
-                    e.Priority_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Entry
-                    Created = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Entry(
-                        "Created",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Created_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Created_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Created_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Created_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Created_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Created_OnValueChanged);
-                private static void _Created_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Created, sf);
-                }
-                private static bool _Created_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
-                {
-                    bool result = false;
-                    e.Created_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Created_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Created_Validate(r);
-                }
-                private static global::System.Nullable<global::System.DateTimeOffset> _Created_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Created;
-                }
-                private static void _Created_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, global::System.Nullable<global::System.DateTimeOffset> v)
-                {
-                    d.ImplementationEntity.Created = v;
-                }
-                private static void _Created_OnValueChanged(global::LightSwitchApplication.Endpoint e)
-                {
-                    e.Created_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
                         "CreatedBy",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._CreatedBy_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._CreatedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._CreatedBy_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._CreatedBy_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._CreatedBy_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._CreatedBy_OnValueChanged);
-                private static void _CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._CreatedBy_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._CreatedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._CreatedBy_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._CreatedBy_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._CreatedBy_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._CreatedBy_OnValueChanged);
+                private static void _CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
                 {
                     c(d, ref d._CreatedBy, sf);
                 }
-                private static bool _CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
+                private static bool _CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
                 {
                     bool result = false;
                     e.CreatedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _CreatedBy_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _CreatedBy_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.CreatedBy_Validate(r);
                 }
-                private static string _CreatedBy_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
+                private static string _CreatedBy_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
                 {
                     return d.ImplementationEntity.CreatedBy;
                 }
-                private static void _CreatedBy_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
+                private static void _CreatedBy_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.CreatedBy = v;
                 }
-                private static void _CreatedBy_OnValueChanged(global::LightSwitchApplication.Endpoint e)
+                private static void _CreatedBy_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
                 {
                     e.CreatedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Entry
-                    Modified = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Entry(
-                        "Modified",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Modified_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Modified_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Modified_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Modified_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Modified_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._Modified_OnValueChanged);
-                private static void _Modified_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Modified, sf);
-                }
-                private static bool _Modified_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
-                {
-                    bool result = false;
-                    e.Modified_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Modified_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Modified_Validate(r);
-                }
-                private static global::System.Nullable<global::System.DateTimeOffset> _Modified_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Modified;
-                }
-                private static void _Modified_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, global::System.Nullable<global::System.DateTimeOffset> v)
-                {
-                    d.ImplementationEntity.Modified = v;
-                }
-                private static void _Modified_OnValueChanged(global::LightSwitchApplication.Endpoint e)
-                {
-                    e.Modified_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry
-                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry
+                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Entry(
                         "ModifiedBy",
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
-                        global::LightSwitchApplication.Endpoint.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
-                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Endpoint.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data> c, global::LightSwitchApplication.Endpoint.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
+                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
                 {
                     c(d, ref d._ModifiedBy, sf);
                 }
-                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.Endpoint e)
+                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
                 {
                     bool result = false;
                     e.ModifiedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ModifiedBy_Validate(global::LightSwitchApplication.Endpoint e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ModifiedBy_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.ModifiedBy_Validate(r);
                 }
-                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d)
+                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
                 {
                     return d.ImplementationEntity.ModifiedBy;
                 }
-                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.Endpoint.DetailsClass d, string v)
+                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.ModifiedBy = v;
                 }
-                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.Endpoint e)
+                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
                 {
                     e.ModifiedBy_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Entry
+                    Created = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Entry(
+                        "Created",
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Created_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Created_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Created_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Created_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Created_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Created_OnValueChanged);
+                private static void _Created_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Created, sf);
+                }
+                private static bool _Created_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    bool result = false;
+                    e.Created_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Created_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Created_Validate(r);
+                }
+                private static global::System.DateTimeOffset _Created_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Created;
+                }
+                private static void _Created_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, global::System.DateTimeOffset v)
+                {
+                    d.ImplementationEntity.Created = v;
+                }
+                private static void _Created_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    e.Created_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Entry
+                    Modified = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Entry(
+                        "Modified",
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Modified_Stub,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Modified_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Modified_Validate,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Modified_GetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Modified_SetImplementationValue,
+                        global::LightSwitchApplication.ManagementCredential.DetailsClass.PropertySetProperties._Modified_OnValueChanged);
+                private static void _Modified_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ManagementCredential.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.ManagementCredential.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Modified, sf);
+                }
+                private static bool _Modified_ComputeIsReadOnly(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    bool result = false;
+                    e.Modified_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Modified_Validate(global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Modified_Validate(r);
+                }
+                private static global::System.DateTimeOffset _Modified_GetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Modified;
+                }
+                private static void _Modified_SetImplementationValue(global::LightSwitchApplication.ManagementCredential.DetailsClass d, global::System.DateTimeOffset v)
+                {
+                    d.ImplementationEntity.Modified = v;
+                }
+                private static void _Modified_OnValueChanged(global::LightSwitchApplication.ManagementCredential e)
+                {
+                    e.Modified_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Data _Id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _Username;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _Tid;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _EncryptedPassword;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _Name;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, int>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _Version;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _Tid;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _RouteTemplate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _Name;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _RoutePrefix;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _Description;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _ServerRole;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _CreatedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, int>.Data _Priority;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, string>.Data _ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Data _Created;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Data _Created;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _CreatedBy;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, global::System.Nullable<global::System.DateTimeOffset>>.Data _Modified;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Endpoint, global::LightSwitchApplication.Endpoint.DetailsClass, string>.Data _ModifiedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ManagementCredential, global::LightSwitchApplication.ManagementCredential.DetailsClass, global::System.DateTimeOffset>.Data _Modified;
             
         }
     

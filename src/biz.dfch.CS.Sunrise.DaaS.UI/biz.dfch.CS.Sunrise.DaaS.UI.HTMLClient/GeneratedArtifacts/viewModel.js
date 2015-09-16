@@ -74,6 +74,28 @@
         $Screen.call(this, dataWorkspace, "CatalogueItemsList", parameters);
     }
 
+    function CatalogueItemView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CatalogueItemView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="CatalogueItem1" type="msls.application.CatalogueItem1">
+        /// Gets or sets the catalogueItem1 for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CatalogueItemView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CatalogueItemView", parameters);
+    }
+
     function EndpointsList(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the EndpointsList screen.
@@ -135,6 +157,50 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "Home", parameters);
+    }
+
+    function JobsList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the JobsList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Jobs" type="msls.VisualCollection" elementType="msls.application.Job">
+        /// Gets the jobs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.JobsList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "JobsList", parameters);
+    }
+
+    function JobView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the JobView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Job" type="msls.application.Job">
+        /// Gets or sets the job for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.JobView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "JobView", parameters);
     }
 
     function KeyNameValueAdd(parameters, dataWorkspace) {
@@ -225,141 +291,6 @@
         $Screen.call(this, dataWorkspace, "KeyNameValueView", parameters);
     }
 
-    function OrdersList(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the OrdersList screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Orders" type="msls.VisualCollection" elementType="msls.application.Order">
-        /// Gets the orders for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.OrdersList.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "OrdersList", parameters);
-    }
-
-    function OrderView(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the OrderView screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Order" type="msls.application.Order">
-        /// Gets or sets the order for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.OrderView.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "OrderView", parameters);
-    }
-
-    function OrderViewDetails(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the OrderViewDetails screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Order" type="msls.application.Order">
-        /// Gets or sets the order for this screen.
-        /// </field>
-        /// <field name="OrderItems" type="msls.VisualCollection" elementType="msls.application.OrderItem">
-        /// Gets the orderItems for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.OrderViewDetails.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "OrderViewDetails", parameters);
-    }
-
-    function CatalogueItemView(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the CatalogueItemView screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="CatalogueItem1" type="msls.application.CatalogueItem1">
-        /// Gets or sets the catalogueItem1 for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.CatalogueItemView.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "CatalogueItemView", parameters);
-    }
-
-    function JobsList(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the JobsList screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Jobs" type="msls.VisualCollection" elementType="msls.application.Job">
-        /// Gets the jobs for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.JobsList.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "JobsList", parameters);
-    }
-
-    function JobView(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the JobView screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Job" type="msls.application.Job">
-        /// Gets or sets the job for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.JobView.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "JobView", parameters);
-    }
-
     function OrderAdd(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the OrderAdd screen.
@@ -448,6 +379,75 @@
         $Screen.call(this, dataWorkspace, "OrderItemView", parameters);
     }
 
+    function OrdersList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the OrdersList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Orders" type="msls.VisualCollection" elementType="msls.application.Order">
+        /// Gets the orders for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.OrdersList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "OrdersList", parameters);
+    }
+
+    function OrderView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the OrderView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Order" type="msls.application.Order">
+        /// Gets or sets the order for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.OrderView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "OrderView", parameters);
+    }
+
+    function OrderViewDetails(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the OrderViewDetails screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Order" type="msls.application.Order">
+        /// Gets or sets the order for this screen.
+        /// </field>
+        /// <field name="OrderItems" type="msls.VisualCollection" elementType="msls.application.OrderItem">
+        /// Gets the orderItems for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.OrderViewDetails.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "OrderViewDetails", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         ApprovalsList: $defineScreen(ApprovalsList, [
@@ -480,6 +480,12 @@
         ], [
         ]),
 
+        CatalogueItemView: $defineScreen(CatalogueItemView, [
+            { name: "CatalogueItem1", kind: "local", type: lightSwitchApplication.CatalogueItem1 }
+        ], [
+            { name: "deleteEntity" }
+        ]),
+
         EndpointsList: $defineScreen(EndpointsList, [
             {
                 name: "Endpoints", kind: "collection", elementType: lightSwitchApplication.Endpoint,
@@ -498,6 +504,22 @@
 
         Home: $defineScreen(Home, [
         ], [
+        ]),
+
+        JobsList: $defineScreen(JobsList, [
+            {
+                name: "Jobs", kind: "collection", elementType: lightSwitchApplication.Job,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.Jobs;
+                }
+            }
+        ], [
+        ]),
+
+        JobView: $defineScreen(JobView, [
+            { name: "Job", kind: "local", type: lightSwitchApplication.Job }
+        ], [
+            { name: "deleteEntity" }
         ]),
 
         KeyNameValueAdd: $defineScreen(KeyNameValueAdd, [
@@ -522,6 +544,32 @@
 
         KeyNameValueView: $defineScreen(KeyNameValueView, [
             { name: "KeyNameValue", kind: "local", type: lightSwitchApplication.KeyNameValue }
+        ], [
+            { name: "deleteEntity" }
+        ]),
+
+        OrderAdd: $defineScreen(OrderAdd, [
+            { name: "Order", kind: "local", type: lightSwitchApplication.Order }
+        ], [
+        ]),
+
+        OrderAddSpecial: $defineScreen(OrderAddSpecial, [
+            { name: "Order", kind: "local", type: lightSwitchApplication.Order }
+        ], [
+        ]),
+
+        OrderItemsList: $defineScreen(OrderItemsList, [
+            {
+                name: "OrderItems", kind: "collection", elementType: lightSwitchApplication.OrderItem,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.OrderItems;
+                }
+            }
+        ], [
+        ]),
+
+        OrderItemView: $defineScreen(OrderItemView, [
+            { name: "OrderItem", kind: "local", type: lightSwitchApplication.OrderItem }
         ], [
             { name: "deleteEntity" }
         ]),
@@ -556,54 +604,6 @@
                     return this;
                 }
             }
-        ], [
-            { name: "deleteEntity" }
-        ]),
-
-        CatalogueItemView: $defineScreen(CatalogueItemView, [
-            { name: "CatalogueItem1", kind: "local", type: lightSwitchApplication.CatalogueItem1 }
-        ], [
-            { name: "deleteEntity" }
-        ]),
-
-        JobsList: $defineScreen(JobsList, [
-            {
-                name: "Jobs", kind: "collection", elementType: lightSwitchApplication.Job,
-                createQuery: function () {
-                    return this.dataWorkspace.CoreData.Jobs;
-                }
-            }
-        ], [
-        ]),
-
-        JobView: $defineScreen(JobView, [
-            { name: "Job", kind: "local", type: lightSwitchApplication.Job }
-        ], [
-            { name: "deleteEntity" }
-        ]),
-
-        OrderAdd: $defineScreen(OrderAdd, [
-            { name: "Order", kind: "local", type: lightSwitchApplication.Order }
-        ], [
-        ]),
-
-        OrderAddSpecial: $defineScreen(OrderAddSpecial, [
-            { name: "Order", kind: "local", type: lightSwitchApplication.Order }
-        ], [
-        ]),
-
-        OrderItemsList: $defineScreen(OrderItemsList, [
-            {
-                name: "OrderItems", kind: "collection", elementType: lightSwitchApplication.OrderItem,
-                createQuery: function () {
-                    return this.dataWorkspace.CoreData.OrderItems;
-                }
-            }
-        ], [
-        ]),
-
-        OrderItemView: $defineScreen(OrderItemView, [
-            { name: "OrderItem", kind: "local", type: lightSwitchApplication.OrderItem }
         ], [
             { name: "deleteEntity" }
         ]),
@@ -644,6 +644,18 @@
             return lightSwitchApplication.showScreen("CatalogueItemsList", parameters, options);
         }),
 
+        showCatalogueItemView: $defineShowScreen(function showCatalogueItemView(CatalogueItem1, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CatalogueItemView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CatalogueItemView", parameters, options);
+        }),
+
         showEndpointsList: $defineShowScreen(function showEndpointsList(options) {
             /// <summary>
             /// Asynchronously navigates forward to the EndpointsList screen.
@@ -678,6 +690,30 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
             return lightSwitchApplication.showScreen("Home", parameters, options);
+        }),
+
+        showJobsList: $defineShowScreen(function showJobsList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the JobsList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("JobsList", parameters, options);
+        }),
+
+        showJobView: $defineShowScreen(function showJobView(Job, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the JobView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("JobView", parameters, options);
         }),
 
         showKeyNameValueAdd: $defineShowScreen(function showKeyNameValueAdd(KeyNameValue, options) {
@@ -728,78 +764,6 @@
             return lightSwitchApplication.showScreen("KeyNameValueView", parameters, options);
         }),
 
-        showOrdersList: $defineShowScreen(function showOrdersList(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the OrdersList screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("OrdersList", parameters, options);
-        }),
-
-        showOrderView: $defineShowScreen(function showOrderView(Order, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the OrderView screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("OrderView", parameters, options);
-        }),
-
-        showOrderViewDetails: $defineShowScreen(function showOrderViewDetails(Order, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the OrderViewDetails screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("OrderViewDetails", parameters, options);
-        }),
-
-        showCatalogueItemView: $defineShowScreen(function showCatalogueItemView(CatalogueItem1, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the CatalogueItemView screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("CatalogueItemView", parameters, options);
-        }),
-
-        showJobsList: $defineShowScreen(function showJobsList(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the JobsList screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("JobsList", parameters, options);
-        }),
-
-        showJobView: $defineShowScreen(function showJobView(Job, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the JobView screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("JobView", parameters, options);
-        }),
-
         showOrderAdd: $defineShowScreen(function showOrderAdd(Order, options) {
             /// <summary>
             /// Asynchronously navigates forward to the OrderAdd screen.
@@ -846,6 +810,42 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("OrderItemView", parameters, options);
+        }),
+
+        showOrdersList: $defineShowScreen(function showOrdersList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the OrdersList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("OrdersList", parameters, options);
+        }),
+
+        showOrderView: $defineShowScreen(function showOrderView(Order, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the OrderView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("OrderView", parameters, options);
+        }),
+
+        showOrderViewDetails: $defineShowScreen(function showOrderViewDetails(Order, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the OrderViewDetails screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("OrderViewDetails", parameters, options);
         })
 
     });

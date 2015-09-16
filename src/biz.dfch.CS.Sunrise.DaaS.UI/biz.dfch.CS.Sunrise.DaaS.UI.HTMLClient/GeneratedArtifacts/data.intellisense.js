@@ -74,4 +74,12 @@
         created: [lightSwitchApplication.Order]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.ManagementCredential, {
+        /// <field>
+        /// Called when a new managementCredential is created.
+        /// <br/>created(msls.application.ManagementCredential entity)
+        /// </field>
+        created: [lightSwitchApplication.ManagementCredential]
+    });
+
 }(msls.application));

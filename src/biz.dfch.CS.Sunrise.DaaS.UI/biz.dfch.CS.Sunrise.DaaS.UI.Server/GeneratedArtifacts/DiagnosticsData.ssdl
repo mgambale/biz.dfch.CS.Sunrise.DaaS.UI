@@ -8,16 +8,18 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="Tid" Type="nvarchar(max)" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
     <Property Name="RouteTemplate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="RoutePrefix" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ServerRole" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Priority" Type="int" Nullable="false" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
   </EntityType>
 </Schema>

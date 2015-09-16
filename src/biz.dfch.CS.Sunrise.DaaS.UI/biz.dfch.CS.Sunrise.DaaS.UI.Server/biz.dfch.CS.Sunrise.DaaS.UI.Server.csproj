@@ -259,6 +259,7 @@
     <LightSwitchModel Include="DataSources\CoreData\Aces.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\Approvals.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\ActiveDirectoryUsers.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\ManagementCredentials.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

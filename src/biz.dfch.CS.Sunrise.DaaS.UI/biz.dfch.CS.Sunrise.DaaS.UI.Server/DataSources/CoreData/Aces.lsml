@@ -8,6 +8,7 @@
     Name="Ace">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -198,7 +199,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Ace"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
           Name="Aces"
           EntityType="Ace" />
         <CsdlProperty

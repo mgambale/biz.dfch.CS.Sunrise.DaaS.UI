@@ -8,6 +8,7 @@
     Name="OrderItem">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -217,7 +218,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="OrderItem"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
           Name="OrderItems"
           EntityType="OrderItem" />
         <CsdlProperty

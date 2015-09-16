@@ -8,6 +8,7 @@
     Name="CatalogueItem1">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -183,7 +184,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="CatalogueItem"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
           Name="CatalogueItems"
           EntityType="CatalogueItem1" />
         <CsdlProperty
