@@ -184,7 +184,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="CatalogueItem"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
           Name="CatalogueItems"
           EntityType="CatalogueItem1" />
         <CsdlProperty

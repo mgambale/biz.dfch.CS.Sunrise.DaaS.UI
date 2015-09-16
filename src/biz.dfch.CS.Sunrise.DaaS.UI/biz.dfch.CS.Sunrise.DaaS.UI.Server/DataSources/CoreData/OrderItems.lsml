@@ -218,7 +218,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="OrderItem"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
           Name="OrderItems"
           EntityType="OrderItem" />
         <CsdlProperty

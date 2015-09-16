@@ -46,7 +46,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="State" Type="Edm.String" MaxLength="Max" />
     <Property Name="Id" Type="Edm.Int32" Nullable="false" />
     <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
@@ -55,6 +54,7 @@
     <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
   </EntityType>
   <EntityType Name="CatalogueItem1">
     <Key>
@@ -75,7 +75,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="State" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="ReferencedItemId" Type="Edm.String" MaxLength="Max" />
     <Property Name="Token" Type="Edm.String" MaxLength="Max" />
@@ -92,6 +91,7 @@
     <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="Max" />
   </EntityType>
   <EntityType Name="KeyNameValue">
     <Key>
@@ -107,6 +107,21 @@
     <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="ManagementCredential">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Username" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="EncryptedPassword" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderItem">
     <Key>
@@ -141,6 +156,7 @@
     <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="OrderOnBehalfOf" Type="Edm.String" MaxLength="Max" />
     <NavigationProperty Name="OrderItems" Relationship="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" ToRole="OrderItems" FromRole="OrderItemsPartner" />
   </EntityType>
   <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
@@ -154,6 +170,7 @@
     <EntitySet Name="CatalogueItems" EntityType="LightSwitchApplication.CatalogueItem1" />
     <EntitySet Name="Jobs" EntityType="LightSwitchApplication.Job" />
     <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
+    <EntitySet Name="ManagementCredentials" EntityType="LightSwitchApplication.ManagementCredential" />
     <EntitySet Name="OrderItems" EntityType="LightSwitchApplication.OrderItem" />
     <EntitySet Name="Orders" EntityType="LightSwitchApplication.Order" />
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">

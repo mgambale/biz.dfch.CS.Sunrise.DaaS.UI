@@ -167,6 +167,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<ManagementCredential> ManagementCredentials
+        {
+            get
+            {
+                if ((_ManagementCredentials == null))
+                {
+                    _ManagementCredentials = base.CreateObjectSet<ManagementCredential>("ManagementCredentials");
+                }
+                return _ManagementCredentials;
+            }
+        }
+        private ObjectSet<ManagementCredential> _ManagementCredentials;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<OrderItem> OrderItems
         {
             get
@@ -246,6 +262,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToKeyNameValues(KeyNameValue keyNameValue)
         {
             base.AddObject("KeyNameValues", keyNameValue);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ManagementCredentials EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToManagementCredentials(ManagementCredential managementCredential)
+        {
+            base.AddObject("ManagementCredentials", managementCredential);
         }
     
         /// <summary>
@@ -1176,30 +1200,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String State
-        {
-            get
-            {
-                return _State;
-            }
-            set
-            {
-                OnStateChanging(value);
-                ReportPropertyChanging("State");
-                _State = value;
-                ReportPropertyChanged("State");
-                OnStateChanged();
-            }
-        }
-        private global::System.String _State;
-        partial void OnStateChanging(global::System.String value);
-        partial void OnStateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 Id
@@ -1391,6 +1391,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                OnStatusChanging(value);
+                ReportPropertyChanging("Status");
+                _Status = value;
+                ReportPropertyChanged("Status");
+                OnStatusChanged();
+            }
+        }
+        private global::System.String _Status;
+        partial void OnStatusChanging(global::System.String value);
+        partial void OnStatusChanged();
 
         #endregion
 
@@ -1695,7 +1719,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// Create a new Job object.
         /// </summary>
-        /// <param name="state">Initial value of the State property.</param>
         /// <param name="type">Initial value of the Type property.</param>
         /// <param name="parentId">Initial value of the ParentId property.</param>
         /// <param name="id">Initial value of the Id property.</param>
@@ -1705,10 +1728,10 @@ namespace LightSwitchApplication.Implementation
         /// <param name="modifiedBy">Initial value of the ModifiedBy property.</param>
         /// <param name="created">Initial value of the Created property.</param>
         /// <param name="modified">Initial value of the Modified property.</param>
-        public static Job CreateJob(global::System.String state, global::System.String type, global::System.Int32 parentId, global::System.Int32 id, global::System.String tid, global::System.String name, global::System.String createdBy, global::System.String modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        /// <param name="status">Initial value of the Status property.</param>
+        public static Job CreateJob(global::System.String type, global::System.Int32 parentId, global::System.Int32 id, global::System.String tid, global::System.String name, global::System.String createdBy, global::System.String modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified, global::System.String status)
         {
             Job job = new Job();
-            job.State = state;
             job.Type = type;
             job.ParentId = parentId;
             job.Id = id;
@@ -1718,36 +1741,13 @@ namespace LightSwitchApplication.Implementation
             job.ModifiedBy = modifiedBy;
             job.Created = created;
             job.Modified = modified;
+            job.Status = status;
             return job;
         }
 
         #endregion
 
         #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String State
-        {
-            get
-            {
-                return _State;
-            }
-            set
-            {
-                OnStateChanging(value);
-                ReportPropertyChanging("State");
-                _State = value;
-                ReportPropertyChanged("State");
-                OnStateChanged();
-            }
-        }
-        private global::System.String _State;
-        partial void OnStateChanging(global::System.String value);
-        partial void OnStateChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2135,6 +2135,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                OnStatusChanging(value);
+                ReportPropertyChanging("Status");
+                _Status = value;
+                ReportPropertyChanged("Status");
+                OnStatusChanged();
+            }
+        }
+        private global::System.String _Status;
+        partial void OnStatusChanging(global::System.String value);
+        partial void OnStatusChanged();
 
         #endregion
 
@@ -2433,6 +2457,295 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ManagementCredential")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class ManagementCredential : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new ManagementCredential object.
+        /// </summary>
+        /// <param name="username">Initial value of the Username property.</param>
+        /// <param name="encryptedPassword">Initial value of the EncryptedPassword property.</param>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="tid">Initial value of the Tid property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
+        /// <param name="modifiedBy">Initial value of the ModifiedBy property.</param>
+        /// <param name="created">Initial value of the Created property.</param>
+        /// <param name="modified">Initial value of the Modified property.</param>
+        public static ManagementCredential CreateManagementCredential(global::System.String username, global::System.String encryptedPassword, global::System.Int32 id, global::System.String tid, global::System.String name, global::System.String createdBy, global::System.String modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            ManagementCredential managementCredential = new ManagementCredential();
+            managementCredential.Username = username;
+            managementCredential.EncryptedPassword = encryptedPassword;
+            managementCredential.Id = id;
+            managementCredential.Tid = tid;
+            managementCredential.Name = name;
+            managementCredential.CreatedBy = createdBy;
+            managementCredential.ModifiedBy = modifiedBy;
+            managementCredential.Created = created;
+            managementCredential.Modified = modified;
+            return managementCredential;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Username
+        {
+            get
+            {
+                return _Username;
+            }
+            set
+            {
+                OnUsernameChanging(value);
+                ReportPropertyChanging("Username");
+                _Username = value;
+                ReportPropertyChanged("Username");
+                OnUsernameChanged();
+            }
+        }
+        private global::System.String _Username;
+        partial void OnUsernameChanging(global::System.String value);
+        partial void OnUsernameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String EncryptedPassword
+        {
+            get
+            {
+                return _EncryptedPassword;
+            }
+            set
+            {
+                OnEncryptedPasswordChanging(value);
+                ReportPropertyChanging("EncryptedPassword");
+                _EncryptedPassword = value;
+                ReportPropertyChanged("EncryptedPassword");
+                OnEncryptedPasswordChanged();
+            }
+        }
+        private global::System.String _EncryptedPassword;
+        partial void OnEncryptedPasswordChanging(global::System.String value);
+        partial void OnEncryptedPasswordChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Tid
+        {
+            get
+            {
+                return _Tid;
+            }
+            set
+            {
+                OnTidChanging(value);
+                ReportPropertyChanging("Tid");
+                _Tid = value;
+                ReportPropertyChanged("Tid");
+                OnTidChanged();
+            }
+        }
+        private global::System.String _Tid;
+        partial void OnTidChanging(global::System.String value);
+        partial void OnTidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = value;
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Description
+        {
+            get
+            {
+                return _Description;
+            }
+            set
+            {
+                OnDescriptionChanging(value);
+                ReportPropertyChanging("Description");
+                _Description = value;
+                ReportPropertyChanged("Description");
+                OnDescriptionChanged();
+            }
+        }
+        private global::System.String _Description;
+        partial void OnDescriptionChanging(global::System.String value);
+        partial void OnDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = value;
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = value;
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private global::System.String _ModifiedBy;
+        partial void OnModifiedByChanging(global::System.String value);
+        partial void OnModifiedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return _Created;
+            }
+            set
+            {
+                OnCreatedChanging(value);
+                ReportPropertyChanging("Created");
+                _Created = value;
+                ReportPropertyChanged("Created");
+                OnCreatedChanged();
+            }
+        }
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return _Modified;
+            }
+            set
+            {
+                OnModifiedChanging(value);
+                ReportPropertyChanging("Modified");
+                _Modified = value;
+                ReportPropertyChanged("Modified");
+                OnModifiedChanged();
+            }
+        }
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Order")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -2709,6 +3022,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String OrderOnBehalfOf
+        {
+            get
+            {
+                return _OrderOnBehalfOf;
+            }
+            set
+            {
+                OnOrderOnBehalfOfChanging(value);
+                ReportPropertyChanging("OrderOnBehalfOf");
+                _OrderOnBehalfOf = value;
+                ReportPropertyChanged("OrderOnBehalfOf");
+                OnOrderOnBehalfOfChanged();
+            }
+        }
+        private global::System.String _OrderOnBehalfOf;
+        partial void OnOrderOnBehalfOfChanging(global::System.String value);
+        partial void OnOrderOnBehalfOfChanged();
 
         #endregion
 

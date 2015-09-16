@@ -216,7 +216,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Order"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
           Name="Orders"
           EntityType="Order" />
         <CsdlProperty
@@ -261,7 +261,7 @@
       AssociationSet="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <AssociationSetMapping.Attributes>
         <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Endpoints_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Endpoints_OdataServices_Core_OrderItem_OrderItemsPartnerSet"
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartnerSet"
           Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" />
         <CsdlAssociationSetEnd
           End="CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItemsPartner]" />

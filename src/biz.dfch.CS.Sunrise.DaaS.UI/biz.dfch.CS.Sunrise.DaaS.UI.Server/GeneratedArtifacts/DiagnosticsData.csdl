@@ -5,17 +5,19 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="RouteTemplate" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="RoutePrefix" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="ServerRole" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Priority" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" />
-    <Property Name="CreatedBy" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" />
-    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Address" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
   </EntityType>
   <EntityContainer Name="DiagnosticsData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Endpoints" EntityType="LightSwitchApplication.Endpoint" />

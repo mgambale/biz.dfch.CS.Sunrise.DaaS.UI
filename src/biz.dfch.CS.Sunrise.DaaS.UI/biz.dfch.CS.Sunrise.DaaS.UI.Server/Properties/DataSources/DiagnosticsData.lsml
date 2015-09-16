@@ -21,14 +21,14 @@
       <CsdlEntityContainer
         Format="Json"
         Name="Diagnostics"
-        Namespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics" />
+        Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics" />
       <Partial
         IsPrimary="True" />
     </DataService.Attributes>
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="e145c15c-ec9d-4b07-93c9-6cca6ff6d6cc" />
+        Value="b904e711-aac7-4500-8541-e0c84e573fbc" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="DiagnosticsData" />

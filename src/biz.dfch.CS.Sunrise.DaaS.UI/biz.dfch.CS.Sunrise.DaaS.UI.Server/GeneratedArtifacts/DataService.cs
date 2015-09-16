@@ -258,6 +258,39 @@ namespace LightSwitchApplication
         partial void KeyNameValues_Validate(global::LightSwitchApplication.KeyNameValue entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Inserting(global::LightSwitchApplication.ManagementCredential entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Inserted(global::LightSwitchApplication.ManagementCredential entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Updating(global::LightSwitchApplication.ManagementCredential entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Updated(global::LightSwitchApplication.ManagementCredential entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Deleting(global::LightSwitchApplication.ManagementCredential entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Deleted(global::LightSwitchApplication.ManagementCredential entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ManagementCredentials_Validate(global::LightSwitchApplication.ManagementCredential entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void OrderItems_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -322,39 +355,6 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Orders_Validate(global::LightSwitchApplication.Order entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Inserting(global::LightSwitchApplication.ManagementCredential entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Inserted(global::LightSwitchApplication.ManagementCredential entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Updating(global::LightSwitchApplication.ManagementCredential entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Updated(global::LightSwitchApplication.ManagementCredential entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Deleting(global::LightSwitchApplication.ManagementCredential entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Deleted(global::LightSwitchApplication.ManagementCredential entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ManagementCredentials_Validate(global::LightSwitchApplication.ManagementCredential entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
@@ -820,6 +820,76 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.ManagementCredential>
+                __ManagementCredentialsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.ManagementCredential>(
+                    "ManagementCredentials",
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanInsert,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanUpdate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanDelete,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanRead,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Inserting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Inserted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Updating,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Updated,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Deleting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Deleted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Validate,
+                    null);
+            private static bool __ManagementCredentials_CanInsert(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.ManagementCredentials_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ManagementCredentials_CanUpdate(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.ManagementCredentials_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ManagementCredentials_CanDelete(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.ManagementCredentials_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ManagementCredentials_CanRead(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.ManagementCredentials_CanRead(ref result);
+                return result;
+            }
+            private static void __ManagementCredentials_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
+            {
+                d.ManagementCredentials_Inserting(e);
+            }
+            private static void __ManagementCredentials_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
+            {
+                d.ManagementCredentials_Inserted(e);
+            }
+            private static void __ManagementCredentials_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
+            {
+                d.ManagementCredentials_Updating(e);
+            }
+            private static void __ManagementCredentials_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
+            {
+                d.ManagementCredentials_Updated(e);
+            }
+            private static void __ManagementCredentials_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
+            {
+                d.ManagementCredentials_Deleting(e);
+            }
+            private static void __ManagementCredentials_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
+            {
+                d.ManagementCredentials_Deleted(e);
+            }
+            private static void __ManagementCredentials_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ManagementCredentials_Validate(e, r);
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.OrderItem>
                 __OrderItemsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.OrderItem>(
                     "OrderItems",
@@ -956,76 +1026,6 @@ namespace LightSwitchApplication
             private static void __Orders_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Order e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
                 d.Orders_Validate(e, r);
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.ManagementCredential>
-                __ManagementCredentialsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.ManagementCredential>(
-                    "ManagementCredentials",
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanInsert,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanUpdate,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanDelete,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_CanRead,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Inserting,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Inserted,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Updating,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Updated,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Deleting,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Deleted,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__ManagementCredentials_Validate,
-                    null);
-            private static bool __ManagementCredentials_CanInsert(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.ManagementCredentials_CanInsert(ref result);
-                return result;
-            }
-            private static bool __ManagementCredentials_CanUpdate(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.ManagementCredentials_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __ManagementCredentials_CanDelete(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.ManagementCredentials_CanDelete(ref result);
-                return result;
-            }
-            private static bool __ManagementCredentials_CanRead(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.ManagementCredentials_CanRead(ref result);
-                return result;
-            }
-            private static void __ManagementCredentials_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
-            {
-                d.ManagementCredentials_Inserting(e);
-            }
-            private static void __ManagementCredentials_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
-            {
-                d.ManagementCredentials_Inserted(e);
-            }
-            private static void __ManagementCredentials_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
-            {
-                d.ManagementCredentials_Updating(e);
-            }
-            private static void __ManagementCredentials_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
-            {
-                d.ManagementCredentials_Updated(e);
-            }
-            private static void __ManagementCredentials_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
-            {
-                d.ManagementCredentials_Deleting(e);
-            }
-            private static void __ManagementCredentials_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e)
-            {
-                d.ManagementCredentials_Deleted(e);
-            }
-            private static void __ManagementCredentials_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.ManagementCredential e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.ManagementCredentials_Validate(e, r);
             }
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]

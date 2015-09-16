@@ -66,6 +66,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.KeyNameValue();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.ManagementCredential))
+            {
+                return new global::LightSwitchApplication.Implementation.ManagementCredential();
+            }
             if (type == typeof(global::LightSwitchApplication.Implementation.OrderItem))
             {
                 return new global::LightSwitchApplication.Implementation.OrderItem();
@@ -114,6 +118,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.KeyNameValue();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ManagementCredential))
+            {
+                return new global::LightSwitchApplication.Implementation.ManagementCredential();
+            }
             if (typeof(T) == typeof(global::LightSwitchApplication.OrderItem))
             {
                 return new global::LightSwitchApplication.Implementation.OrderItem();
@@ -158,6 +166,10 @@ namespace LightSwitchApplication.Implementation
             if (outerType == typeof(global::LightSwitchApplication.Implementation.KeyNameValue))
             {
                 return typeof(global::CoreData.CoreDataService.KeyNameValue);
+            }
+            if (outerType == typeof(global::LightSwitchApplication.Implementation.ManagementCredential))
+            {
+                return typeof(global::CoreData.CoreDataService.ManagementCredential);
             }
             if (outerType == typeof(global::LightSwitchApplication.Implementation.OrderItem))
             {
@@ -234,7 +246,6 @@ namespace LightSwitchApplication.Implementation
             if (approval != null)
             {
                 global::CoreData.CoreDataService.Approval result = new global::CoreData.CoreDataService.Approval();
-                result.State = approval.State;
                 result.Id = approval.Id;
                 result.Tid = approval.Tid;
                 result.Name = approval.Name;
@@ -243,6 +254,7 @@ namespace LightSwitchApplication.Implementation
                 result.ModifiedBy = approval.ModifiedBy;
                 result.Created = approval.Created;
                 result.Modified = approval.Modified;
+                result.Status = approval.Status;
                 return result;
             }
             global::LightSwitchApplication.Implementation.CatalogueItem1 catalogueItem1 = outerEntity as global::LightSwitchApplication.Implementation.CatalogueItem1;
@@ -265,7 +277,6 @@ namespace LightSwitchApplication.Implementation
             if (job != null)
             {
                 global::CoreData.CoreDataService.Job result = new global::CoreData.CoreDataService.Job();
-                result.State = job.State;
                 result.Type = job.Type;
                 result.ReferencedItemId = job.ReferencedItemId;
                 result.Token = job.Token;
@@ -282,6 +293,7 @@ namespace LightSwitchApplication.Implementation
                 result.ModifiedBy = job.ModifiedBy;
                 result.Created = job.Created;
                 result.Modified = job.Modified;
+                result.Status = job.Status;
                 return result;
             }
             global::LightSwitchApplication.Implementation.KeyNameValue keyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
@@ -298,6 +310,22 @@ namespace LightSwitchApplication.Implementation
                 result.CreatedBy = keyNameValue.CreatedBy;
                 result.Modified = keyNameValue.Modified;
                 result.ModifiedBy = keyNameValue.ModifiedBy;
+                return result;
+            }
+            global::LightSwitchApplication.Implementation.ManagementCredential managementCredential = outerEntity as global::LightSwitchApplication.Implementation.ManagementCredential;
+            if (managementCredential != null)
+            {
+                global::CoreData.CoreDataService.ManagementCredential result = new global::CoreData.CoreDataService.ManagementCredential();
+                result.Username = managementCredential.Username;
+                result.EncryptedPassword = managementCredential.EncryptedPassword;
+                result.Id = managementCredential.Id;
+                result.Tid = managementCredential.Tid;
+                result.Name = managementCredential.Name;
+                result.Description = managementCredential.Description;
+                result.CreatedBy = managementCredential.CreatedBy;
+                result.ModifiedBy = managementCredential.ModifiedBy;
+                result.Created = managementCredential.Created;
+                result.Modified = managementCredential.Modified;
                 return result;
             }
             global::LightSwitchApplication.Implementation.OrderItem orderItem = outerEntity as global::LightSwitchApplication.Implementation.OrderItem;
@@ -334,6 +362,7 @@ namespace LightSwitchApplication.Implementation
                 result.ModifiedBy = order.ModifiedBy;
                 result.Created = order.Created;
                 result.Modified = order.Modified;
+                result.OrderOnBehalfOf = order.OrderOnBehalfOf;
                 return result;
             }
             return null;
@@ -389,7 +418,6 @@ namespace LightSwitchApplication.Implementation
             global::CoreData.CoreDataService.Approval innerApproval = innerResult as global::CoreData.CoreDataService.Approval;
             if ((outerApproval != null) && (innerApproval != null))
             {
-                outerApproval.State = innerApproval.State;
                 outerApproval.Id = innerApproval.Id;
                 outerApproval.Tid = innerApproval.Tid;
                 outerApproval.Name = innerApproval.Name;
@@ -398,6 +426,7 @@ namespace LightSwitchApplication.Implementation
                 outerApproval.ModifiedBy = innerApproval.ModifiedBy;
                 outerApproval.Created = innerApproval.Created;
                 outerApproval.Modified = innerApproval.Modified;
+                outerApproval.Status = innerApproval.Status;
                 return;
             }
             global::LightSwitchApplication.Implementation.CatalogueItem1 outerCatalogueItem1 = outerEntity as global::LightSwitchApplication.Implementation.CatalogueItem1;
@@ -420,7 +449,6 @@ namespace LightSwitchApplication.Implementation
             global::CoreData.CoreDataService.Job innerJob = innerResult as global::CoreData.CoreDataService.Job;
             if ((outerJob != null) && (innerJob != null))
             {
-                outerJob.State = innerJob.State;
                 outerJob.Type = innerJob.Type;
                 outerJob.ReferencedItemId = innerJob.ReferencedItemId;
                 outerJob.Token = innerJob.Token;
@@ -437,6 +465,7 @@ namespace LightSwitchApplication.Implementation
                 outerJob.ModifiedBy = innerJob.ModifiedBy;
                 outerJob.Created = innerJob.Created;
                 outerJob.Modified = innerJob.Modified;
+                outerJob.Status = innerJob.Status;
                 return;
             }
             global::LightSwitchApplication.Implementation.KeyNameValue outerKeyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
@@ -453,6 +482,22 @@ namespace LightSwitchApplication.Implementation
                 outerKeyNameValue.CreatedBy = innerKeyNameValue.CreatedBy;
                 outerKeyNameValue.Modified = innerKeyNameValue.Modified;
                 outerKeyNameValue.ModifiedBy = innerKeyNameValue.ModifiedBy;
+                return;
+            }
+            global::LightSwitchApplication.Implementation.ManagementCredential outerManagementCredential = outerEntity as global::LightSwitchApplication.Implementation.ManagementCredential;
+            global::CoreData.CoreDataService.ManagementCredential innerManagementCredential = innerResult as global::CoreData.CoreDataService.ManagementCredential;
+            if ((outerManagementCredential != null) && (innerManagementCredential != null))
+            {
+                outerManagementCredential.Username = innerManagementCredential.Username;
+                outerManagementCredential.EncryptedPassword = innerManagementCredential.EncryptedPassword;
+                outerManagementCredential.Id = innerManagementCredential.Id;
+                outerManagementCredential.Tid = innerManagementCredential.Tid;
+                outerManagementCredential.Name = innerManagementCredential.Name;
+                outerManagementCredential.Description = innerManagementCredential.Description;
+                outerManagementCredential.CreatedBy = innerManagementCredential.CreatedBy;
+                outerManagementCredential.ModifiedBy = innerManagementCredential.ModifiedBy;
+                outerManagementCredential.Created = innerManagementCredential.Created;
+                outerManagementCredential.Modified = innerManagementCredential.Modified;
                 return;
             }
             global::LightSwitchApplication.Implementation.OrderItem outerOrderItem = outerEntity as global::LightSwitchApplication.Implementation.OrderItem;
@@ -489,6 +534,7 @@ namespace LightSwitchApplication.Implementation
                 outerOrder.ModifiedBy = innerOrder.ModifiedBy;
                 outerOrder.Created = innerOrder.Created;
                 outerOrder.Modified = innerOrder.Modified;
+                outerOrder.OrderOnBehalfOf = innerOrder.OrderOnBehalfOf;
                 return;
             }
             base.UpdateResult(outerEntity, innerResult);
@@ -590,6 +636,8 @@ namespace LightSwitchApplication.Implementation
                 result.CreatedBy = endpoint.CreatedBy;
                 result.Modified = endpoint.Modified;
                 result.ModifiedBy = endpoint.ModifiedBy;
+                result.Address = endpoint.Address;
+                result.Description = endpoint.Description;
                 return result;
             }
             return null;
@@ -613,6 +661,8 @@ namespace LightSwitchApplication.Implementation
                 outerEndpoint.CreatedBy = innerEndpoint.CreatedBy;
                 outerEndpoint.Modified = innerEndpoint.Modified;
                 outerEndpoint.ModifiedBy = innerEndpoint.ModifiedBy;
+                outerEndpoint.Address = innerEndpoint.Address;
+                outerEndpoint.Description = innerEndpoint.Description;
                 return;
             }
             base.UpdateResult(outerEntity, innerResult);
@@ -691,6 +741,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.KeyNameValue) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.KeyNameValue);
+            }
+            if (typeof(global::LightSwitchApplication.ManagementCredential) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ManagementCredential);
             }
             if (typeof(global::LightSwitchApplication.OrderItem) == definitionType)
             {
@@ -946,6 +1000,53 @@ namespace LightSwitchApplication.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class KeyNameValue :
         global::LightSwitchApplication.KeyNameValue.DetailsClass.IImplementation,
+        global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
+    {
+    
+        [global::System.Runtime.Serialization.DataMember]
+        public string Microsoft_LightSwitch_ETag
+        {
+            get;
+            set;
+        }
+    
+        string global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation.ETag
+        {
+            get { return this.Microsoft_LightSwitch_ETag; }
+            set { this.Microsoft_LightSwitch_ETag = value; }
+        }
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ManagementCredential :
+        global::LightSwitchApplication.ManagementCredential.DetailsClass.IImplementation,
         global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
     {
     

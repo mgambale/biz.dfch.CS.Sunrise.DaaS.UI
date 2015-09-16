@@ -48,7 +48,6 @@
     <EntitySetMapping Name="Approvals">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Approval)">
         <MappingFragment StoreEntitySet="Approvals">
-          <ScalarProperty Name="State" ColumnName="State" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Tid" ColumnName="Tid" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -57,6 +56,7 @@
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -79,7 +79,6 @@
     <EntitySetMapping Name="Jobs">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Job)">
         <MappingFragment StoreEntitySet="Jobs">
-          <ScalarProperty Name="State" ColumnName="State" />
           <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="ReferencedItemId" ColumnName="ReferencedItemId" />
           <ScalarProperty Name="Token" ColumnName="Token" />
@@ -96,6 +95,7 @@
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -112,6 +112,22 @@
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManagementCredentials">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ManagementCredential)">
+        <MappingFragment StoreEntitySet="ManagementCredentials">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="EncryptedPassword" ColumnName="EncryptedPassword" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -148,6 +164,7 @@
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="OrderOnBehalfOf" ColumnName="OrderOnBehalfOf" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

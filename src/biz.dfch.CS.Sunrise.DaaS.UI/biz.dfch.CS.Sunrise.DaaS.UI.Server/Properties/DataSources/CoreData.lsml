@@ -20,14 +20,14 @@
     <DataService.Attributes>
       <CsdlEntityContainer
         Name="Core"
-        Namespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core" />
+        Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core" />
       <Partial
         IsPrimary="True" />
     </DataService.Attributes>
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="873803ed-7418-4daf-a32f-ef996091b2cb" />
+        Value="cbe1b2e6-b291-4606-8ff3-df1e8051211f" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="BaseData" />

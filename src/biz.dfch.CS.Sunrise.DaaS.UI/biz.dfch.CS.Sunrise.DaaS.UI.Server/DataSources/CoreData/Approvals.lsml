@@ -181,7 +181,7 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Approval"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Endpoints.OdataServices.Core"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
           Name="Approvals"
           EntityType="Approval" />
         <CsdlProperty

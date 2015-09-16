@@ -180,7 +180,7 @@
               <ContentItem
                 Name="Tid"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -210,7 +210,7 @@
               <ContentItem
                 Name="CreatedBy"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -225,7 +225,7 @@
               <ContentItem
                 Name="Created"
                 Kind="Value"
-                DataType=":DateTimeOffset?">
+                DataType=":DateTimeOffset">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -240,7 +240,7 @@
               <ContentItem
                 Name="ModifiedBy"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -255,7 +255,7 @@
               <ContentItem
                 Name="Modified"
                 Kind="Value"
-                DataType=":DateTimeOffset?">
+                DataType=":DateTimeOffset">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

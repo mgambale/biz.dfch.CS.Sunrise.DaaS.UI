@@ -28,7 +28,13 @@
       </KeyProperty>
       <EntityProperty
         Name="Tid"
-        PropertyType=":String?" />
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="Name"
         PropertyType=":String">
@@ -74,23 +80,47 @@
       </EntityProperty>
       <EntityProperty
         Name="Created"
-        PropertyType=":DateTimeOffset?">
+        PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="CreatedBy"
-        PropertyType=":String?" />
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="Modified"
-        PropertyType=":DateTimeOffset?">
+        PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
         PropertyType=":String?" />
     </EntityType.Properties>
   </EntityType>
@@ -196,21 +226,15 @@
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
           EntityTypeName="Endpoint"
-          EntityTypeNamespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics"
           Name="Endpoints"
           EntityType="Endpoint" />
         <CsdlProperty
-          Name="Id"
-          Property="Endpoint/Properties[Id]" />
-        <CsdlProperty
-          Name="Tid"
-          Property="Endpoint/Properties[Tid]" />
-        <CsdlProperty
-          Name="Name"
-          Property="Endpoint/Properties[Name]" />
-        <CsdlProperty
           Name="Version"
           Property="Endpoint/Properties[Version]" />
+        <CsdlProperty
+          Name="Address"
+          Property="Endpoint/Properties[Address]" />
         <CsdlProperty
           Name="RouteTemplate"
           Property="Endpoint/Properties[RouteTemplate]" />
@@ -224,17 +248,29 @@
           Name="Priority"
           Property="Endpoint/Properties[Priority]" />
         <CsdlProperty
-          Name="Created"
-          Property="Endpoint/Properties[Created]" />
+          Name="Id"
+          Property="Endpoint/Properties[Id]" />
+        <CsdlProperty
+          Name="Tid"
+          Property="Endpoint/Properties[Tid]" />
+        <CsdlProperty
+          Name="Name"
+          Property="Endpoint/Properties[Name]" />
+        <CsdlProperty
+          Name="Description"
+          Property="Endpoint/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
           Property="Endpoint/Properties[CreatedBy]" />
         <CsdlProperty
-          Name="Modified"
-          Property="Endpoint/Properties[Modified]" />
-        <CsdlProperty
           Name="ModifiedBy"
           Property="Endpoint/Properties[ModifiedBy]" />
+        <CsdlProperty
+          Name="Created"
+          Property="Endpoint/Properties[Created]" />
+        <CsdlProperty
+          Name="Modified"
+          Property="Endpoint/Properties[Modified]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>
