@@ -130,26 +130,29 @@ myapp.Home.ShowBrowseProjectDocuments_postRender = function (element, contentIte
 };
 
 myapp.Home.Endpoints_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/Uris.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-expand', { height: height, width: width });
 };
 myapp.Home.Configuration_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/document.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-gears', { height: height, width: width });
 };
 myapp.Home.Orders_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/basket.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-list-ul', { height: height, width: width });
 };
 myapp.Home.Approvals_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/key.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-eye', { height: height, width: width });
 };
 myapp.Home.Catalogue_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/folders.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-files-o', { height: height, width: width });
 };
 myapp.Home.Jobs_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/audit.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-fast-forward', { height: height, width: width });
 };
 myapp.Home.NewOrder_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/add-to-cart.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-cart-plus', { height: height, width: width });
 };
 myapp.Home.OrderItems_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'Content/Icons/document.png', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-database', { height: height, width: width });
+};
+myapp.Home.somethingToProve_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'fa-camera-retro', { height: height, width: width });
 };

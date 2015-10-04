@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\dark-theme-2.5.1.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Icons\Add-To-Cart.png" />
     <Content Include="Content\Icons\Audit.png" />
     <Content Include="Content\Icons\Basket.png" />
@@ -87,6 +89,12 @@
     <Content Include="Content\Images\user-logo-144.png" />
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <Content Include="packages.config" />
     <Content Include="Screens\ApprovalsList.lsml.js">
       <DependentUpon>ApprovalsList.lsml</DependentUpon>

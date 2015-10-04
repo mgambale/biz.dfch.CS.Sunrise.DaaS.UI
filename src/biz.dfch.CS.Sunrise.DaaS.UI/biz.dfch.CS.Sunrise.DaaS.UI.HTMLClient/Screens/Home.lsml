@@ -25,6 +25,10 @@
               <ContentItem
                 Name="Orders"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="View a list of your orders" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -40,6 +44,10 @@
               <ContentItem
                 Name="Approvals"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="Approve pending orders" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -55,6 +63,10 @@
               <ContentItem
                 Name="Catalogue"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="Browse catalogue" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -70,6 +82,10 @@
               <ContentItem
                 Name="NewOrder"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="Plkace a new order" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -88,6 +104,25 @@
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
+              <ContentItem
+                Name="somethingToProve"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="the birds" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Home/Methods[somethingToProve]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
             </ContentItem>
             <ContentItem
               Name="Group2"
@@ -96,6 +131,10 @@
               <ContentItem
                 Name="Endpoints"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="Manage endpoints" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -111,6 +150,10 @@
               <ContentItem
                 Name="Configuration"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="Manage configuration items" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -126,6 +169,10 @@
               <ContentItem
                 Name="Jobs"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="View a list of jobs" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -144,6 +191,8 @@
                 <ContentItem.Attributes>
                   <DisplayName
                     Value="Order Items" />
+                  <Description
+                    Value="View order items" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -201,6 +250,8 @@
           Name="dialogName"
           ParameterType=":String" />
       </ScreenMethod>
+      <ScreenMethod
+        Name="somethingToProve" />
     </Screen.Methods>
   </Screen>
   <Application.Methods>

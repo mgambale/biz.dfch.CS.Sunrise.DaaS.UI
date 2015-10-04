@@ -846,21 +846,20 @@ function checkIfUserIsInStorebox(username) {
 
 (function ($) {
     $.fn.spOverlay = function (contentItem, imageUrl, options, createNoti, count) {
-        $element = this;
         var me = $.extend({
             width: 200,
             height: 200,
             displayName: contentItem.model.displayName,
             description: (contentItem.model.description) ? contentItem.model.description : '',
             element: this,
-            imageUrl: imageUrl,
+            //imageUrl: imageUrl,
         }, options);
 
         me.createSpOverlay = function () {
             me.element.find('a').css({
-                'background-image': 'url(' + me.imageUrl + ')',
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
+                //    'background-image': 'url(' + me.imageUrl + ')',
+                //    'background-repeat': 'no-repeat',
+                //    'background-position': 'center',
                 'width': '' + me.width + 'px',
                 'height': '' + me.height + 'px'
             });
@@ -869,16 +868,15 @@ function checkIfUserIsInStorebox(username) {
                 me.element.append($noti);
             }
 
-
             setTimeout(function () {
                 me.element.find('a').html(
-                '<div style="width:100%;height:100%;position:relative;" >' +
-                '    <div class="spOverlay" >' +
-                '        <div class="spOverlayBackground"></div>' +
-                '        <div class="spTitle"><p>' + me.displayName + '</p></div>' +
-                '        <div class="spDescription">' + me.description + '</div> ' +
-                '    </div>' +
-                '</div>');
+                '<span class="fa ' + imageUrl + ' fa-inverse fa-5x" style="width:100%;height:100%;position:relative;background-color:#5D1048" >' +
+                '    <span class="spOverlay ui-btn-up-a ui-btn-hover-a ui-btn-down-a" style="display:block;font-size:14px">' +
+                '        <span class="spOverlayBackground"></span>' +
+                '        <span class="spTitle">' + me.displayName + '</span>' +
+                '        <span class="spDescription">' + me.description + '</span> ' +
+                '    </span>' +
+                '</span>');
             });
         };
 
