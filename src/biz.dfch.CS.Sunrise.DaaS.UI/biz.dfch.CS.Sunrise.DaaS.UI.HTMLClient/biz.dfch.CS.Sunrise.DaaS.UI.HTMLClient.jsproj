@@ -82,6 +82,10 @@
     <Content Include="Content\select2_locale_de.js" />
     <Content Include="Content\sp.css" />
     <Content Include="Content\sunrise.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Content\toastr.scss" />
     <Content Include="default.htm" />
     <Content Include="Content\user-customization.css" />
     <Content Include="Content\Images\user-logo.png" />
@@ -153,6 +157,8 @@
     <Content Include="Scripts\select2_locale_de.js" />
     <Content Include="Scripts\select2_locale_en.js" />
     <TypeScriptCompile Include="Scripts\UtilitiesData.d.ts" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\UtilitiesData.js" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
